@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [简要说明](default.md)
 * [Linux Shell](LinuxShell.md)
     * [实现简单的命令](实现简单的命令.md)
     * [掌握GNU bash](GNU-bashshell的特点.md)
