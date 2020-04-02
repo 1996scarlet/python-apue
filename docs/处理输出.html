@@ -1,0 +1,1197 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>处理输出 · Python全栈高级编程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="1996scarlet <1996scarlet@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="数组与函数.html" />
+    
+    
+    <link rel="prev" href="处理输入.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="LinuxShell.html">
+            
+                <a href="LinuxShell.html">
+            
+                    
+                    Linux Shell
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="实现简单的命令.html">
+            
+                <a href="实现简单的命令.html">
+            
+                    
+                    实现简单的命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="GNU-bashshell的特点.html">
+            
+                <a href="GNU-bashshell的特点.html">
+            
+                    
+                    掌握GNU bash
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="快捷键.html">
+            
+                <a href="快捷键.html">
+            
+                    
+                    快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="初始化.html">
+            
+                <a href="初始化.html">
+            
+                    
+                    初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="命令的执行方式.html">
+            
+                <a href="命令的执行方式.html">
+            
+                    
+                    命令的执行方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="子shell.html">
+            
+                <a href="子shell.html">
+            
+                    
+                    子shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="自动补全.html">
+            
+                <a href="自动补全.html">
+            
+                    
+                    自动补全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="历史记录.html">
+            
+                <a href="历史记录.html">
+            
+                    
+                    历史记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" data-path="状态码与退出状态.html">
+            
+                <a href="状态码与退出状态.html">
+            
+                    
+                    状态码与退出状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.8" data-path="文件描述符与重定向.html">
+            
+                <a href="文件描述符与重定向.html">
+            
+                    
+                    文件描述符与重定向
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="shell编程基础.html">
+            
+                <a href="shell编程基础.html">
+            
+                    
+                    shell编程基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="变量.html">
+            
+                <a href="变量.html">
+            
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="符号与别名.html">
+            
+                <a href="符号与别名.html">
+            
+                    
+                    符号与别名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="正则表达式.html">
+            
+                <a href="正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="流程控制.html">
+            
+                <a href="流程控制.html">
+            
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="信号处理.html">
+            
+                <a href="信号处理.html">
+            
+                    
+                    信号处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="作业控制.html">
+            
+                <a href="作业控制.html">
+            
+                    
+                    作业控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.7" data-path="调试脚本.html">
+            
+                <a href="调试脚本.html">
+            
+                    
+                    调试脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="流编辑器.html">
+            
+                <a href="流编辑器.html">
+            
+                    
+                    流编辑器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="快速上手.html">
+            
+                <a href="快速上手.html">
+            
+                    
+                    快速上手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="编写sed脚本.html">
+            
+                <a href="编写sed脚本.html">
+            
+                    
+                    编写sed脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="sed中的addr.html">
+            
+                <a href="sed中的addr.html">
+            
+                    
+                    sed中的addr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="配合正则表达式.html">
+            
+                <a href="配合正则表达式.html">
+            
+                    
+                    配合正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="高级用法.html">
+            
+                <a href="高级用法.html">
+            
+                    
+                    高级用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="应用案例.html">
+            
+                <a href="应用案例.html">
+            
+                    
+                    应用案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="文本分析.html">
+            
+                <a href="文本分析.html">
+            
+                    
+                    文本分析工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="快速入门awk.html">
+            
+                <a href="快速入门awk.html">
+            
+                    
+                    快速入门awk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="处理输入.html">
+            
+                <a href="处理输入.html">
+            
+                    
+                    处理输入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5.3" data-path="处理输出.html">
+            
+                <a href="处理输出.html">
+            
+                    
+                    处理输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="数组与函数.html">
+            
+                <a href="数组与函数.html">
+            
+                    
+                    数组与函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="awk应用案例.html">
+            
+                <a href="awk应用案例.html">
+            
+                    
+                    应用案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="本章练习.html">
+            
+                <a href="本章练习.html">
+            
+                    
+                    本章练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="操作系统基础知识.html">
+            
+                <a href="操作系统基础知识.html">
+            
+                    
+                    操作系统基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="引导过程.html">
+            
+                <a href="引导过程.html">
+            
+                    
+                    引导过程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="运行级别.html">
+            
+                <a href="运行级别.html">
+            
+                    
+                    运行级别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="设备管理.html">
+            
+                <a href="设备管理.html">
+            
+                    
+                    设备管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="内存管理.html">
+            
+                <a href="内存管理.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="系统调度.html">
+            
+                <a href="系统调度.html">
+            
+                    
+                    系统调度
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="信号.html">
+            
+                <a href="信号.html">
+            
+                    
+                    信号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="进程状态.html">
+            
+                <a href="进程状态.html">
+            
+                    
+                    进程状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="时间片.html">
+            
+                <a href="时间片.html">
+            
+                    
+                    时间片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="调度算法.html">
+            
+                <a href="调度算法.html">
+            
+                    
+                    调度算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="死锁.html">
+            
+                <a href="死锁.html">
+            
+                    
+                    死锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="进程管理.html">
+            
+                <a href="进程管理.html">
+            
+                    
+                    进程管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="进程通信.html">
+            
+                <a href="进程通信.html">
+            
+                    
+                    进程通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="新建进程.html">
+            
+                <a href="新建进程.html">
+            
+                    
+                    新建进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="特殊进程.html">
+            
+                <a href="特殊进程.html">
+            
+                    
+                    特殊进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="孤儿进程与僵尸进程.html">
+            
+                <a href="孤儿进程与僵尸进程.html">
+            
+                    
+                    孤儿进程与僵尸进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="守护进程.html">
+            
+                <a href="守护进程.html">
+            
+                    
+                    守护进程（服务）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="线程管理.html">
+            
+                <a href="线程管理.html">
+            
+                    
+                    线程管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="内核级线程.html">
+            
+                <a href="内核级线程.html">
+            
+                    
+                    内核级线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="用户级线程.html">
+            
+                <a href="用户级线程.html">
+            
+                    
+                    用户级线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="线程安全与通信.html">
+            
+                <a href="线程安全与通信.html">
+            
+                    
+                    线程安全与通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="日志模块.html">
+            
+                <a href="日志模块.html">
+            
+                    
+                    日志模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="pgrep与pkill.html">
+            
+                <a href="pgrep与pkill.html">
+            
+                    
+                    pgrep与pkill
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="find与xargs.html">
+            
+                <a href="find与xargs.html">
+            
+                    
+                    find与xargs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="文件系统.html">
+            
+                <a href="文件系统.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="MBR与GPT.html">
+            
+                <a href="MBR与GPT.html">
+            
+                    
+                    MBR与GPT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >处理输出</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x8F93;&#x51FA;&#x5206;&#x9694;&#x7B26;">&#x8F93;&#x51FA;&#x5206;&#x9694;&#x7B26;</h1>
+<ul>
+<li><code>OFS</code>&#xFF1A;&#x5B57;&#x6BB5;&#x5206;&#x9694;&#x7B26;&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x65F6;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x662F;&#x5426;&#x89E6;&#x53D1;<code>rebuild</code>&#x3002;
+```shell<blockquote>
+<p>echo &quot;a b c&quot; | awk -v OFS=&quot;&lt;-&gt;&quot; &apos;{$1=$1; print}&apos;
+a&lt;-&gt;b&lt;-&gt;c</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>echo &quot;a b c&quot; | awk -v OFS=&quot;&lt;-&gt;&quot; &apos;{print}&apos;
+a b c  # &#x6CA1;&#x6709;&#x89E6;&#x53D1; rebuild &#x56E0;&#x6B64;&#x65E0;&#x6548;</p>
+<pre><code>* `ORS`&#xFF1A;&#x8BB0;&#x5F55;&#x5206;&#x9694;&#x7B26;&#x3002;
+```shell
+seq 3 | awk -v ORS=&quot;\n---\n&quot; &apos;{print}&apos;
+1
+---
+2
+---
+3
+---
+</code></pre><ul>
+<li><code>OFMT</code>&#xFF1A;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x8F93;&#x51FA;&#x683C;&#x5F0F;&#x3002;<pre><code class="lang-shell">awk &apos;BEGIN {OFMT = &quot;%.0f&quot;; print 17.23,68.54}&apos;
+17 69
+</code></pre>
+</li>
+</ul>
+</blockquote>
+<h1 id="print-&#x5173;&#x952E;&#x5B57;">print &#x5173;&#x952E;&#x5B57;</h1>
+<p>&#x5728;<code>awk</code>&#x4E2D;&#xFF0C;<code>print</code>&#x5173;&#x952E;&#x5B57;&#x88AB;&#x7528;&#x4E8E;&#x8F93;&#x51FA;&#xFF0C;&#x8BE5;&#x5173;&#x952E;&#x5B57;&#x5728;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x65F6;&#x7C7B;&#x4F3C;&#x4E8E;&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF0C;&#x5E76;&#x4E14;&#x652F;&#x6301;&#x91CD;&#x5B9A;&#x5411;&#xFF1A;</p>
+<pre><code class="lang-shell">print item1, item2, &#x2026;
+
+# &#x91CD;&#x5B9A;&#x5411;&#x8F93;&#x51FA;
+&gt; awk &apos;{ print $1 $2 &gt; &quot;/dev/stderr&quot;}&apos; inventory-shipped
+
+# &#x6253;&#x5370;&#x591A;&#x884C;
+&gt; awk &apos;BEGIN { print &quot;line one\nline two\nline three&quot; }&apos;
+line one
+line two
+line three
+
+# &#x4F7F;&#x7528;&#x9017;&#x53F7;&#x5206;&#x9694;&#x5219;&#x81EA;&#x52A8;&#x6DFB;&#x52A0; OFS
+&gt; awk -v OFS=&quot;--&quot; &apos;{ print $1,$2 }&apos; inventory-shipped 
+Jan--13
+Feb--15
+Mar--15
+
+&gt; awk -v OFS=&quot;     &quot; &apos;BEGIN { print &quot;Month Crates&quot;; print &quot;----- ------&quot; } { print $1,$2}&apos; inventory-shipped
+</code></pre>
+<h1 id="printf-&#x5173;&#x952E;&#x5B57;">printf &#x5173;&#x952E;&#x5B57;</h1>
+<p><code>printf</code>&#x7684;&#x7528;&#x6CD5;&#x7C7B;&#x4F3C;&#x4E8E;<code>C</code>&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x8F93;&#x51FA;&#x51FD;&#x6570;&#xFF0C;&#x652F;&#x6301;&#x683C;&#x5F0F;&#x5316;&#xFF1A;</p>
+<pre><code class="lang-shell">printf format, item1, item2, &#x2026;
+</code></pre>
+<p>&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;<code>OFS</code>&#x548C;<code>ORS</code>&#x5BF9;<code>printf</code>&#x90FD;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;<code>printf</code>&#x53EA;&#x6309;&#x7167;&#x8BBE;&#x5B9A;&#x7684;&#x683C;&#x5F0F;&#x8FDB;&#x884C;&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre><code class="lang-shell">&gt; awk &apos;BEGIN { ORS=&quot;\n---\n&quot;; OFS=&quot;+&quot;; msg=&quot;Don\47t Panic!&quot;; printf &quot;%s\n&quot;, msg}&apos;
+Don&apos;t Panic!
+
+&gt; awk &apos;BEGIN { printf &quot;%s %s\n&quot;, &quot;Month&quot;, &quot;Crates&quot;; print &quot;----- ------&quot; } { printf &quot;%-5s %6d\n&quot;, $1, $2}&apos; inventory-shipped
+</code></pre>
+<h2 id="&#x5E38;&#x7528;&#x683C;&#x5F0F;&#x7B26;">&#x5E38;&#x7528;&#x683C;&#x5F0F;&#x7B26;</h2>
+<ul>
+<li><code>%f</code>&#xFF1A;&#x8BBE;&#x5B9A;&#x5C0F;&#x6570;&#x683C;&#x5F0F;&#x3002;
+```shell<h1 id="&#x683C;&#x5F0F;-&#x53F3;&#x5BF9;&#x9F50;&#x603B;&#x5BBD;&#x5EA6;&#x5C0F;&#x6570;&#x70B9;&#x540E;&#x4F4D;&#x6570;">&#x683C;&#x5F0F; [&#x53F3;&#x5BF9;&#x9F50;&#x603B;&#x5BBD;&#x5EA6;].[&#x5C0F;&#x6570;&#x70B9;&#x540E;&#x4F4D;&#x6570;]</h1>
+<blockquote>
+<p>awk &apos;BEGIN {printf &quot;%5.1f&lt;-&gt;%-5.1f&lt;-&gt;%.2f\n&quot;, 1, 1, 1}&apos;
+1.0&lt;-&gt;1.0  &lt;-&gt;1.00</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="&#x5BBD;&#x5EA6;&#x548C;&#x4F4D;&#x6570;&#x53EF;&#x4EE5;&#x4E3A;&#x53D8;&#x91CF;">&#x5BBD;&#x5EA6;&#x548C;&#x4F4D;&#x6570;&#x53EF;&#x4EE5;&#x4E3A;&#x53D8;&#x91CF;</h1>
+<blockquote>
+<p>awk &apos;BEGIN {w=5;p=2;s=&quot;abc&quot;;printf &quot;|%<em>.</em>s|\n&quot;, w, p, s}&apos;
+|   ab|</p>
+<pre><code>* `%e %E`&#xFF1A;&#x79D1;&#x5B66;&#x8BA1;&#x6570;&#x6CD5;&#x3002;
+```shell
+awk &apos;BEGIN {printf &quot;%10.1e&lt;-&gt;%-10.1e&lt;-&gt;%.2e\n&quot;, 1, 1, 1}&apos;
+   1.0e+00&lt;-&gt;1.0e+00   &lt;-&gt;1.00e+00
+</code></pre><ul>
+<li><code>-</code>&#xFF1A;&#x7531;&#x4E8E;&#x5DE6;&#x5BF9;&#x9F50;&#x6307;&#x5B9A;&#x957F;&#x5EA6;&#xFF0C;&#x957F;&#x5EA6;&#x4E0D;&#x8DB3;&#x5219;&#x8865;&#x5145;&#x7A7A;&#x683C;&#xFF1A;<pre><code class="lang-shell">awk &apos;BEGIN {printf &quot;%-3s&lt;-&gt;%-3s&lt;-&gt;%-3s\n&quot;, &quot;ab&quot;, &quot;a&quot;, 1235}&apos;
+ab &lt;-&gt;a  &lt;-&gt;1235
+</code></pre>
+</li>
+<li><code>\47</code>&#xFF1A;&#x4E5F;&#x5C31;&#x662F;&#x5355;&#x5F15;&#x53F7;&#xFF0C;&#x8868;&#x793A;&#x5343;&#x5206;&#x8BA1;&#x6570;&#x6CD5;&#x3002;<pre><code class="lang-shell">awk &apos;BEGIN {printf &quot;%\47d\n&quot;, 12345678}&apos;
+12,345,678
+</code></pre>
+</li>
+<li><code>N$</code>&#xFF1A;&#x6307;&#x5B9A;&#x987A;&#x5E8F;&#x3002;<pre><code class="lang-shell">awk &apos;BEGIN { printf &quot;%3$s %1$s %2$s\n&quot;, &quot;a&quot;, &quot;b&quot;, &quot;c&quot; }&apos;
+c a b
+</code></pre>
+&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5B9A;&#x4E49;<code>format</code>&#x53D8;&#x91CF;&#x5C06;&#x5176;&#x91CD;&#x590D;&#x4F7F;&#x7528;&#xFF1A;
+```shell
+awk &apos;BEGIN { format = &quot;%-10s %s\n&quot;<pre><code>        printf format, &quot;Name&quot;, &quot;Number&quot;
+        printf format, &quot;----&quot;, &quot;------&quot; }
+       { printf format, $1, $2 }&apos; mail-list
+</code></pre>Name       Number</li>
+</ul>
+<hr>
+<p>Amelia     555-5553
+Anthony    555-3412
+Becky      555-7685
+Bill       555-1675
+Broderick  555-0542
+Camilla    555-2912
+Fabius     555-1234
+Julie      555-6699
+Martin     555-6480
+Samuel     555-3430
+Jean-Paul  555-2127</p>
+<pre><code># &#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;
+&#x4E0E;&#x5728;`shell`&#x4E2D;&#x7684;&#x91CD;&#x5B9A;&#x5411;&#x65B9;&#x6CD5;&#x7C7B;&#x4F3C;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;`&gt; &gt;&gt; |`&#x5BF9;`print`&#x548C;`printf`&#x7684;&#x8F93;&#x51FA;&#x8FDB;&#x884C;&#x91CD;&#x5B9A;&#x5411;&#x3002;
+```shell
+awk &apos;BEGIN {print &quot;line1&quot; &gt; &quot;guide.txt&quot;; print &quot;line2&quot; &gt;&gt; &quot;guide.txt&quot;}&apos;
+cat guide.txt 
+line1
+line2
+</code></pre><p>&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7BA1;&#x9053;&#x5BF9;&#x8F93;&#x51FA;&#x8FDB;&#x884C;&#x91CD;&#x5B9A;&#x5411;&#xFF0C;&#x4F7F;&#x7528;&#x7BA1;&#x9053;&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x597D;&#x5904;&#x662F;&#x53EF;&#x4EE5;&#x5C06;&#x62FC;&#x51D1;&#x7684;&#x547D;&#x4EE4;&#x4F20;&#x9012;&#x7ED9;&#x7BA1;&#x9053;&#x540E;&#x7684;&#x547D;&#x4EE4;&#x53BB;&#x6267;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-shell">awk &apos;BEGIN { print &quot;ps -a&quot; | &quot;bash&quot; }&apos;
+ll | grep &apos;^[^d]&apos; | awk &apos;$NF ~ /^[[:alpha:]]/ { print &quot;ls -l&quot;,$NF | &quot;bash&quot;}&apos;
+</code></pre>
+</blockquote>
+<h2 id="&#x5173;&#x95ED;&#x91CD;&#x5B9A;&#x5411;">&#x5173;&#x95ED;&#x91CD;&#x5B9A;&#x5411;</h2>
+<p><code>close</code>&#x65B9;&#x6CD5;&#x7684;&#x7528;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-shell">close(file_name)
+close(command)
+</code></pre>
+<p>&#x5173;&#x95ED;&#x6587;&#x4EF6;&#x7684;&#x529F;&#x80FD;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x8BF4;&#x8FC7;&#xFF0C;<code>awk</code>&#x5BF9;&#x5DF2;&#x7ECF;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#x4E0D;&#x4F1A;&#x901A;&#x8FC7;<code>getline</code>&#x91CD;&#x5B9A;&#x5411;&#x6216;<code>@include</code>&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#xFF0C;&#x56E0;&#x6B64;&#x5EFA;&#x8BAE;&#x5728;&#x5904;&#x7406;&#x5B8C;&#x5F53;&#x524D;&#x4E0E;&#x6587;&#x4EF6;&#x6709;&#x5173;&#x903B;&#x8F91;&#x4E4B;&#x540E;&#x5173;&#x95ED;&#x6587;&#x4EF6;&#x3002;&#x800C;&#x5BF9;&#x4E8E;&#x7BA1;&#x9053;&#x4E5F;&#x6709;&#x76F8;&#x4F3C;&#x7684;&#x7EA6;&#x675F;&#xFF0C;<code>awk</code>&#x5728;&#x540C;&#x4E00;&#x65F6;&#x95F4;&#x53EA;&#x80FD;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x6253;&#x5F00;&#x7684;&#x7BA1;&#x9053;&#xFF0C;&#x56E0;&#x6B64;&#x5927;&#x90E8;&#x5206;&#x60C5;&#x51B5;&#x4E0B;&#x9700;&#x8981;&#x901A;&#x8FC7;<code>close(command)</code>&#x5173;&#x95ED;&#x7BA1;&#x9053;&#x67D0;&#x4E00;&#x4FA7;&#x7684;&#x547D;&#x4EE4;&#x4ECE;&#x800C;&#x5173;&#x95ED;&#x6574;&#x4E2A;&#x7BA1;&#x9053;&#xFF1A;</p>
+<pre><code class="lang-shell">&quot;sort -r names&quot; | getline foo
+close(&quot;sort -r names&quot;)  # &#x5173;&#x95ED;&#x4E00;&#x4FA7;&#xFF0C;&#x5176;&#x5B9E;&#x672C;&#x8D28;&#x662F;&#x5173;&#x95ED;&#x4E86;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;
+
+sortcom = &quot;sort -r names&quot;
+sortcom | getline foo
+close(sortcom)  # &#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x53D8;&#x91CF;&#x5173;&#x95ED;
+</code></pre>
+<h2 id="close-&#x7684;&#x8FD4;&#x56DE;&#x503C;">close &#x7684;&#x8FD4;&#x56DE;&#x503C;</h2>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>retval = close(command)</code>&#x7684;&#x65B9;&#x5F0F;&#x83B7;&#x5F97;&#x5173;&#x95ED;&#x65B9;&#x6CD5;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;
+| &#x9000;&#x51FA;&#x72B6;&#x6001; | &#x8FD4;&#x56DE;&#x503C; |
+| --- | --- |
+| &#x6B63;&#x5E38;&#x9000;&#x51FA; | &#x547D;&#x4EE4;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x7801; |
+| &#x901A;&#x8FC7;&#x4FE1;&#x53F7;&#x9000;&#x51FA; | 256 + &#x9000;&#x51FA;&#x4FE1;&#x53F7;&#x7684;&#x503C; |
+| &#x7531;&#x4E8E;&#x4FE1;&#x53F7;&#x5BFC;&#x81F4;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x9519;&#x8BEF; | 512 + &#x9000;&#x51FA;&#x4FE1;&#x53F7;&#x7684;&#x503C; |
+| &#x5185;&#x90E8;&#x9519;&#x8BEF; | -1 |</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="处理输入.html" class="navigation navigation-prev " aria-label="Previous page: 处理输入">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="数组与函数.html" class="navigation navigation-next " aria-label="Next page: 数组与函数">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"处理输出","level":"1.2.5.3","depth":3,"next":{"title":"数组与函数","level":"1.2.5.4","depth":3,"path":"数组与函数.md","ref":"数组与函数.md","articles":[]},"previous":{"title":"处理输入","level":"1.2.5.2","depth":3,"path":"处理输入.md","ref":"处理输入.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"1996scarlet <1996scarlet@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python全栈高级编程","language":"zh","gitbook":"*"},"file":{"path":"处理输出.md","mtime":"2020-04-02T12:11:45.094Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-02T12:41:24.403Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
