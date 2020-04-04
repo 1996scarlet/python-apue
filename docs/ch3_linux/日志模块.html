@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>梗概 · UNIX环境中的全栈Python高级编程</title>
+        <title>日志模块 · UNIX环境中的全栈Python高级编程</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -12,28 +12,28 @@
         
         
     
-    <link rel="stylesheet" href="gitbook/style.css">
+    <link rel="stylesheet" href="../gitbook/style.css">
 
     
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-flexible-alerts/style.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
                 
             
         
@@ -61,12 +61,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="ch1_intro/作者简介.html" />
+    <link rel="next" href="pgrep与pkill.html" />
     
+    
+    <link rel="prev" href="线程安全与通信.html" />
     
 
     </head>
@@ -97,9 +99,9 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="../">
             
-                <a href="./">
+                <a href="../">
             
                     
                         <b>1.1.</b>
@@ -112,9 +114,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="ch1_intro/作者简介.html">
+        <li class="chapter " data-level="1.2" data-path="../ch1_intro/作者简介.html">
             
-                <a href="ch1_intro/作者简介.html">
+                <a href="../ch1_intro/作者简介.html">
             
                     
                         <b>1.2.</b>
@@ -127,9 +129,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="ch1_intro/UNIX基础知识.html">
+        <li class="chapter " data-level="1.3" data-path="../ch1_intro/UNIX基础知识.html">
             
-                <a href="ch1_intro/UNIX基础知识.html">
+                <a href="../ch1_intro/UNIX基础知识.html">
             
                     
                         <b>1.3.</b>
@@ -149,9 +151,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="ch2_bash/认识Bash.html">
+        <li class="chapter " data-level="2.1" data-path="../ch2_bash/认识Bash.html">
             
-                <a href="ch2_bash/认识Bash.html">
+                <a href="../ch2_bash/认识Bash.html">
             
                     
                         <b>2.1.</b>
@@ -180,9 +182,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.1" data-path="ch2_bash/mechanism/初始化.html">
+        <li class="chapter " data-level="2.2.1" data-path="../ch2_bash/mechanism/初始化.html">
             
-                <a href="ch2_bash/mechanism/初始化.html">
+                <a href="../ch2_bash/mechanism/初始化.html">
             
                     
                         <b>2.2.1.</b>
@@ -195,9 +197,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2" data-path="ch2_bash/mechanism/实现简单的命令.html">
+        <li class="chapter " data-level="2.2.2" data-path="../ch2_bash/mechanism/实现简单的命令.html">
             
-                <a href="ch2_bash/mechanism/实现简单的命令.html">
+                <a href="../ch2_bash/mechanism/实现简单的命令.html">
             
                     
                         <b>2.2.2.</b>
@@ -210,9 +212,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.3" data-path="ch2_bash/mechanism/命令的执行方式.html">
+        <li class="chapter " data-level="2.2.3" data-path="../ch2_bash/mechanism/命令的执行方式.html">
             
-                <a href="ch2_bash/mechanism/命令的执行方式.html">
+                <a href="../ch2_bash/mechanism/命令的执行方式.html">
             
                     
                         <b>2.2.3.</b>
@@ -225,9 +227,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.4" data-path="ch2_bash/mechanism/子shell.html">
+        <li class="chapter " data-level="2.2.4" data-path="../ch2_bash/mechanism/子shell.html">
             
-                <a href="ch2_bash/mechanism/子shell.html">
+                <a href="../ch2_bash/mechanism/子shell.html">
             
                     
                         <b>2.2.4.</b>
@@ -240,9 +242,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.5" data-path="ch2_bash/mechanism/文件描述符与重定向.html">
+        <li class="chapter " data-level="2.2.5" data-path="../ch2_bash/mechanism/文件描述符与重定向.html">
             
-                <a href="ch2_bash/mechanism/文件描述符与重定向.html">
+                <a href="../ch2_bash/mechanism/文件描述符与重定向.html">
             
                     
                         <b>2.2.5.</b>
@@ -255,9 +257,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.6" data-path="ch2_bash/mechanism/自动补全.html">
+        <li class="chapter " data-level="2.2.6" data-path="../ch2_bash/mechanism/自动补全.html">
             
-                <a href="ch2_bash/mechanism/自动补全.html">
+                <a href="../ch2_bash/mechanism/自动补全.html">
             
                     
                         <b>2.2.6.</b>
@@ -270,9 +272,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.7" data-path="ch2_bash/mechanism/历史记录.html">
+        <li class="chapter " data-level="2.2.7" data-path="../ch2_bash/mechanism/历史记录.html">
             
-                <a href="ch2_bash/mechanism/历史记录.html">
+                <a href="../ch2_bash/mechanism/历史记录.html">
             
                     
                         <b>2.2.7.</b>
@@ -285,9 +287,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.8" data-path="ch2_bash/mechanism/作业控制.html">
+        <li class="chapter " data-level="2.2.8" data-path="../ch2_bash/mechanism/作业控制.html">
             
-                <a href="ch2_bash/mechanism/作业控制.html">
+                <a href="../ch2_bash/mechanism/作业控制.html">
             
                     
                         <b>2.2.8.</b>
@@ -300,9 +302,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.9" data-path="ch2_bash/mechanism/信号处理.html">
+        <li class="chapter " data-level="2.2.9" data-path="../ch2_bash/mechanism/信号处理.html">
             
-                <a href="ch2_bash/mechanism/信号处理.html">
+                <a href="../ch2_bash/mechanism/信号处理.html">
             
                     
                         <b>2.2.9.</b>
@@ -336,9 +338,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.3.1" data-path="ch2_bash/grammar/变量.html">
+        <li class="chapter " data-level="2.3.1" data-path="../ch2_bash/grammar/变量.html">
             
-                <a href="ch2_bash/grammar/变量.html">
+                <a href="../ch2_bash/grammar/变量.html">
             
                     
                         <b>2.3.1.</b>
@@ -351,9 +353,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.2" data-path="ch2_bash/grammar/符号与别名.html">
+        <li class="chapter " data-level="2.3.2" data-path="../ch2_bash/grammar/符号与别名.html">
             
-                <a href="ch2_bash/grammar/符号与别名.html">
+                <a href="../ch2_bash/grammar/符号与别名.html">
             
                     
                         <b>2.3.2.</b>
@@ -366,9 +368,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.3" data-path="ch2_bash/grammar/正则表达式.html">
+        <li class="chapter " data-level="2.3.3" data-path="../ch2_bash/grammar/正则表达式.html">
             
-                <a href="ch2_bash/grammar/正则表达式.html">
+                <a href="../ch2_bash/grammar/正则表达式.html">
             
                     
                         <b>2.3.3.</b>
@@ -381,9 +383,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.4" data-path="ch2_bash/grammar/流程控制.html">
+        <li class="chapter " data-level="2.3.4" data-path="../ch2_bash/grammar/流程控制.html">
             
-                <a href="ch2_bash/grammar/流程控制.html">
+                <a href="../ch2_bash/grammar/流程控制.html">
             
                     
                         <b>2.3.4.</b>
@@ -396,9 +398,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.5" data-path="ch2_bash/grammar/调试脚本.html">
+        <li class="chapter " data-level="2.3.5" data-path="../ch2_bash/grammar/调试脚本.html">
             
-                <a href="ch2_bash/grammar/调试脚本.html">
+                <a href="../ch2_bash/grammar/调试脚本.html">
             
                     
                         <b>2.3.5.</b>
@@ -432,7 +434,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.4.1" data-path="快速上手.md">
+        <li class="chapter " data-level="2.4.1" data-path="../快速上手.md">
             
                 <span>
             
@@ -447,7 +449,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.2" data-path="编写sed脚本.md">
+        <li class="chapter " data-level="2.4.2" data-path="../编写sed脚本.md">
             
                 <span>
             
@@ -462,7 +464,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.3" data-path="sed中的addr.md">
+        <li class="chapter " data-level="2.4.3" data-path="../sed中的addr.md">
             
                 <span>
             
@@ -477,7 +479,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.4" data-path="配合正则表达式.md">
+        <li class="chapter " data-level="2.4.4" data-path="../配合正则表达式.md">
             
                 <span>
             
@@ -492,7 +494,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.5" data-path="高级用法.md">
+        <li class="chapter " data-level="2.4.5" data-path="../高级用法.md">
             
                 <span>
             
@@ -507,7 +509,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.6" data-path="应用案例.md">
+        <li class="chapter " data-level="2.4.6" data-path="../应用案例.md">
             
                 <span>
             
@@ -543,9 +545,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.5.1" data-path="ch2_bash/awk/awk_快速入门.html">
+        <li class="chapter " data-level="2.5.1" data-path="../ch2_bash/awk/awk_快速入门.html">
             
-                <a href="ch2_bash/awk/awk_快速入门.html">
+                <a href="../ch2_bash/awk/awk_快速入门.html">
             
                     
                         <b>2.5.1.</b>
@@ -558,9 +560,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5.2" data-path="ch2_bash/awk/awk_处理输入.html">
+        <li class="chapter " data-level="2.5.2" data-path="../ch2_bash/awk/awk_处理输入.html">
             
-                <a href="ch2_bash/awk/awk_处理输入.html">
+                <a href="../ch2_bash/awk/awk_处理输入.html">
             
                     
                         <b>2.5.2.</b>
@@ -573,9 +575,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5.3" data-path="ch2_bash/awk/awk_处理输出.html">
+        <li class="chapter " data-level="2.5.3" data-path="../ch2_bash/awk/awk_处理输出.html">
             
-                <a href="ch2_bash/awk/awk_处理输出.html">
+                <a href="../ch2_bash/awk/awk_处理输出.html">
             
                     
                         <b>2.5.3.</b>
@@ -588,9 +590,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5.4" data-path="ch2_bash/awk/awk_数组与函数.html">
+        <li class="chapter " data-level="2.5.4" data-path="../ch2_bash/awk/awk_数组与函数.html">
             
-                <a href="ch2_bash/awk/awk_数组与函数.html">
+                <a href="../ch2_bash/awk/awk_数组与函数.html">
             
                     
                         <b>2.5.4.</b>
@@ -603,9 +605,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5.5" data-path="ch2_bash/awk/awk_应用案例.html">
+        <li class="chapter " data-level="2.5.5" data-path="../ch2_bash/awk/awk_应用案例.html">
             
-                <a href="ch2_bash/awk/awk_应用案例.html">
+                <a href="../ch2_bash/awk/awk_应用案例.html">
             
                     
                         <b>2.5.5.</b>
@@ -639,9 +641,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.6.1" data-path="ch2_bash/exercise/基础命令练习.html">
+        <li class="chapter " data-level="2.6.1" data-path="../ch2_bash/exercise/基础命令练习.html">
             
-                <a href="ch2_bash/exercise/基础命令练习.html">
+                <a href="../ch2_bash/exercise/基础命令练习.html">
             
                     
                         <b>2.6.1.</b>
@@ -654,9 +656,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.6.2" data-path="ch2_bash/exercise/综合脚本练习.html">
+        <li class="chapter " data-level="2.6.2" data-path="../ch2_bash/exercise/综合脚本练习.html">
             
-                <a href="ch2_bash/exercise/综合脚本练习.html">
+                <a href="../ch2_bash/exercise/综合脚本练习.html">
             
                     
                         <b>2.6.2.</b>
@@ -697,9 +699,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.1.1" data-path="ch3_linux/MBR与GPT.html">
+        <li class="chapter " data-level="3.1.1" data-path="MBR与GPT.html">
             
-                <a href="ch3_linux/MBR与GPT.html">
+                <a href="MBR与GPT.html">
             
                     
                         <b>3.1.1.</b>
@@ -712,9 +714,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.1.2" data-path="ch3_linux/运行级别.html">
+        <li class="chapter " data-level="3.1.2" data-path="运行级别.html">
             
-                <a href="ch3_linux/运行级别.html">
+                <a href="运行级别.html">
             
                     
                         <b>3.1.2.</b>
@@ -727,9 +729,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.1.3" data-path="ch3_linux/设备管理.html">
+        <li class="chapter " data-level="3.1.3" data-path="设备管理.html">
             
-                <a href="ch3_linux/设备管理.html">
+                <a href="设备管理.html">
             
                     
                         <b>3.1.3.</b>
@@ -742,9 +744,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.1.4" data-path="ch3_linux/内存管理.html">
+        <li class="chapter " data-level="3.1.4" data-path="内存管理.html">
             
-                <a href="ch3_linux/内存管理.html">
+                <a href="内存管理.html">
             
                     
                         <b>3.1.4.</b>
@@ -778,9 +780,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.2.1" data-path="ch3_linux/信号.html">
+        <li class="chapter " data-level="3.2.1" data-path="信号.html">
             
-                <a href="ch3_linux/信号.html">
+                <a href="信号.html">
             
                     
                         <b>3.2.1.</b>
@@ -793,9 +795,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.2" data-path="ch3_linux/进程状态.html">
+        <li class="chapter " data-level="3.2.2" data-path="进程状态.html">
             
-                <a href="ch3_linux/进程状态.html">
+                <a href="进程状态.html">
             
                     
                         <b>3.2.2.</b>
@@ -808,9 +810,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.3" data-path="ch3_linux/时间片.html">
+        <li class="chapter " data-level="3.2.3" data-path="时间片.html">
             
-                <a href="ch3_linux/时间片.html">
+                <a href="时间片.html">
             
                     
                         <b>3.2.3.</b>
@@ -823,9 +825,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.4" data-path="ch3_linux/调度算法.html">
+        <li class="chapter " data-level="3.2.4" data-path="调度算法.html">
             
-                <a href="ch3_linux/调度算法.html">
+                <a href="调度算法.html">
             
                     
                         <b>3.2.4.</b>
@@ -838,9 +840,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.5" data-path="ch3_linux/死锁.html">
+        <li class="chapter " data-level="3.2.5" data-path="死锁.html">
             
-                <a href="ch3_linux/死锁.html">
+                <a href="死锁.html">
             
                     
                         <b>3.2.5.</b>
@@ -874,9 +876,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.3.1" data-path="ch3_linux/进程通信.html">
+        <li class="chapter " data-level="3.3.1" data-path="进程通信.html">
             
-                <a href="ch3_linux/进程通信.html">
+                <a href="进程通信.html">
             
                     
                         <b>3.3.1.</b>
@@ -889,9 +891,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3.2" data-path="ch3_linux/新建进程.html">
+        <li class="chapter " data-level="3.3.2" data-path="新建进程.html">
             
-                <a href="ch3_linux/新建进程.html">
+                <a href="新建进程.html">
             
                     
                         <b>3.3.2.</b>
@@ -904,9 +906,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3.3" data-path="ch3_linux/特殊进程.html">
+        <li class="chapter " data-level="3.3.3" data-path="特殊进程.html">
             
-                <a href="ch3_linux/特殊进程.html">
+                <a href="特殊进程.html">
             
                     
                         <b>3.3.3.</b>
@@ -919,9 +921,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3.4" data-path="ch3_linux/孤儿进程与僵尸进程.html">
+        <li class="chapter " data-level="3.3.4" data-path="孤儿进程与僵尸进程.html">
             
-                <a href="ch3_linux/孤儿进程与僵尸进程.html">
+                <a href="孤儿进程与僵尸进程.html">
             
                     
                         <b>3.3.4.</b>
@@ -934,9 +936,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3.5" data-path="ch3_linux/守护进程.html">
+        <li class="chapter " data-level="3.3.5" data-path="守护进程.html">
             
-                <a href="ch3_linux/守护进程.html">
+                <a href="守护进程.html">
             
                     
                         <b>3.3.5.</b>
@@ -970,9 +972,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.4.1" data-path="ch3_linux/内核级线程.html">
+        <li class="chapter " data-level="3.4.1" data-path="内核级线程.html">
             
-                <a href="ch3_linux/内核级线程.html">
+                <a href="内核级线程.html">
             
                     
                         <b>3.4.1.</b>
@@ -985,9 +987,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4.2" data-path="ch3_linux/用户级线程.html">
+        <li class="chapter " data-level="3.4.2" data-path="用户级线程.html">
             
-                <a href="ch3_linux/用户级线程.html">
+                <a href="用户级线程.html">
             
                     
                         <b>3.4.2.</b>
@@ -1000,9 +1002,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4.3" data-path="ch3_linux/线程安全与通信.html">
+        <li class="chapter " data-level="3.4.3" data-path="线程安全与通信.html">
             
-                <a href="ch3_linux/线程安全与通信.html">
+                <a href="线程安全与通信.html">
             
                     
                         <b>3.4.3.</b>
@@ -1020,9 +1022,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5" data-path="ch3_linux/日志模块.html">
+        <li class="chapter active" data-level="3.5" data-path="日志模块.html">
             
-                <a href="ch3_linux/日志模块.html">
+                <a href="日志模块.html">
             
                     
                         <b>3.5.</b>
@@ -1035,9 +1037,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.6" data-path="ch3_linux/pgrep与pkill.html">
+        <li class="chapter " data-level="3.6" data-path="pgrep与pkill.html">
             
-                <a href="ch3_linux/pgrep与pkill.html">
+                <a href="pgrep与pkill.html">
             
                     
                         <b>3.6.</b>
@@ -1050,9 +1052,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.7" data-path="ch3_linux/find与xargs.html">
+        <li class="chapter " data-level="3.7" data-path="find与xargs.html">
             
-                <a href="ch3_linux/find与xargs.html">
+                <a href="find与xargs.html">
             
                     
                         <b>3.7.</b>
@@ -1065,9 +1067,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.8" data-path="ch3_linux/文件系统.html">
+        <li class="chapter " data-level="3.8" data-path="文件系统.html">
             
-                <a href="ch3_linux/文件系统.html">
+                <a href="文件系统.html">
             
                     
                         <b>3.8.</b>
@@ -1110,7 +1112,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >梗概</a>
+        <a href=".." >日志模块</a>
     </h1>
 </div>
 
@@ -1125,38 +1127,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="unix&#x73AF;&#x5883;&#x4E2D;&#x7684;&#x5168;&#x6808;python&#x9AD8;&#x7EA7;&#x7F16;&#x7A0B;"><a href="https://1996scarlet.github.io/python-apue/" target="_blank">UNIX&#x73AF;&#x5883;&#x4E2D;&#x7684;&#x5168;&#x6808;Python&#x9AD8;&#x7EA7;&#x7F16;&#x7A0B;</a></h1>
-<p>Advanced Full-Stack Python Programming in the UNIX Environment</p>
-<h2 id="&#x5199;&#x4F5C;&#x76EE;&#x7684;">&#x5199;&#x4F5C;&#x76EE;&#x7684;</h2>
-<p>&#x4F5C;&#x4E3A;&#x590D;&#x6742;&#x8F6F;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x8BBE;&#x8BA1;&#x8005;&#x4E0E;&#x4F18;&#x7F8E;&#x4EE3;&#x7801;&#x7684;&#x521B;&#x9020;&#x8005;, &#x4F18;&#x79C0;&#x7684;&#x5168;&#x6808;&#x5DE5;&#x7A0B;&#x5E08;&#x4E0D;&#x4EC5;&#x9700;&#x8981;&#x719F;&#x6089;&#x5DE5;&#x5177;&#xFF08;&#x5305;&#x62EC;&#x4F46;&#x4E0D;&#x9650;&#x4E8E;: &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;, &#x7F16;&#x7A0B;&#x8BED;&#x8A00;, &#x6846;&#x67B6;, &#x534F;&#x8BAE;, &#x5F00;&#x6E90;&#x5E93;&#xFF09;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x6DF1;&#x5165;&#x7406;&#x89E3;&#x8FD9;&#x4E9B;&#x5DE5;&#x5177;&#x7684;&#x5185;&#x90E8;&#x8FD0;&#x884C;&#x673A;&#x5236;&#x3002;&#x5168;&#x6808;&#x7684;&#x57FA;&#x7840;&#x5C31;&#x662F;&#x624E;&#x5B9E;&#x7684;&#x8BA1;&#x7B97;&#x673A;&#x4E13;&#x4E1A;&#x77E5;&#x8BC6;&#xFF0C;&#x5168;&#x6808;&#x7684;&#x7075;&#x9B42;&#x5C31;&#x662F;&#x4E30;&#x5BCC;&#x7684;&#x7F16;&#x7A0B;&#x4E0E;&#x7CFB;&#x7EDF;&#x8BBE;&#x8BA1;&#x7ECF;&#x9A8C;&#xFF0C;&#x56E0;&#x6B64;&#x672C;&#x4E66;&#x4ECE;&#x57FA;&#x7840;&#x5165;&#x624B;&#xFF0C;&#x518D;&#x901A;&#x8FC7;&#x5B9E;&#x9645;&#x5DE5;&#x7A0B;&#x9879;&#x76EE;&#x63D0;&#x5347;&#x8BFB;&#x8005;&#x7684;&#x8BBE;&#x8BA1;&#x7ECF;&#x9A8C;&#x4E0E;&#x4EE3;&#x7801;&#x80FD;&#x529B;&#x3002;&#x672C;&#x4E66;&#x7684;&#x521B;&#x4F5C;&#x539F;&#x5219;&#x5C31;&#x662F;&#x5B9E;&#x7528;&#x6027;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x4F1A;&#x6709;&#x590D;&#x6742;&#x7684;&#x7406;&#x8BBA;&#x5305;&#x88C5;&#x4E0E;&#x8FF7;&#x60D1;&#x6027;&#x7684;&#x8BED;&#x8A00;&#x8868;&#x8FBE;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x559C;&#x6B22;<strong>&#x5012;&#x7ACB;&#x5012;&#x5199;&#x7EA2;&#x9ED1;&#x6811;</strong>&#x6216;&#x8005;<strong>&#x7814;&#x7A76;&#x5982;&#x4F55;&#x8BBE;&#x8BA1;ARM&#x82AF;&#x7247;</strong>&#xFF0C;&#x90A3;&#x4E48;&#x672C;&#x4E66;&#x663E;&#x7136;&#x4E0D;&#x9002;&#x5408;&#x4F60;&#x3002;</p>
-<h2 id="&#x9762;&#x5411;&#x4EBA;&#x7FA4;">&#x9762;&#x5411;&#x4EBA;&#x7FA4;</h2>
-<ul>
-<li>&#x672C;&#x4E66;&#x9762;&#x5411;&#x6709;&#x4E00;&#x5B9A;&#x7F16;&#x7A0B;&#x57FA;&#x7840;&#x7684;&#x4EBA;&#x7FA4;&#xFF0C;&#x9700;&#x8981;&#x8BFB;&#x8005;&#x719F;&#x6089;<code>C</code>&#x8BED;&#x8A00;&#x548C;<code>Python</code>&#x7684;&#x57FA;&#x672C;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x4E14;&#x719F;&#x6089;&#x5E38;&#x7528;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;</li>
-<li>&#x672C;&#x4E66;&#x524D;&#x534A;&#x90E8;&#x5206;&#x4FA7;&#x91CD;&#x4E8E;&#x8BA1;&#x7B97;&#x673A;&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#x7684;&#x8BB2;&#x89E3;&#xFF0C;&#x4E3A;&#x4E86;&#x52A0;&#x6DF1;&#x7406;&#x89E3;&#xFF0C;&#x4E2D;&#x95F4;&#x4F1A;&#x7A7F;&#x63D2;&#x4E00;&#x4E9B;<code>shell/C/Python</code>&#x7EC3;&#x4E60;&#x9898;&#x3002;</li>
-<li>&#x672C;&#x4E66;&#x4E2D;&#x95F4;&#x90E8;&#x5206;&#x9996;&#x5148;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x9488;&#x5BF9;&#x5E94;&#x7528;&#x573A;&#x666F;&#x9009;&#x62E9;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x5E93;&#xFF08;<code>MySQL</code>&#x3001;<code>MongoDB</code>&#x548C;<code>Redis</code>&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x4ECB;&#x7ECD;<code>Python</code>&#x7684;&#x9AD8;&#x7EA7;&#x8BED;&#x6CD5;&#x77E5;&#x8BC6;&#x4E0E;&#x7279;&#x6027;&#xFF0C;&#x6700;&#x540E;&#x901A;&#x8FC7;&#x5B9E;&#x9645;&#x9879;&#x76EE;&#x6848;&#x4F8B;&#x8BB2;&#x89E3;&#x7F51;&#x7EDC;&#x6846;&#x67B6;<code>Django</code>&#x548C;<code>Flask</code>&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x3002;</li>
-<li>&#x7531;&#x4E8E;&#x540E;&#x534A;&#x90E8;&#x5206;&#x6D89;&#x53CA;&#x5230;&#x4F7F;&#x7528;&#x7EDF;&#x8BA1;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5206;&#x6790;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x8BFB;&#x8005;<strong>&#x719F;&#x7EC3;&#x638C;&#x63E1;</strong>&#x6982;&#x7387;&#x8BBA;&#x4E0E;&#x6570;&#x7406;&#x7EDF;&#x8BA1;&#x7684;&#x76F8;&#x5173;&#x77E5;&#x8BC6;&#xFF0C;&#x800C;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x5730;&#x83B7;&#x53D6;&#x5927;&#x91CF;&#x6570;&#x636E;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x5148;&#x4ECB;&#x7ECD;&#x5206;&#x5E03;&#x5F0F;&#x722C;&#x866B;&#x6846;&#x67B6;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x3002;</li>
-<li>&#x672C;&#x4E66;&#x7684;&#x6700;&#x540E;&#x4F1A;&#x8BB2;&#x89E3;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x65B9;&#x6CD5;&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x89C6;&#x89C9;&#x9886;&#x57DF;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x7F16;&#x7A0B;&#x8FC7;&#x7A0B;&#x4E2D;&#x4F1A;&#x5927;&#x91CF;&#x4F7F;&#x7528;&#x77E9;&#x9635;&#x548C;&#x5411;&#x91CF;&#x8FD0;&#x7B97;&#x6765;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#x7684;&#x6267;&#x884C;&#x6548;&#x7387;&#xFF0C;&#x56E0;&#x6B64;&#x4F1A;&#x4ECB;&#x7ECD;<code>numpy</code>&#x7684;&#x9AD8;&#x7EA7;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF0C;&#x4EE5;&#x53CA;<code>CUDA</code>&#x7F16;&#x7A0B;&#x65B9;&#x6CD5;. &#x8FD9;&#x90E8;&#x5206;&#x9700;&#x8981;&#x8BFB;&#x8005;<strong>&#x719F;&#x7EC3;&#x638C;&#x63E1;</strong>&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#x7684;&#x76F8;&#x5173;&#x77E5;&#x8BC6;&#xFF0C;&#x5E76;&#x5177;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x82F1;&#x6587;&#x6587;&#x732E;&#x9605;&#x8BFB;&#x80FD;&#x529B;&#x3002;</li>
-</ul>
-<h2 id="&#x5168;&#x4E66;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;">&#x5168;&#x4E66;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;</h2>
-<ol>
-<li>&#x7ED3;&#x5408;&#x6E90;&#x7801;&#x5256;&#x6790;<code>Bash Shell</code>&#x8FD0;&#x884C;&#x673A;&#x5236;</li>
-<li>&#x6DF1;&#x5165;&#x7406;&#x89E3;<code>Linux</code>&#x5185;&#x6838;</li>
-<li>&#x8BA1;&#x7B97;&#x673A;&#x7F51;&#x7EDC;&#x57FA;&#x7840;&#x77E5;&#x8BC6;</li>
-<li>&#x6570;&#x636E;&#x5E93;&#x57FA;&#x7840;&#x77E5;&#x8BC6;</li>
-<li><code>Python</code>&#x9AD8;&#x7EA7;&#x7F16;&#x7A0B;</li>
-<li><code>WEB</code>&#x6846;&#x67B6;</li>
-<li>&#x5206;&#x5E03;&#x5F0F;&#x722C;&#x866B;&#x6846;&#x67B6;</li>
-<li>&#x6570;&#x636E;&#x5206;&#x6790;&#x4E0E;&#x53EF;&#x89C6;&#x5316;</li>
-<li>&#x6DF1;&#x5EA6;&#x8BA1;&#x7B97;&#x673A;&#x89C6;&#x89C9;</li>
-</ol>
-<h2 id="&#x7F16;&#x8BD1;&#x672C;&#x4E66;">&#x7F16;&#x8BD1;&#x672C;&#x4E66;</h2>
-<p>&#x83B7;&#x5F97;<code>Markdown</code>&#x683C;&#x5F0F;&#x6E90;&#x6587;&#x4EF6;:</p>
-<pre><code class="lang-bash">&gt; git <span class="hljs-built_in">clone</span> git@github.com:1996scarlet/python-apue.git
-</code></pre>
-<p>&#x7F16;&#x8BD1;&#x4E3A;&#x9759;&#x6001;&#x9875;&#x9762;:</p>
-<pre><code class="lang-bash">&gt; gitbook install
-&gt; gitbook build &lt;SUMMARY.md&#x6240;&#x5728;&#x8DEF;&#x5F84;&gt; &lt;&#x76EE;&#x6807;&#x8DEF;&#x5F84;&gt;
-</code></pre>
+                                <h1 id="&#x65E5;&#x5FD7;&#x6A21;&#x5757;">&#x65E5;&#x5FD7;&#x6A21;&#x5757;</h1>
 
                                 
                                 </section>
@@ -1184,8 +1155,12 @@
 
             
                 
+                <a href="线程安全与通信.html" class="navigation navigation-prev " aria-label="Previous page: 线程安全与通信">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="ch1_intro/作者简介.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 作者简介">
+                
+                <a href="pgrep与pkill.html" class="navigation navigation-next " aria-label="Next page: pgrep与pkill">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1196,53 +1171,53 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"梗概","level":"1.1","depth":1,"next":{"title":"作者简介","level":"1.2","depth":1,"path":"ch1_intro/作者简介.md","ref":"ch1_intro/作者简介.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","flexible-alerts","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/1996scarlet/python-apue"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"1info":{"label":"提示","icon":"fa fa-comments","className":"info"},"1warn":{"label":"注意","icon":"fa fa-warning","className":"warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{}},"theme":"default","author":"1996scarlet <1996scarlet@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"UNIX环境中的全栈Python高级编程","language":"zh-hans","gitbook":"*"},"file":{"path":"README.md","mtime":"2020-04-03T23:03:14.398Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-04T04:45:30.373Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"日志模块","level":"3.5","depth":1,"next":{"title":"pgrep与pkill","level":"3.6","depth":1,"path":"ch3_linux/pgrep与pkill.md","ref":"ch3_linux/pgrep与pkill.md","articles":[]},"previous":{"title":"线程安全与通信","level":"3.4.3","depth":2,"path":"ch3_linux/线程安全与通信.md","ref":"ch3_linux/线程安全与通信.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","flexible-alerts","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/1996scarlet/python-apue"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"1info":{"label":"提示","icon":"fa fa-comments","className":"info"},"1warn":{"label":"注意","icon":"fa fa-warning","className":"warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{}},"theme":"default","author":"1996scarlet <1996scarlet@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"UNIX环境中的全栈Python高级编程","language":"zh-hans","gitbook":"*"},"file":{"path":"ch3_linux/日志模块.md","mtime":"2020-04-04T03:25:31.562Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-04T04:45:30.373Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    <script src="gitbook/gitbook.js"></script>
-    <script src="gitbook/theme.js"></script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
     
         
-        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
 

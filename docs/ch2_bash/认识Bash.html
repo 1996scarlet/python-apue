@@ -1,0 +1,1305 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Bourne-Again Shell · UNIX环境中的全栈Python高级编程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="1996scarlet <1996scarlet@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../ch1_intro/UNIX基础知识.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Part I 绪论</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    梗概
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../ch1_intro/作者简介.html">
+            
+                <a href="../ch1_intro/作者简介.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    作者简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ch1_intro/UNIX基础知识.html">
+            
+                <a href="../ch1_intro/UNIX基础知识.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    UNIX基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part II 深入理解Bash</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="认识Bash.html">
+            
+                <a href="认识Bash.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Bourne-Again Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                        <b>2.2.</b>
+                    
+                    运行机制
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="mechanism/初始化.html">
+            
+                <a href="mechanism/初始化.html">
+            
+                    
+                        <b>2.2.1.</b>
+                    
+                    初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="mechanism/实现简单的命令.html">
+            
+                <a href="mechanism/实现简单的命令.html">
+            
+                    
+                        <b>2.2.2.</b>
+                    
+                    实现简单的命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="mechanism/命令的执行方式.html">
+            
+                <a href="mechanism/命令的执行方式.html">
+            
+                    
+                        <b>2.2.3.</b>
+                    
+                    命令的执行方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="mechanism/子shell.html">
+            
+                <a href="mechanism/子shell.html">
+            
+                    
+                        <b>2.2.4.</b>
+                    
+                    子shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="mechanism/文件描述符与重定向.html">
+            
+                <a href="mechanism/文件描述符与重定向.html">
+            
+                    
+                        <b>2.2.5.</b>
+                    
+                    文件描述符与重定向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="mechanism/自动补全.html">
+            
+                <a href="mechanism/自动补全.html">
+            
+                    
+                        <b>2.2.6.</b>
+                    
+                    自动补全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="mechanism/历史记录.html">
+            
+                <a href="mechanism/历史记录.html">
+            
+                    
+                        <b>2.2.7.</b>
+                    
+                    历史记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="mechanism/作业控制.html">
+            
+                <a href="mechanism/作业控制.html">
+            
+                    
+                        <b>2.2.8.</b>
+                    
+                    作业控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.9" data-path="mechanism/信号处理.html">
+            
+                <a href="mechanism/信号处理.html">
+            
+                    
+                        <b>2.2.9.</b>
+                    
+                    信号处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                        <b>2.3.</b>
+                    
+                    脚本编程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="grammar/变量.html">
+            
+                <a href="grammar/变量.html">
+            
+                    
+                        <b>2.3.1.</b>
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="grammar/符号与别名.html">
+            
+                <a href="grammar/符号与别名.html">
+            
+                    
+                        <b>2.3.2.</b>
+                    
+                    符号与别名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="grammar/正则表达式.html">
+            
+                <a href="grammar/正则表达式.html">
+            
+                    
+                        <b>2.3.3.</b>
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="grammar/流程控制.html">
+            
+                <a href="grammar/流程控制.html">
+            
+                    
+                        <b>2.3.4.</b>
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="grammar/调试脚本.html">
+            
+                <a href="grammar/调试脚本.html">
+            
+                    
+                        <b>2.3.5.</b>
+                    
+                    调试脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                        <b>2.4.</b>
+                    
+                    流编辑器--sed
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../快速上手.md">
+            
+                <span>
+            
+                    
+                        <b>2.4.1.</b>
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../编写sed脚本.md">
+            
+                <span>
+            
+                    
+                        <b>2.4.2.</b>
+                    
+                    编写脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../sed中的addr.md">
+            
+                <span>
+            
+                    
+                        <b>2.4.3.</b>
+                    
+                    sed中的addr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="../配合正则表达式.md">
+            
+                <span>
+            
+                    
+                        <b>2.4.4.</b>
+                    
+                    配合正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="../高级用法.md">
+            
+                <span>
+            
+                    
+                        <b>2.4.5.</b>
+                    
+                    高级用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.6" data-path="../应用案例.md">
+            
+                <span>
+            
+                    
+                        <b>2.4.6.</b>
+                    
+                    应用案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" >
+            
+                <span>
+            
+                    
+                        <b>2.5.</b>
+                    
+                    文本分析工具--awk
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="awk/awk_快速入门.html">
+            
+                <a href="awk/awk_快速入门.html">
+            
+                    
+                        <b>2.5.1.</b>
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="awk/awk_处理输入.html">
+            
+                <a href="awk/awk_处理输入.html">
+            
+                    
+                        <b>2.5.2.</b>
+                    
+                    处理输入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="awk/awk_处理输出.html">
+            
+                <a href="awk/awk_处理输出.html">
+            
+                    
+                        <b>2.5.3.</b>
+                    
+                    处理输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" data-path="awk/awk_数组与函数.html">
+            
+                <a href="awk/awk_数组与函数.html">
+            
+                    
+                        <b>2.5.4.</b>
+                    
+                    数组与函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5" data-path="awk/awk_应用案例.html">
+            
+                <a href="awk/awk_应用案例.html">
+            
+                    
+                        <b>2.5.5.</b>
+                    
+                    应用案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" >
+            
+                <span>
+            
+                    
+                        <b>2.6.</b>
+                    
+                    本章练习
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.6.1" data-path="exercise/基础命令练习.html">
+            
+                <a href="exercise/基础命令练习.html">
+            
+                    
+                        <b>2.6.1.</b>
+                    
+                    基础命令练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.2" data-path="exercise/综合脚本练习.html">
+            
+                <a href="exercise/综合脚本练习.html">
+            
+                    
+                        <b>2.6.2.</b>
+                    
+                    综合脚本练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part III 深入理解Linux内核</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                        <b>3.1.</b>
+                    
+                    引导过程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../ch3_linux/MBR与GPT.html">
+            
+                <a href="../ch3_linux/MBR与GPT.html">
+            
+                    
+                        <b>3.1.1.</b>
+                    
+                    MBR与GPT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../ch3_linux/运行级别.html">
+            
+                <a href="../ch3_linux/运行级别.html">
+            
+                    
+                        <b>3.1.2.</b>
+                    
+                    运行级别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../ch3_linux/设备管理.html">
+            
+                <a href="../ch3_linux/设备管理.html">
+            
+                    
+                        <b>3.1.3.</b>
+                    
+                    设备管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../ch3_linux/内存管理.html">
+            
+                <a href="../ch3_linux/内存管理.html">
+            
+                    
+                        <b>3.1.4.</b>
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                        <b>3.2.</b>
+                    
+                    系统调度
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../ch3_linux/信号.html">
+            
+                <a href="../ch3_linux/信号.html">
+            
+                    
+                        <b>3.2.1.</b>
+                    
+                    信号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../ch3_linux/进程状态.html">
+            
+                <a href="../ch3_linux/进程状态.html">
+            
+                    
+                        <b>3.2.2.</b>
+                    
+                    进程状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../ch3_linux/时间片.html">
+            
+                <a href="../ch3_linux/时间片.html">
+            
+                    
+                        <b>3.2.3.</b>
+                    
+                    时间片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../ch3_linux/调度算法.html">
+            
+                <a href="../ch3_linux/调度算法.html">
+            
+                    
+                        <b>3.2.4.</b>
+                    
+                    调度算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../ch3_linux/死锁.html">
+            
+                <a href="../ch3_linux/死锁.html">
+            
+                    
+                        <b>3.2.5.</b>
+                    
+                    死锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                        <b>3.3.</b>
+                    
+                    进程管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../ch3_linux/进程通信.html">
+            
+                <a href="../ch3_linux/进程通信.html">
+            
+                    
+                        <b>3.3.1.</b>
+                    
+                    进程通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../ch3_linux/新建进程.html">
+            
+                <a href="../ch3_linux/新建进程.html">
+            
+                    
+                        <b>3.3.2.</b>
+                    
+                    新建进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../ch3_linux/特殊进程.html">
+            
+                <a href="../ch3_linux/特殊进程.html">
+            
+                    
+                        <b>3.3.3.</b>
+                    
+                    特殊进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="../ch3_linux/孤儿进程与僵尸进程.html">
+            
+                <a href="../ch3_linux/孤儿进程与僵尸进程.html">
+            
+                    
+                        <b>3.3.4.</b>
+                    
+                    孤儿进程与僵尸进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="../ch3_linux/守护进程.html">
+            
+                <a href="../ch3_linux/守护进程.html">
+            
+                    
+                        <b>3.3.5.</b>
+                    
+                    守护进程（服务）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <span>
+            
+                    
+                        <b>3.4.</b>
+                    
+                    线程管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../ch3_linux/内核级线程.html">
+            
+                <a href="../ch3_linux/内核级线程.html">
+            
+                    
+                        <b>3.4.1.</b>
+                    
+                    内核级线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../ch3_linux/用户级线程.html">
+            
+                <a href="../ch3_linux/用户级线程.html">
+            
+                    
+                        <b>3.4.2.</b>
+                    
+                    用户级线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../ch3_linux/线程安全与通信.html">
+            
+                <a href="../ch3_linux/线程安全与通信.html">
+            
+                    
+                        <b>3.4.3.</b>
+                    
+                    线程安全与通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../ch3_linux/日志模块.html">
+            
+                <a href="../ch3_linux/日志模块.html">
+            
+                    
+                        <b>3.5.</b>
+                    
+                    日志模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../ch3_linux/pgrep与pkill.html">
+            
+                <a href="../ch3_linux/pgrep与pkill.html">
+            
+                    
+                        <b>3.6.</b>
+                    
+                    pgrep与pkill
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../ch3_linux/find与xargs.html">
+            
+                <a href="../ch3_linux/find与xargs.html">
+            
+                    
+                        <b>3.7.</b>
+                    
+                    find与xargs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../ch3_linux/文件系统.html">
+            
+                <a href="../ch3_linux/文件系统.html">
+            
+                    
+                        <b>3.8.</b>
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Bourne-Again Shell</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="shell-&#x7684;&#x79CD;&#x7C7B;">Shell &#x7684;&#x79CD;&#x7C7B;</h1>
+<p><strong>sh</strong> -- <code>Bourne Shell</code> &#xFF1A;&#x5728; <code>v7</code> &#x7248;&#x672C;&#x4E2D;&#x5F15;&#x5165;&#x7684;&#x9996;&#x4E2A;&#x6807;&#x51C6; <code>Unix Shell</code> &#x7A0B;&#x5E8F;&#xFF0C;&#x4EC5;&#x652F;&#x6301;&#x6700;&#x57FA;&#x7840;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x4F46;&#x76EE;&#x524D;&#x4ECD;&#x5728; <code>Unix</code> &#x7CFB;&#x7EDF;&#x548C;&#x4E0E; <code>Unix</code> &#x76F8;&#x5173;&#x7684;&#x73AF;&#x5883;&#x4E2D;&#x4F7F;&#x7528;&#x3002;&#x5728; <code>Linux</code> &#x7CFB;&#x7EDF;&#x4E2D;&#x4E5F;&#x63D0;&#x4F9B;&#x4E86; <code>sh</code> &#x7528;&#x4E8E;&#x5B9E;&#x73B0;&#x5BF9; <code>Unix</code> &#x7A0B;&#x5E8F;&#x7684;&#x517C;&#x5BB9;&#x3002;</p>
+<p><strong>bash</strong> -- <code>GNU Bourne-Again SHell</code> &#xFF1A; <code>GNU</code> &#x94A6;&#x5B9A;&#x7684;&#x6807;&#x51C6; <code>shell</code> &#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x4E5F;&#x662F; &#x5927;&#x90E8;&#x5206; <code>Linux</code> &#x53D1;&#x884C;&#x7248;&#x548C; <code>Mac OS X</code> &#x4E0A;&#x7684;&#x9ED8;&#x8BA4; <code>shell</code> &#x3002;&#x4F5C;&#x4E3A; <code>sh</code> &#x7684;&#x8D85;&#x96C6;( <code>superset</code> ), <code>bash</code> &#x5728;&#x65B9;&#x4FBF;&#x521D;&#x5B66;&#x8005;&#x4F7F;&#x7528;&#x7684;&#x540C;&#x65F6;&#x4E5F;&#x4E3A;&#x4E13;&#x4E1A;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x4E86;&#x5927;&#x91CF;&#x7684;&#x9AD8;&#x7EA7;&#x529F;&#x80FD;&#xFF0C;&#x800C;&#x4E14;&#x6709;&#x826F;&#x597D;&#x7684;&#x517C;&#x5BB9;&#x6027;&#x3002;<a href="https://1996scarlet.github.io/python-apue/" target="_blank">&#x672C;&#x4E66;</a>&#x4E2D;&#x6240;&#x6709;&#x7684;&#x7EC3;&#x4E60;&#x4E0E;&#x793A;&#x4F8B;&#x90FD;&#x4F7F;&#x7528; <code>Ubuntu 20.04 LTS</code> &#x81EA;&#x5E26;&#x7684; <code>bash 5.3.0</code> &#x3002;</p>
+<p><strong>csh</strong> -- <code>C shell</code> &#xFF1A;&#x8BED;&#x6CD5;&#x7C7B;&#x4F3C; <code>C</code> &#x8BED;&#x8A00;&#x7684; <code>shell</code> &#xFF0C;&#x7531; <code>Bill Joy</code> &#x8BBE;&#x8BA1;&#xFF0C;&#x76EE;&#x524D;&#x5F88;&#x5C11;&#x4F7F;&#x7528;&#x3002;</p>
+<p><strong>tcsh</strong> -- <code>TENEX C shell</code> &#xFF1A; <code>csh</code> &#x7684;&#x5347;&#x7EA7;&#x7248;&#xFF0C;&#x5B8C;&#x5168;&#x517C;&#x5BB9; <code>csh</code> &#xFF0C;&#x6DFB;&#x52A0;&#x4E86;&#x81EA;&#x52A8;&#x8865;&#x5168;&#x3001;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x3001;&#x4F5C;&#x4E1A;&#x63A7;&#x5236;&#x7B49;&#x529F;&#x80FD;&#x5E76;&#x5177;&#x6709;&#x66F4;&#x5F3A;&#x5927;&#x7684;&#x8BED;&#x6CD5;&#x652F;&#x6301;&#x3002;</p>
+<p><strong>zsh</strong> -- <code>Z shell</code> &#xFF1A;&#x529F;&#x80FD;&#x66F4;&#x52A0;&#x5F3A;&#x5927;&#x7684; <code>shell</code> &#xFF0C;&#x4E5F;&#x662F; <code>Mac OS Catalina</code> &#x7248;&#x672C;&#x4E4B;&#x540E;&#x7684;&#x9ED8;&#x8BA4; <code>shell</code> &#xFF0C;&#x76F8;&#x6BD4;&#x4E8E; <code>bash</code> &#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x52A0;&#x667A;&#x80FD;&#x7684;&#x547D;&#x4EE4;&#x8865;&#x5168;&#x548C;&#x63D0;&#x793A;&#x529F;&#x80FD;&#x4EE5;&#x53CA;&#x5BF9;&#x5176;&#x4ED6;&#x529F;&#x80FD;&#x7684;&#x4F18;&#x5316;&#xFF0C;&#x4F46;&#x662F;&#x7531;&#x4E8E;&#x5176;&#x8FD0;&#x884C;&#x6548;&#x7387;&#x8F83;&#x5DEE;&#x800C;&#x4E14;&#x8BED;&#x6CD5;&#x4E0E; <code>bash</code> &#x6709;&#x7EC6;&#x5FAE;&#x5DEE;&#x522B;&#xFF0C;&#x56E0;&#x6B64;&#x76EE;&#x524D;&#x4E0D;&#x9002;&#x5408;&#x5728;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E2D;&#x4F7F;&#x7528;&#x3002;</p>
+<h2 id="&#x81EA;&#x5B9A;&#x4E49;&#x89E3;&#x91CA;&#x5668;">&#x81EA;&#x5B9A;&#x4E49;&#x89E3;&#x91CA;&#x5668;</h2>
+<p>&#x5728; <code>/etc/shells</code> &#x6587;&#x4EF6;&#x4E2D;&#x4F1A;&#x5217;&#x51FA;&#x5F53;&#x524D;&#x4E2D;&#x7CFB;&#x7EDF;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x7684; <code>shell</code> &#x89E3;&#x91CA;&#x5668;&#xFF1A;</p>
+<pre><code class="lang-bash">&gt; cat /etc/shells
+<span class="hljs-comment"># /etc/shells: valid login shells  </span>
+/bin/sh  
+/bin/bash  
+/usr/bin/bash  
+/bin/rbash  
+/usr/bin/rbash  
+/bin/dash  
+/usr/bin/dash  
+/bin/tcsh
+/usr/bin/tcsh
+</code></pre>
+<p>&#x7528;&#x6237;&#x767B;&#x5F55;&#x65F6;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x7684; <code>shell</code> &#x5B9A;&#x4E49;&#x5728; <code>/etc/passwd</code> &#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x914D;&#x5408; <code>USER</code> &#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x9ED8;&#x8BA4; <code>shell</code> &#xFF1A;</p>
+<pre><code class="lang-bash">&gt; cat /etc/passwd | grep <span class="hljs-variable">$USER</span>  
+remilia:x:1000:1000:Remilia Scarlet,,,:/home/remilia:/bin/bash
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x5728;&#x6587;&#x4EF6;&#x5F00;&#x5934;&#x6307;&#x5B9A;<a href="https://bash.cyberciti.biz/guide/Shebang" target="_blank">Shebang</a>&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x6267;&#x884C; <code>shell</code> &#x811A;&#x672C;&#x65F6;&#x7528;&#x7684;&#x89E3;&#x91CA;&#x5668;&#xFF0C;&#x5728; <code>Python</code> &#x548C; <code>Perl</code> &#x4E2D;&#x4E5F;&#x6709;&#x7C7B;&#x4F3C;&#x7684;&#x8BBE;&#x5B9A;&#x3002;</p>
+<pre><code class="lang-bash"><span class="hljs-comment">#!/usr/bin/python</span>
+</code></pre>
+<h1 id="bash-&#x7F16;&#x8F91;&#x6A21;&#x5F0F;">Bash &#x7F16;&#x8F91;&#x6A21;&#x5F0F;</h1>
+<p><code>bash</code> &#x6709; <code>emacs</code> (&#x9ED8;&#x8BA4;)&#x548C; <code>vi</code> &#x4E24;&#x79CD;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;, &#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>bind -V</code> &#x67E5;&#x770B;&#x5F53;&#x524D;&#x7684;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;, &#x901A;&#x8FC7; <code>set -o</code> &#x8BBE;&#x7F6E;&#x5FEB;&#x6377;&#x952E;&#x6A21;&#x5F0F;&#x3002;</p>
+<pre><code class="lang-bash">&gt; <span class="hljs-built_in">bind</span> -V | grep keymap
+keymap is <span class="hljs-built_in">set</span> to <span class="hljs-string">&apos;emacs&apos;</span>
+&gt; <span class="hljs-built_in">set</span> -o vi
+&gt; <span class="hljs-built_in">bind</span> -V | grep keymap
+keymap is <span class="hljs-built_in">set</span> to `vi-insert<span class="hljs-string">&apos;
+</span></code></pre>
+<h2 id="&#x5149;&#x6807;&#x63A7;&#x5236;&#x5FEB;&#x6377;&#x952E;">&#x5149;&#x6807;&#x63A7;&#x5236;&#x5FEB;&#x6377;&#x952E;</h2>
+<ul>
+<li>&#x5149;&#x6807;&#x8DF3;&#x8F6C;&#x5230;&#x884C;&#x9996; <code>Ctrl + A</code> </li>
+<li>&#x5149;&#x6807;&#x8DF3;&#x8F6C;&#x5230;&#x884C;&#x5C3E; <code>Ctrl + E</code> </li>
+<li>&#x5149;&#x6807;&#x5411;&#x5DE6;&#x79FB;&#x4E00;&#x4F4D; <code>Ctrl + B</code> </li>
+<li>&#x5149;&#x6807;&#x5411;&#x53F3;&#x79FB;&#x4E00;&#x4F4D; <code>Ctrl + F</code> </li>
+<li>&#x5728;&#x884C;&#x9996;&#x4E0E;&#x5F53;&#x524D;&#x5149;&#x6807;&#x4F4D;&#x7F6E;&#x4E4B;&#x95F4;&#x5207;&#x6362; <code>Ctrl + XX</code> </li>
+</ul>
+<h2 id="&#x4F5C;&#x4E1A;&#x63A7;&#x5236;&#x5FEB;&#x6377;&#x952E;">&#x4F5C;&#x4E1A;&#x63A7;&#x5236;&#x5FEB;&#x6377;&#x952E;</h2>
+<ul>
+<li>&#x4E2D;&#x65AD;&#x524D;&#x53F0;&#x4F5C;&#x4E1A;(SIGINT) <code>Ctrl + C</code> </li>
+<li>EOF&#xFF08;&#x7ED3;&#x675F;&#x6807;&#x51C6;&#x8F93;&#x5165;stdin&#xFF09;&#x3001;&#x9000;&#x51FA;&#x524D;&#x53F0;&#x4F5C;&#x4E1A;&#x3001;&#x767B;&#x51FA;&#x4F1A;&#x8BDD; <code>Ctrl + D</code> </li>
+<li>&#x6302;&#x8D77;&#x524D;&#x53F0;&#x4F5C;&#x4E1A;(SIGTSTP) <code>Ctrl + Z</code> </li>
+</ul>
+<h2 id="&#x6587;&#x672C;&#x63A7;&#x5236;&#x5FEB;&#x6377;&#x952E;">&#x6587;&#x672C;&#x63A7;&#x5236;&#x5FEB;&#x6377;&#x952E;</h2>
+<ul>
+<li>Backspace <code>Ctrl + H</code> </li>
+<li>Delete <code>Ctrl + D</code> </li>
+<li>&#x6E05;&#x5C4F; <code>Ctrl + L</code> </li>
+<li>&#x5220;&#x9664;&#x4ECE;&#x5F53;&#x524D;&#x5149;&#x6807;&#x4F4D;&#x7F6E;&#x5230;&#x884C;&#x9996;&#x7684;&#x5168;&#x90E8;&#x5B57;&#x7B26; <code>Ctrl + U</code> </li>
+<li>&#x5220;&#x9664;&#x4ECE;&#x5F53;&#x524D;&#x5149;&#x6807;&#x4F4D;&#x7F6E;&#x5230;&#x884C;&#x5C3E;&#x7684;&#x5168;&#x90E8;&#x5B57;&#x7B26; <code>Ctrl + K</code> </li>
+</ul>
+<h2 id="&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x5FEB;&#x6377;&#x952E;">&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x5FEB;&#x6377;&#x952E;</h2>
+<ul>
+<li>&#x641C;&#x7D22;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#xFF08;&#x6700;&#x8FD1;&#x6700;&#x5339;&#x914D;&#x539F;&#x5219;&#xFF09; <code>Ctrl + R</code> </li>
+<li>&#x7531;&#x8FD1;&#x5230;&#x8FDC;&#x83B7;&#x5F97;&#x4E00;&#x6761;&#x5386;&#x53F2;&#x8BB0;&#x5F55; <code>Ctrl + P</code> </li>
+<li>&#x7531;&#x8FDC;&#x5230;&#x8FD1;&#x83B7;&#x5F97;&#x4E00;&#x6761;&#x5386;&#x53F2;&#x8BB0;&#x5F55; <code>Ctrl + N</code> </li>
+<li>&#x7531;&#x8FD1;&#x5230;&#x8FDC;&#x83B7;&#x5F97;&#x4E00;&#x6761;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x8BCD; <code>Alt + .</code> </li>
+</ul>
+<pre><code class="lang-shell">&gt; touch /tmp/this-is-a-long-file-name.99839.op
+&gt; chmod a+x &lt;Alt + .&gt;
+# &#x7B49;&#x4EF7;&#x4E8E; chmod a+x /tmp/this-is-a-long-file-name.99839.op
+</code></pre>
+<h2 id="&#x6D41;&#x63A7;&#x5236;&#xFF08;&#x81EA;&#x4FE1;&#x76F2;&#x6253;&#x6A21;&#x5F0F;&#xFF09;">&#x6D41;&#x63A7;&#x5236;&#xFF08;&#x81EA;&#x4FE1;&#x76F2;&#x6253;&#x6A21;&#x5F0F;&#xFF09;</h2>
+<ul>
+<li>&#x9501;&#x5B9A;&#x8F93;&#x51FA;&#x6D41;(XOFF) <code>Ctrl + S</code> </li>
+<li>&#x91CA;&#x653E;&#x8F93;&#x51FA;&#x6D41;(XON) <code>Ctrl + Q</code> </li>
+</ul>
+<pre><code class="lang-shell">&gt; &lt;Ctrl + S&gt; date &lt;Ctrl + J&gt; uname -sr &lt;Ctrl + J&gt; &lt;Ctrl + Q&gt; 
+# &#x7531;&#x4E8E;&#x8F93;&#x51FA;&#x6D41;&#x4F1A;&#x9501;&#x5B9A;&#xFF0C;&#x7EC8;&#x7AEF;&#x4E0D;&#x4F1A;&#x663E;&#x793A;&#x4EFB;&#x4F55;&#x8F93;&#x51FA;, &#x91CA;&#x653E;&#x540E;&#x4F1A;&#x663E;&#x793A;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;
+&gt; date
+Sat 22 Feb 2020 01:31:04 PM CST
+&gt; uname -sr
+Linux CT7GK 5.3.0-40-generic
+</code></pre>
+<h1 id="&#x53C2;&#x8003;&#x5185;&#x5BB9;">&#x53C2;&#x8003;&#x5185;&#x5BB9;</h1>
+<ul>
+<li>UNIX&#x73AF;&#x5883;&#x9AD8;&#x7EA7;&#x7F16;&#x7A0B;</li>
+<li><a href="https://linux.cn/article-5660-1.html" target="_blank">Bash&#x5FEB;&#x6377;&#x952E;&#x5927;&#x5168;</a></li>
+<li><a href="https://linuxconfig.org/linux-command-line-bash-shell-shortcuts" target="_blank">Linux Command Line &amp; Bash Shell Shortcuts</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../ch1_intro/UNIX基础知识.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: UNIX基础知识">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Bourne-Again Shell","level":"2.1","depth":1,"next":{"title":"运行机制","level":"2.2","depth":1,"ref":"","articles":[{"title":"初始化","level":"2.2.1","depth":2,"path":"ch2_bash/mechanism/初始化.md","ref":"ch2_bash/mechanism/初始化.md","articles":[]},{"title":"实现简单的命令","level":"2.2.2","depth":2,"path":"ch2_bash/mechanism/实现简单的命令.md","ref":"ch2_bash/mechanism/实现简单的命令.md","articles":[]},{"title":"命令的执行方式","level":"2.2.3","depth":2,"path":"ch2_bash/mechanism/命令的执行方式.md","ref":"ch2_bash/mechanism/命令的执行方式.md","articles":[]},{"title":"子shell","level":"2.2.4","depth":2,"path":"ch2_bash/mechanism/子shell.md","ref":"ch2_bash/mechanism/子shell.md","articles":[]},{"title":"文件描述符与重定向","level":"2.2.5","depth":2,"path":"ch2_bash/mechanism/文件描述符与重定向.md","ref":"ch2_bash/mechanism/文件描述符与重定向.md","articles":[]},{"title":"自动补全","level":"2.2.6","depth":2,"path":"ch2_bash/mechanism/自动补全.md","ref":"ch2_bash/mechanism/自动补全.md","articles":[]},{"title":"历史记录","level":"2.2.7","depth":2,"path":"ch2_bash/mechanism/历史记录.md","ref":"ch2_bash/mechanism/历史记录.md","articles":[]},{"title":"作业控制","level":"2.2.8","depth":2,"path":"ch2_bash/mechanism/作业控制.md","ref":"ch2_bash/mechanism/作业控制.md","articles":[]},{"title":"信号处理","level":"2.2.9","depth":2,"path":"ch2_bash/mechanism/信号处理.md","ref":"ch2_bash/mechanism/信号处理.md","articles":[]}]},"previous":{"title":"UNIX基础知识","level":"1.3","depth":1,"path":"ch1_intro/UNIX基础知识.md","ref":"ch1_intro/UNIX基础知识.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","flexible-alerts","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/1996scarlet/python-apue"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"1info":{"label":"提示","icon":"fa fa-comments","className":"info"},"1warn":{"label":"注意","icon":"fa fa-warning","className":"warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{}},"theme":"default","author":"1996scarlet <1996scarlet@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"UNIX环境中的全栈Python高级编程","language":"zh-hans","gitbook":"*"},"file":{"path":"ch2_bash/认识Bash.md","mtime":"2020-04-04T02:27:03.186Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-04T04:45:30.373Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

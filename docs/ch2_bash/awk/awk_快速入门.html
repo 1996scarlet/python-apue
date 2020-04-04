@@ -1,0 +1,1601 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>快速入门 · UNIX环境中的全栈Python高级编程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="1996scarlet <1996scarlet@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="awk_处理输入.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Part I 绪论</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    梗概
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../ch1_intro/作者简介.html">
+            
+                <a href="../../ch1_intro/作者简介.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    作者简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../ch1_intro/UNIX基础知识.html">
+            
+                <a href="../../ch1_intro/UNIX基础知识.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    UNIX基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part II 深入理解Bash</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../认识Bash.html">
+            
+                <a href="../认识Bash.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Bourne-Again Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                        <b>2.2.</b>
+                    
+                    运行机制
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../mechanism/初始化.html">
+            
+                <a href="../mechanism/初始化.html">
+            
+                    
+                        <b>2.2.1.</b>
+                    
+                    初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../mechanism/实现简单的命令.html">
+            
+                <a href="../mechanism/实现简单的命令.html">
+            
+                    
+                        <b>2.2.2.</b>
+                    
+                    实现简单的命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../mechanism/命令的执行方式.html">
+            
+                <a href="../mechanism/命令的执行方式.html">
+            
+                    
+                        <b>2.2.3.</b>
+                    
+                    命令的执行方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../mechanism/子shell.html">
+            
+                <a href="../mechanism/子shell.html">
+            
+                    
+                        <b>2.2.4.</b>
+                    
+                    子shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="../mechanism/文件描述符与重定向.html">
+            
+                <a href="../mechanism/文件描述符与重定向.html">
+            
+                    
+                        <b>2.2.5.</b>
+                    
+                    文件描述符与重定向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="../mechanism/自动补全.html">
+            
+                <a href="../mechanism/自动补全.html">
+            
+                    
+                        <b>2.2.6.</b>
+                    
+                    自动补全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="../mechanism/历史记录.html">
+            
+                <a href="../mechanism/历史记录.html">
+            
+                    
+                        <b>2.2.7.</b>
+                    
+                    历史记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="../mechanism/作业控制.html">
+            
+                <a href="../mechanism/作业控制.html">
+            
+                    
+                        <b>2.2.8.</b>
+                    
+                    作业控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.9" data-path="../mechanism/信号处理.html">
+            
+                <a href="../mechanism/信号处理.html">
+            
+                    
+                        <b>2.2.9.</b>
+                    
+                    信号处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                        <b>2.3.</b>
+                    
+                    脚本编程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../grammar/变量.html">
+            
+                <a href="../grammar/变量.html">
+            
+                    
+                        <b>2.3.1.</b>
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../grammar/符号与别名.html">
+            
+                <a href="../grammar/符号与别名.html">
+            
+                    
+                        <b>2.3.2.</b>
+                    
+                    符号与别名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../grammar/正则表达式.html">
+            
+                <a href="../grammar/正则表达式.html">
+            
+                    
+                        <b>2.3.3.</b>
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../grammar/流程控制.html">
+            
+                <a href="../grammar/流程控制.html">
+            
+                    
+                        <b>2.3.4.</b>
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="../grammar/调试脚本.html">
+            
+                <a href="../grammar/调试脚本.html">
+            
+                    
+                        <b>2.3.5.</b>
+                    
+                    调试脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                        <b>2.4.</b>
+                    
+                    流编辑器--sed
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../快速上手.md">
+            
+                <span>
+            
+                    
+                        <b>2.4.1.</b>
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../../编写sed脚本.md">
+            
+                <span>
+            
+                    
+                        <b>2.4.2.</b>
+                    
+                    编写脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../../sed中的addr.md">
+            
+                <span>
+            
+                    
+                        <b>2.4.3.</b>
+                    
+                    sed中的addr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="../../配合正则表达式.md">
+            
+                <span>
+            
+                    
+                        <b>2.4.4.</b>
+                    
+                    配合正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="../../高级用法.md">
+            
+                <span>
+            
+                    
+                        <b>2.4.5.</b>
+                    
+                    高级用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.6" data-path="../../应用案例.md">
+            
+                <span>
+            
+                    
+                        <b>2.4.6.</b>
+                    
+                    应用案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" >
+            
+                <span>
+            
+                    
+                        <b>2.5.</b>
+                    
+                    文本分析工具--awk
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.5.1" data-path="awk_快速入门.html">
+            
+                <a href="awk_快速入门.html">
+            
+                    
+                        <b>2.5.1.</b>
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="awk_处理输入.html">
+            
+                <a href="awk_处理输入.html">
+            
+                    
+                        <b>2.5.2.</b>
+                    
+                    处理输入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="awk_处理输出.html">
+            
+                <a href="awk_处理输出.html">
+            
+                    
+                        <b>2.5.3.</b>
+                    
+                    处理输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" data-path="awk_数组与函数.html">
+            
+                <a href="awk_数组与函数.html">
+            
+                    
+                        <b>2.5.4.</b>
+                    
+                    数组与函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5" data-path="awk_应用案例.html">
+            
+                <a href="awk_应用案例.html">
+            
+                    
+                        <b>2.5.5.</b>
+                    
+                    应用案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" >
+            
+                <span>
+            
+                    
+                        <b>2.6.</b>
+                    
+                    本章练习
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.6.1" data-path="../exercise/基础命令练习.html">
+            
+                <a href="../exercise/基础命令练习.html">
+            
+                    
+                        <b>2.6.1.</b>
+                    
+                    基础命令练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.2" data-path="../exercise/综合脚本练习.html">
+            
+                <a href="../exercise/综合脚本练习.html">
+            
+                    
+                        <b>2.6.2.</b>
+                    
+                    综合脚本练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part III 深入理解Linux内核</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                        <b>3.1.</b>
+                    
+                    引导过程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../ch3_linux/MBR与GPT.html">
+            
+                <a href="../../ch3_linux/MBR与GPT.html">
+            
+                    
+                        <b>3.1.1.</b>
+                    
+                    MBR与GPT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../ch3_linux/运行级别.html">
+            
+                <a href="../../ch3_linux/运行级别.html">
+            
+                    
+                        <b>3.1.2.</b>
+                    
+                    运行级别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../ch3_linux/设备管理.html">
+            
+                <a href="../../ch3_linux/设备管理.html">
+            
+                    
+                        <b>3.1.3.</b>
+                    
+                    设备管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../ch3_linux/内存管理.html">
+            
+                <a href="../../ch3_linux/内存管理.html">
+            
+                    
+                        <b>3.1.4.</b>
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                        <b>3.2.</b>
+                    
+                    系统调度
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../../ch3_linux/信号.html">
+            
+                <a href="../../ch3_linux/信号.html">
+            
+                    
+                        <b>3.2.1.</b>
+                    
+                    信号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../../ch3_linux/进程状态.html">
+            
+                <a href="../../ch3_linux/进程状态.html">
+            
+                    
+                        <b>3.2.2.</b>
+                    
+                    进程状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../../ch3_linux/时间片.html">
+            
+                <a href="../../ch3_linux/时间片.html">
+            
+                    
+                        <b>3.2.3.</b>
+                    
+                    时间片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../../ch3_linux/调度算法.html">
+            
+                <a href="../../ch3_linux/调度算法.html">
+            
+                    
+                        <b>3.2.4.</b>
+                    
+                    调度算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../../ch3_linux/死锁.html">
+            
+                <a href="../../ch3_linux/死锁.html">
+            
+                    
+                        <b>3.2.5.</b>
+                    
+                    死锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                        <b>3.3.</b>
+                    
+                    进程管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../../ch3_linux/进程通信.html">
+            
+                <a href="../../ch3_linux/进程通信.html">
+            
+                    
+                        <b>3.3.1.</b>
+                    
+                    进程通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../../ch3_linux/新建进程.html">
+            
+                <a href="../../ch3_linux/新建进程.html">
+            
+                    
+                        <b>3.3.2.</b>
+                    
+                    新建进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../../ch3_linux/特殊进程.html">
+            
+                <a href="../../ch3_linux/特殊进程.html">
+            
+                    
+                        <b>3.3.3.</b>
+                    
+                    特殊进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="../../ch3_linux/孤儿进程与僵尸进程.html">
+            
+                <a href="../../ch3_linux/孤儿进程与僵尸进程.html">
+            
+                    
+                        <b>3.3.4.</b>
+                    
+                    孤儿进程与僵尸进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="../../ch3_linux/守护进程.html">
+            
+                <a href="../../ch3_linux/守护进程.html">
+            
+                    
+                        <b>3.3.5.</b>
+                    
+                    守护进程（服务）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <span>
+            
+                    
+                        <b>3.4.</b>
+                    
+                    线程管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../../ch3_linux/内核级线程.html">
+            
+                <a href="../../ch3_linux/内核级线程.html">
+            
+                    
+                        <b>3.4.1.</b>
+                    
+                    内核级线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../../ch3_linux/用户级线程.html">
+            
+                <a href="../../ch3_linux/用户级线程.html">
+            
+                    
+                        <b>3.4.2.</b>
+                    
+                    用户级线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../../ch3_linux/线程安全与通信.html">
+            
+                <a href="../../ch3_linux/线程安全与通信.html">
+            
+                    
+                        <b>3.4.3.</b>
+                    
+                    线程安全与通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../ch3_linux/日志模块.html">
+            
+                <a href="../../ch3_linux/日志模块.html">
+            
+                    
+                        <b>3.5.</b>
+                    
+                    日志模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../../ch3_linux/pgrep与pkill.html">
+            
+                <a href="../../ch3_linux/pgrep与pkill.html">
+            
+                    
+                        <b>3.6.</b>
+                    
+                    pgrep与pkill
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../../ch3_linux/find与xargs.html">
+            
+                <a href="../../ch3_linux/find与xargs.html">
+            
+                    
+                        <b>3.7.</b>
+                    
+                    find与xargs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../../ch3_linux/文件系统.html">
+            
+                <a href="../../ch3_linux/文件系统.html">
+            
+                    
+                        <b>3.8.</b>
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >快速入门</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h1>
+<p><code>awk</code>&#x7684;&#x57FA;&#x672C;&#x529F;&#x80FD;&#x662F;&#x5728;&#x6587;&#x4EF6;&#x4E2D;&#x641C;&#x7D22;&#x5305;&#x542B;&#x67D0;&#x4E9B;&#x6A21;&#x5F0F;&#x7684;&#x884C;&#x5E76;&#x6267;&#x884C;&#x5BF9;&#x5E94;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x4F5C;&#x4E3A;&#x6570;&#x636E;&#x9A71;&#x52A8;&#x7684;&#x5DE5;&#x5177;&#xFF0C;<code>awk</code>&#x5185;&#x7F6E;&#x4E86;&#x4E00;&#x79CD;&#x89E3;&#x91CA;&#x578B;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#xFF0C;&#x8FD9;&#x79CD;&#x8BED;&#x8A00;&#x7684;&#x5904;&#x7406;&#x6D41;&#x7A0B;&#x4E3A;&#xFF1A;</p>
+<ul>
+<li>&#x63CF;&#x8FF0;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x7684;&#x6A21;&#x5F0F;&#xFF08;<code>pattern</code>&#xFF09;</li>
+<li>&#x7ED9;&#x51FA;&#x5BF9;&#x5E94;&#x6A21;&#x5F0F;&#x7684;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF08;<code>action</code>&#xFF09;</li>
+<li>&#x5728;&#x8F93;&#x5165;&#x4E2D;&#x5BFB;&#x627E;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x7684;&#x6570;&#x636E;</li>
+<li>&#x6839;&#x636E;&#x4E8B;&#x5148;&#x5B9A;&#x4E49;&#x7684;&#x5904;&#x7406;<code>action</code>&#x8FDB;&#x884C;&#x64CD;&#x4F5C;</li>
+</ul>
+<p>&#x8FD9;&#x79CD;&#x7C7B;&#x4F3C;<code>SQL</code>&#x7684;&#x6267;&#x884C;&#x65B9;&#x5F0F;&#x5BFC;&#x81F4;<code>awk</code>&#x9002;&#x5408;&#x88AB;&#x7528;&#x6765;&#x5904;&#x7406;&#x6570;&#x636E;&#xFF0C;&#x547D;&#x4EE4;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-shell">awk &apos;program&apos; input-file1 input-file2 ...
+</code></pre>
+<p>&#x5982;&#x679C;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF08;<code>program</code>&#xFF09;&#x8F83;&#x957F; &#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x653E;&#x5230;&#x811A;&#x672C;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x7528;<code>-f</code>&#x9009;&#x9879;&#x52A0;&#x8F7D;&#xFF1A;</p>
+<pre><code class="lang-shell">awk -f program-file input-file1 input-file2 &#x2026;
+</code></pre>
+<p>&#x5176;&#x4E2D;&#xFF0C;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#x7684;&#x683C;&#x5F0F;&#x6309;&#x7167;<code>pattern { action }</code>&#x6A21;&#x5F0F;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-shell">&gt; cat test.awk
+#!/usr/bin/awk -f
+BEGIN { print &quot;Don&apos;t Panic!&quot;}
+&gt; chmod +x test.awk
+&gt; ./test.awk
+Don&apos;t Panic!
+</code></pre>
+<p>&#x5728;&#x672C;&#x4F8B;&#x4E2D;&#x6211;&#x4EEC;&#x65B0;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x5C06;&#x8BE5;&#x6587;&#x4EF6;&#x7684;&#x89E3;&#x91CA;&#x5668;&#x6307;&#x5B9A;&#x4E3A;<code>awk -f</code>&#xFF0C;&#x7136;&#x540E;&#x5728;&#x6587;&#x4EF6;&#x4E2D;&#x5199;&#x5904;&#x7406;&#x811A;&#x672C;&#xFF0C;&#x6700;&#x540E;&#x7ED9;&#x6587;&#x4EF6;&#x8D4B;&#x4E88;&#x53EF;&#x6267;&#x884C;&#x6743;&#x9650;&#x5E76;&#x6267;&#x884C;&#x3002;&#x5176;&#x4E2D;&#xFF0C;<code>BEGIN</code>&#x5C31;&#x662F;<code>pattern</code>&#xFF0C;&#x4ED6;&#x63CF;&#x8FF0;&#x4E86;&#x6211;&#x4EEC;&#x8981;&#x5904;&#x7406;&#x7684;&#x6570;&#x636E;&#xFF1B;<code>print &quot;Don&apos;t Panic!&quot;</code>&#x662F;<code>action</code>&#xFF0C;&#x4ED6;&#x51B3;&#x5B9A;&#x4E86;&#x627E;&#x5230;&#x6570;&#x636E;&#x4E4B;&#x540E;&#x5E94;&#x8BE5;&#x6267;&#x884C;&#x4EC0;&#x4E48;&#x64CD;&#x4F5C;&#xFF1B;&#x56E0;&#x6B64;&#x8FD9;&#x4E2A;&#x811A;&#x672C;&#x6700;&#x7EC8;&#x5B8C;&#x6210;&#x7684;&#x529F;&#x80FD;&#x662F;&#x5728;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x811A;&#x672C;&#x65F6;&#x6253;&#x5370;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<blockquote>
+<p>[warning]&#x8B66;&#x544A;&#xFF1A;<code>awk</code>&#x4E2D;&#x7684;&#x5F15;&#x53F7;&#x9075;&#x5FAA;&#x8D2A;&#x5A6A;&#x5339;&#x914D;&#x539F;&#x5219;&#xFF0C;&#x56E0;&#x6B64;&#x4E0A;&#x8FF0;&#x547D;&#x4EE4;&#x76F4;&#x63A5;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x8FD0;&#x884C;&#x4F1A;&#x51FA;&#x9519;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7279;&#x6B8A;&#x65B9;&#x6CD5;&#x5904;&#x7406;&#x5F15;&#x53F7;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-shell">&gt; awk &#x2018;BEGIN { print &quot;Don&apos;t Panic!&quot;}&#x2019;  # &#x4F1A;&#x62A5;&#x9519;
+&gt; awk -v sq=&quot;&apos;&quot; &apos;BEGIN { print &quot;Don&quot; sq &quot;t panic!&quot; }&apos;  # &#x901A;&#x8FC7;&#x53D8;&#x91CF;
+Don&apos;t panic!
+&gt; awk &apos;BEGIN { print &quot;Don\47t panic!&quot; }&apos;  # &#x4F7F;&#x7528; ascii &#x7801;
+Don&apos;t panic!
+</code></pre>
+<h1 id="&#x7B80;&#x5355;&#x4E0A;&#x624B;">&#x7B80;&#x5355;&#x4E0A;&#x624B;</h1>
+<p>&#x6211;&#x4EEC;&#x5148;&#x65B0;&#x5EFA;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x7528;&#x4E8E;<code>awk</code>&#x8BED;&#x6CD5;&#x7684;&#x5B66;&#x4E60;&#xFF1A;</p>
+<pre><code class="lang-shell">&gt; cat mail-list
+Amelia       555-5553     amelia.zodiacusque@gmail.com    F
+Anthony      555-3412     anthony.asserturo@hotmail.com   A
+Becky        555-7685     becky.algebrarum@gmail.com      A
+Bill         555-1675     bill.drowning@hotmail.com       A
+Broderick    555-0542     broderick.aliquotiens@yahoo.com R
+Camilla      555-2912     camilla.infusarum@skynet.be     R
+Fabius       555-1234     fabius.undevicesimus@ucb.edu    F
+Julie        555-6699     julie.perscrutabor@skeeve.com   F
+Martin       555-6480     martin.codicibus@hotmail.com    A
+Samuel       555-3430     samuel.lanceolis@shu.edu        A
+Jean-Paul    555-2127     jeanpaul.campanorum@nyu.edu     R
+
+&gt; cat inventory-shipped
+Jan  13  25  15 115
+Feb  15  32  24 226
+Mar  15  24  34 228
+Apr  31  52  63 420
+May  16  34  29 208
+Jun  31  42  75 492
+Jul  24  34  67 436
+Aug  15  34  47 316
+Sep  13  55  37 277
+Oct  29  54  68 525
+Nov  20  87  82 577
+Dec  17  35  61 401
+
+Jan  21  36  64 620
+Feb  26  58  80 652
+Mar  24  75  70 495
+Apr  21  70  74 514
+</code></pre>
+<h2 id="&#x5355;&#x6A21;&#x5F0F;">&#x5355;&#x6A21;&#x5F0F;</h2>
+<p><code>awk</code>&#x5728;&#x5904;&#x7406;&#x6587;&#x672C;&#x65F6;&#x6BCF;&#x6B21;&#x4F1A;&#x8BFB;&#x53D6;&#x4E00;&#x884C;&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;<code>pattern</code>&#x5224;&#x65AD;&#x5F53;&#x524D;&#x884C;&#x662F;&#x5426;&#x7B26;&#x5408;&#x8981;&#x6C42;&#xFF0C;&#x5982;&#x679C;&#x7B26;&#x5408;&#x5219;&#x6267;&#x884C;&#x5BF9;&#x5E94;&#x7684;<code>action</code>&#x3002;&#x5982;&#x4E0B;&#x4F8B;&#xFF0C;&#x6211;&#x4EEC;&#x6253;&#x5370;&#x5339;&#x914D;<code>/li/</code>&#x7684;&#x884C;&#x7684;&#x7B2C;&#x4E00;&#x5217;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code class="lang-shell">&gt; awk &apos;/li/ {print $1}&apos; mail-list
+Amelia
+Broderick
+Julie
+Samuel
+</code></pre>
+<p>&#x5728;<code>pattern</code>&#x4E2D;&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8868;&#x8FBE;&#x5F0F;&#x548C;&#x5185;&#x7F6E;&#x7684;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x5173;&#x952E;&#x5B57;&#xFF1A;</p>
+<pre><code class="lang-shell"># &#x4F7F;&#x7528;&#x8868;&#x8FBE;&#x5F0F;&#x6253;&#x5370;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E; 35 &#x7684;&#x884C;
+&gt; awk &apos;length($0) &lt; 35&apos; /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+sync:x:4:65534:sync:/bin:/bin/sync
+
+# &#x4F7F;&#x7528;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x5173;&#x952E;&#x5B57;&#x6253;&#x5370;&#x6700;&#x957F;&#x884C;&#x7684;&#x957F;&#x5EA6;
+&gt; awk &apos;{if (max &lt; length($0)) max = length($0)} END {print max}&apos; /etc/passwd
+98  # &#x652F;&#x6301; if&#x3001;else &#x5173;&#x952E;&#x5B57;
+&gt; awk &apos;{max = max &lt; length($0) ? length($0) : max} END {print max}&apos; /etc/passwd
+98  # &#x4E09;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;&#x4E5F;&#x652F;&#x6301;
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x914D;&#x5408;&#x7BA1;&#x9053;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-shell"># &#x63A5;&#x6536;&#x7BA1;&#x9053;&#x8F93;&#x5165;
+# &#x8BA1;&#x7B97;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x7684;&#x603B;&#x5927;&#x5C0F;
+&gt; ls -l | grep ^d | awk &apos;{ x+=$5 } END { print &quot;total bytes: &quot; x}&apos;
+total bytes: 86016
+
+# &#x91CD;&#x5B9A;&#x5411;&#x8F93;&#x51FA;&#x5230;&#x7BA1;&#x9053;
+# &#x83B7;&#x5F97;&#x957F;&#x5EA6;&#x4E3A; 3 &#x7684;&#x7528;&#x6237;&#x540D;&#x5E76;&#x6392;&#x5E8F;
+&gt; awk -F: &apos;length($1)==3 {print $1}&apos; /etc/passwd | sort
+bin
+irc
+man
+sys
+tss
+</code></pre>
+<h2 id="&#x591A;&#x6A21;&#x5F0F;">&#x591A;&#x6A21;&#x5F0F;</h2>
+<p><code>awk</code>&#x652F;&#x6301;&#x591A;&#x4E2A;&#x6A21;&#x5F0F;&#x914D;&#x5408;&#x591A;&#x4E2A;&#x64CD;&#x4F5C;&#xFF0C;&#x540C;&#x65F6;&#x652F;&#x6301;&#x591A;&#x6587;&#x4EF6;&#x805A;&#x5408;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-shell"># &#x67E5;&#x770B;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x5339;&#x914D;&#x6B63;&#x5219; 1 &#x6216;&#x6B63;&#x5219; 2 &#x7684;&#x884C;
+&gt; awk &apos;/12/ {print $0} /21/ {print $0}&apos; mail-list inventory-shipped 
+Anthony      555-3412     anthony.asserturo@hotmail.com   A
+Camilla      555-2912     camilla.infusarum@skynet.be     R
+Fabius       555-1234     fabius.undevicesimus@ucb.edu    F
+Jean-Paul    555-2127     jeanpaul.campanorum@nyu.edu     R
+Jean-Paul    555-2127     jeanpaul.campanorum@nyu.edu     R
+Jan  21  36  64 620
+Apr  21  70  74 514
+
+# &#x8BA1;&#x7B97; 11 &#x6708;&#x4EFD;&#x7684;&#x4EA4;&#x6613;&#x603B;&#x91CF;
+&gt; awk &apos;/Nov/ {sum+=$5} END {print sum}&apos; inventory-shipped 
+577
+</code></pre>
+<blockquote>
+<p>[warning]<strong>&#x8B66;&#x544A;</strong>&#xFF1A;&#x6BCF;&#x4E2A;<code>pattern</code>&#x5BF9;&#x5E94;&#x7D27;&#x8DDF;&#x7740;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;<code>{ action }</code>&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5199;<code>pattern</code>&#x5219;&#x5BF9;&#x6240;&#x6709;&#x884C;&#x90FD;&#x6267;&#x884C;&#x7D27;&#x8DDF;&#x7740;&#x7684;<code>{ action }</code>&#x3002;&#x4F8B;&#x5982;&#xFF1A;<code>pattern { action1 } { action2 }</code>&#x8868;&#x793A;&#x5BF9;&#x6EE1;&#x8DB3;<code>pattern</code>&#x7684;&#x884C;&#x6267;&#x884C;<code>action1</code>&#xFF0C;&#x5E76;&#x4E14;&#x5BF9;&#x6240;&#x6709;&#x884C;&#x6267;&#x884C;<code>action2</code>&#x3002;</p>
+</blockquote>
+<h1 id="&#x9AD8;&#x7EA7;&#x7528;&#x6CD5;">&#x9AD8;&#x7EA7;&#x7528;&#x6CD5;</h1>
+<h2 id="&#x547D;&#x4EE4;&#x884C;&#x9009;&#x9879;">&#x547D;&#x4EE4;&#x884C;&#x9009;&#x9879;</h2>
+<p><code>awk</code>&#x4E2D;&#x6700;&#x5E38;&#x7528;&#x7684;&#x9009;&#x9879;&#x4E3A;<code>-F</code>&#x3001;<code>-f</code>&#x548C;<code>-v</code>&#xFF0C;&#x5176;&#x4ED6;&#x9009;&#x9879;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://www.gnu.org/software/gawk/manual/gawk.html#Options" target="_blank">&#x547D;&#x4EE4;&#x884C;&#x9009;&#x9879;</a>&#xFF1A;
+<code>-F</code>&#xFF1A;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x5206;&#x9694;&#x7B26;&#xFF0C;&#x9ED8;&#x8BA4;&#x5206;&#x9694;&#x7B26;&#x4E3A;&#x7A7A;&#x683C;&#x3002;</p>
+<pre><code class="lang-shell">&gt; awk -F: &apos;/^systemd/ {print $1}&apos; /etc/passwd
+systemd-timesync
+systemd-network
+systemd-resolve
+systemd-coredump
+</code></pre>
+<p><code>-f</code>&#xFF1A;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x8F93;&#x5165;&#x811A;&#x672C;&#x3002;
+<code>-v</code>&#xFF1A;&#x7528;&#x4E8E;&#x81EA;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#x3002;</p>
+<pre><code class="lang-shell">&gt; seq 5 | awk -v sum=-16 &apos;{sum+=$0} END {print sum}&apos;
+-1
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>-</code>&#x6216;<code>/dev/stdin</code>&#x663E;&#x5F0F;&#x6307;&#x5B9A;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x4F5C;&#x4E3A;&#x8981;&#x5904;&#x7406;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x901A;&#x5E38;&#x914D;&#x5408;&#x7BA1;&#x9053;&#x6765;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-shell">&gt; echo &quot;ack&quot; | awk &quot;{print}&quot; t1.awk
+# &#x53EA;&#x80FD;&#x5904;&#x7406; t1.awk
+
+&gt; echo &quot;ack&quot; | awk &quot;{print}&quot; - t1.awk 
+# &#x80FD;&#x5171;&#x540C;&#x5904;&#x7406;&#x7BA1;&#x9053;&#x4F20;&#x9012;&#x6765;&#x7684;&#x6570;&#x636E;&#x548C;&#x5236;&#x5B9A;&#x7684;&#x6587;&#x4EF6;
+
+&gt; cat t2.awk | awk &quot;{print}&quot; t1.awk /dev/stdin t3.awk
+# &#x8FD8;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x6587;&#x4EF6;&#x548C;&#x7BA1;&#x9053;&#x8F93;&#x5165;&#x7684;&#x5904;&#x7406;&#x987A;&#x5E8F;
+</code></pre>
+<h2 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h2>
+<p>&#x9664;&#x4E86;&#x901A;&#x8FC7;<code>-v</code>&#x9009;&#x9879;&#x663E;&#x5F0F;&#x6307;&#x5B9A;&#x53D8;&#x91CF;&#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x4F7F;&#x7528;<code>var=value</code>&#x7684;&#x65B9;&#x5F0F;&#x9690;&#x5F0F;&#x4F20;&#x9012;&#x53D8;&#x91CF;&#x7ED9;<code>awk</code>&#x811A;&#x672C;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x5728;&#x4F7F;&#x7528;&#x4E0A;&#x6709;&#x4E00;&#x4E9B;&#x5DEE;&#x5F02;&#xFF0C;&#x5982;&#x4E0B;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-shell">&gt; cat showargs.awk
+BEGIN {
+    printf &quot;A=%d, B=%d\n&quot;, A, B
+    for ( i = 0; i &lt; ARGC; i++ )
+        printf &quot;\tARGV[%d] = %s\n&quot;, i, ARGV[i]
+}
+END { printf &quot;A=%d, B=%d\n&quot;, A, B }
+
+&gt; awk -f showargs.awk -v A=1 B=2 /dev/null
+A=1, B=0
+        ARGV[0] = awk
+        ARGV[1] = B=2
+        ARGV[2] = /dev/null
+A=1, B=2
+</code></pre>
+<p>&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF1A;&#x5728;&#x811A;&#x672C;&#x7684;<code>BEGIN</code>&#x9636;&#x6BB5;&#xFF0C;&#x901A;&#x8FC7;<code>-v</code>&#x663E;&#x5F0F;&#x6307;&#x5B9A;&#x7684;&#x7684;&#x53D8;&#x91CF;&#x4F1A;&#x88AB;&#x8D4B;&#x503C;&#xFF0C;&#x800C;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C;&#x9690;&#x5F0F;&#x4F20;&#x9012;&#x7684;&#x53C2;&#x6570;&#x4E0D;&#x4F1A;&#x88AB;&#x8D4B;&#x503C;&#xFF0C;&#x4F46;&#x5728;&#x8FD9;&#x4E2A;&#x9636;&#x6BB5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B8C;&#x6574;&#x5730;&#x8BBF;&#x95EE;&#x6240;&#x6709;&#x4F20;&#x9012;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x548C;&#x9690;&#x5F0F;&#x53C2;&#x6570;&#x3002;&#x9690;&#x5F0F;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x4E3B;&#x8981;&#x88AB;&#x7528;&#x4E8E;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x8F93;&#x5165;&#xFF08;&#x6587;&#x4EF6;&#xFF09;&#x8BBE;&#x7F6E;&#x4E0D;&#x540C;&#x7684;&#x5206;&#x9694;&#x7B26;&#x683C;&#x5F0F;&#x7684;<code>RS</code>&#x3001;<code>FS</code>&#x3001;<code>OFS</code>&#x6216;<code>ORS</code>&#x53D8;&#x91CF;&#xFF1A;</p>
+<pre><code class="lang-shell">&gt; awk &apos;/^[Dd]/{print $1,$2}&apos; FS=: OFS=- /etc/passwd FS=&quot; &quot; OFS=% inventory-shipped 
+daemon-x  # &#x8F93;&#x5165;&#x5206;&#x9694;&#x4E3A;&#x5192;&#x53F7;&#xFF0C;&#x8F93;&#x51FA;&#x5206;&#x9694;&#x4E3A;&#x51CF;&#x53F7;
+dnsmasq-x
+Dec%17  # &#x8F93;&#x5165;&#x5206;&#x9694;&#x4E3A;&#x7A7A;&#x683C;&#xFF0C;&#x8F93;&#x51FA;&#x5206;&#x9694;&#x4E3A;&#x767E;&#x5206;&#x53F7;
+</code></pre>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x62E6;&#x622A;&#x9009;&#x9879;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>--</code>&#x505C;&#x7528;&#x6240;&#x6709;&#x9ED8;&#x8BA4;&#x547D;&#x4EE4;&#x884C;&#x9009;&#x9879;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x6240;&#x6709;&#x7684;&#x9009;&#x9879;&#xFF1A;</p>
+<pre><code class="lang-shell">cat myprog.awk 
+BEGIN {
+    for (i = 1; i &lt; ARGC; i++) {
+        if (ARGV[i] == &quot;-v&quot; || ARGV[i] == &quot;-q&quot;)
+            print &quot;recived&quot;, ARGV[i]
+        else if (ARGV[i] ~ /^-./) {
+            e = sprintf(&quot;%s: unrecognized option -- %c&quot;,
+                    ARGV[0], substr(ARGV[i], 2, 1))
+            print e &gt; &quot;/dev/stderr&quot;
+        } else
+            break
+        delete ARGV[i]
+        # &#x4E0D;&#x5220;&#x9664;&#x7684;&#x53C2;&#x6570;&#x4F1A;&#x88AB;&#x5F53;&#x505A;&#x6587;&#x4EF6;&#x540D;
+        # &#x4F8B;&#x5982;&#xFF1A; -q &#x88AB;&#x5F53;&#x505A;&#x6587;&#x4EF6;&#x540D;&#x4F1A;&#x5BFC;&#x81F4;&#x627E;&#x4E0D;&#x5230;&#x6587;&#x4EF6;&#x62A5;&#x9519;
+    }
+}
+
+&gt; awk -f myprog.awk -v -q -p /dev/null
+# &#x4F1A;&#x62A5;&#x9519; &#x56E0;&#x4E3A;&#x4E0D;&#x7B26;&#x5408; -v &#x7684;&#x8BED;&#x6CD5;
+
+&gt; awk -f myprog.awk -- -v -q -p /dev/null
+# &#x4E0D;&#x4F1A;&#x62A5;&#x9519; &#x56E0;&#x4E3A;&#x4F7F;&#x7528;&#x4E86; -- &#x5C4F;&#x853D;&#x9ED8;&#x8BA4;&#x9009;&#x9879;
+recived -v
+recived -q
+awk: unrecognized option -- p
+
+&gt; awk -f myprog.awk -q -v -p /dev/null
+# &#x4E0D;&#x4F1A;&#x62A5;&#x9519; &#x56E0;&#x4E3A; -q &#x4E0D;&#x5B58;&#x5728;
+# &#x56E0;&#x6B64; -q &#x4E4B;&#x540E;&#x7684;&#x90FD;&#x88AB;&#x5F53;&#x505A;&#x53C2;&#x6570;&#x8BFB;&#x53D6;
+recived -q
+recived -v
+awk: unrecognized option -- p
+</code></pre>
+<h2 id="&#x73AF;&#x5883;&#x53D8;&#x91CF;">&#x73AF;&#x5883;&#x53D8;&#x91CF;</h2>
+<ul>
+<li><code>AWKPATH</code>&#xFF1A;<code>awk</code>&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</li>
+<li><code>AWKLIBPATH</code>&#xFF1A;&#x7528;&#x4E8E;&#x5BFB;&#x627E;<code>awk</code>&#x9884;&#x7F16;&#x8BD1;&#x5E93;&#x3002;</li>
+<li><strong>&#x5176;&#x4ED6;&#x73AF;&#x5883;&#x53D8;&#x91CF;</strong>&#xFF1A;&#x53C2;&#x8003;<a href="https://www.gnu.org/software/gawk/manual/gawk.html#Environment-Variables" target="_blank">&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x8868;</a>&#x3002;</li>
+</ul>
+<h2 id="&#x9000;&#x51FA;&#x72B6;&#x6001;&#x7801;">&#x9000;&#x51FA;&#x72B6;&#x6001;&#x7801;</h2>
+<ul>
+<li><strong>&#x6B63;&#x5E38;&#x9000;&#x51FA;</strong>&#xFF1A;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x7801;&#x7B49;&#x4E8E;<code>C</code>&#x8BED;&#x8A00;&#x4E2D;&#x7684;<code>EXIT_SUCCESS</code>&#x5E38;&#x91CF;&#xFF0C;&#x901A;&#x5E38;&#x4E3A;<code>0</code>&#x3002;</li>
+<li><strong>&#x53D1;&#x751F;&#x9519;&#x8BEF;</strong>&#xFF1A;&#x53D1;&#x751F;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;&#x5219;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x7801;&#x7B49;&#x4E8E;<code>C</code>&#x8BED;&#x8A00;&#x4E2D;&#x7684;<code>EXIT_FAILURE</code>&#x5E38;&#x91CF;&#xFF0C;&#x901A;&#x5E38;&#x4E3A;<code>1</code>&#x3002;</li>
+<li><strong>&#x4E25;&#x91CD;&#x9519;&#x8BEF;</strong>&#xFF1A;&#x627E;&#x4E0D;&#x5230;&#x6587;&#x4EF6;&#x6216;&#x5176;&#x4ED6;<code>fatal</code>&#x9519;&#x8BEF;&#x5219;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x7801;&#x4E3A;<code>2</code>&#x3002;</li>
+<li><strong>&#x81EA;&#x5B9A;&#x4E49;&#x72B6;&#x6001;&#x7801;</strong>&#xFF1A;&#x4F7F;&#x7528;<code>exit &#x72B6;&#x6001;&#x7801;</code>&#x8BED;&#x53E5;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x9000;&#x51FA;&#x72B6;&#x6001;&#xFF0C;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x5BF9;&#x6240;&#x6709;&#x7CFB;&#x7EDF;&#x90FD;&#x517C;&#x5BB9;&#xFF0C;&#x5EFA;&#x8BAE;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A;<code>[0, 126]</code>&#x3002;<pre><code class="lang-shell">&gt; echo &quot;&quot; | awk &apos;{ exit 126 }&apos;; echo $?
+126  # &#x81EA;&#x5B9A;&#x4E49;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x7801;
+</code></pre>
+</li>
+</ul>
+<h2 id="&#x6A21;&#x5757;">&#x6A21;&#x5757;</h2>
+<p>&#x5728;<code>gawk</code>&#x4E2D;&#x5B9E;&#x73B0;&#x4E86;&#x811A;&#x672C;&#x7684;&#x6A21;&#x5757;&#x5316;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x811A;&#x672C;&#x6587;&#x4EF6;&#x4E2D;&#x901A;&#x8FC7;<code>@include &quot;&#x6587;&#x4EF6;&#x540D;&quot;</code>&#x7684;&#x65B9;&#x5F0F;&#x5F15;&#x7528;&#x5176;&#x4ED6;&#x811A;&#x672C;&#x6587;&#x4EF6;&#xFF0C;&#x652F;&#x6301;&#x5D4C;&#x5957;&#x5F15;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-shell">&gt; cat t[1-3].awk
+BEGIN {
+    print &quot;This is script test1.&quot;
+}
+@include &quot;t1.awk&quot;
+BEGIN {
+    print &quot;This is script test2.&quot;
+}
+@include &quot;t2.awk&quot;
+BEGIN {
+    print &quot;This is script test3.&quot;
+}
+
+&gt; gawk -f t3.awk 
+This is script test1.
+This is script test2.
+This is script test3.
+</code></pre>
+<p><code>gawk</code>&#x540C;&#x65F6;&#x652F;&#x6301;&#x81EA;&#x5B9A;&#x4E49;&#x6269;&#x5C55;&#x5E93;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>@load &quot;&#x5E93;&#x540D;&quot;</code>&#x6216;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;<code>-l&#x5E93;&#x540D;</code>&#x7684;&#x65B9;&#x5F0F;&#x52A0;&#x8F7D;&#x6269;&#x5C55;&#x5E93;&#xFF08;&#x53C2;&#x8003;&#xFF1A;<a href="https://www.gnu.org/software/gawk/manual/gawk.html#Dynamic-Extensions" target="_blank">&#x6269;&#x5C55;&#x5E93;&#x7684;&#x7F16;&#x5199;&#x65B9;&#x6CD5;</a>&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-shell">&gt; gawk &apos;@load &quot;ordchr&quot;; BEGIN {print chr(65) }&apos;
+A
+&gt; gawk -lordchr &apos;BEGIN { print chr(65) }&apos;
+A
+</code></pre>
+<h1 id="&#x914D;&#x5408;&#x6B63;&#x5F0F;&#x5219;&#x8868;&#x8FBE;&#x5F0F;">&#x914D;&#x5408;&#x6B63;&#x5F0F;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</h1>
+<h2 id="&#x9488;&#x5BF9;&#x5355;&#x5217;&#x7684;&#x6B63;&#x5219;">&#x9488;&#x5BF9;&#x5355;&#x5217;&#x7684;&#x6B63;&#x5219;</h2>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x5C55;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x5BF9;&#x6587;&#x672C;&#x7684;&#x7B2C;<code>1</code>&#x5217;&#x8FDB;&#x884C;&#x6B63;&#x5219;&#x5339;&#x914D;&#xFF0C;&#x9009;&#x62E9;&#x6240;&#x6709;&#x7B2C;&#x4E00;&#x5217;&#x5305;&#x542B;<code>J</code>&#x7684;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-shell">&gt; awk &apos;$1 ~ /J/&apos; inventory-shipped
+Jan  13  25  15 115
+Jun  31  42  75 492
+Jul  24  34  67 436
+Jan  21  36  64 620
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x5199;&#x6CD5;&#x7B49;&#x4EF7;&#x4E8E;&#x4F7F;&#x7528;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x5173;&#x952E;&#x5B57;&#xFF1A;</p>
+<pre><code class="lang-shell">&gt; awk &apos;{ if ($1 ~/J/) print }&apos; inventory-shipped
+</code></pre>
+<p>&#x4F7F;&#x7528;<code>!~</code>&#x53EF;&#x4EE5;&#x5BF9;&#x5339;&#x914D;&#x53D6;&#x53CD;&#xFF1A;</p>
+<pre><code class="lang-shell">&gt; awk &apos;$1 !~ /[DAJSM]/&apos; inventory-shipped 
+Feb  15  32  24 226
+Oct  29  54  68 525
+Nov  20  87  82 577
+
+Feb  26  58  80 652
+</code></pre>
+<h2 id="&#x52A8;&#x6001;&#x6B63;&#x5219;">&#x52A8;&#x6001;&#x6B63;&#x5219;</h2>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5B9A;&#x4E49;&#x6B63;&#x5219;&#x53D8;&#x91CF;&#x5B9E;&#x73B0;&#x52A8;&#x6001;&#x6B63;&#x5219;&#xFF1A;</p>
+<pre><code class="lang-shell">&gt; awk &apos;BEGIN {digits_regexp = &quot;^[[:digit:]]+&quot;} $0 ~ digits_regexp {print}&apos; /etc/hosts
+127.0.0.1       localhost
+127.0.1.1       CT7GK
+
+&gt; seq 5 | awk &apos;BEGIN { reg = @/3/ } $0~reg {print}&apos;
+3
+</code></pre>
+<h2 id="&#x6B63;&#x5219;&#x66FF;&#x6362;&#x51FD;&#x6570;">&#x6B63;&#x5219;&#x66FF;&#x6362;&#x51FD;&#x6570;</h2>
+<p><code>awk</code>&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x79CD;&#x6B63;&#x5219;&#x66FF;&#x6362;&#x51FD;&#x6570;&#xFF0C;&#x5206;&#x522B;&#x7528;&#x4E8E;&#x5355;&#x4E2A;&#x5339;&#x914D;&#x66FF;&#x6362;&#x548C;&#x5168;&#x5C40;&#x5339;&#x914D;&#x66FF;&#x6362;&#xFF1A;</p>
+<pre><code class="lang-shell">&gt; echo &quot;hi! hi yourself&quot; | awk &apos;{ sub(/hi/, &quot;howdy&quot;, $0); print}&apos;
+howdy! hi yourself
+
+&gt; echo &quot;hi! hi yourself&quot; | awk &apos;{ gsub(/hi/, &quot;howdy&quot;, $0); print}&apos;
+howdy! howdy yourself
+</code></pre>
+<h1 id="&#x6A21;&#x5F0F;&#x4E0E;&#x53D8;&#x91CF;">&#x6A21;&#x5F0F;&#x4E0E;&#x53D8;&#x91CF;</h1>
+<h2 id="&#x6761;&#x4EF6;&#x63A7;&#x5236;">&#x6761;&#x4EF6;&#x63A7;&#x5236;</h2>
+<p><code>awk</code>&#x652F;&#x6301;&#x7C7B;&#x4F3C;<code>C</code>&#x8BED;&#x8A00;&#x7684;&#x6761;&#x4EF6;&#x63A7;&#x5236;&#x8BED;&#x6CD5;&#x3002;</p>
+<ul>
+<li>&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x7684;&#xFF1A;<code>if/else</code>&#x3001;<code>while</code>&#x3001;<code>do-while</code>&#x3001;<code>for</code>&#x3001;<code>switch</code>&#x3001;<code>break</code>&#x3001;<code>continue</code>&#x3002;</li>
+<li><code>exit</code>&#xFF1A;&#x9000;&#x51FA;&#x5E76;&#x8FD4;&#x56DE;&#x72B6;&#x6001;&#x7801;&#x4F5C;&#x4E3A;<code>awk</code>&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x3002;<pre><code class="lang-shell">BEGIN {
+  if ((&quot;date&quot; | getline date_now) &lt;= 0) {
+      print &quot;Can&apos;t get system date&quot; &gt; &quot;/dev/stderr&quot;
+      exit 1
+  }
+  print &quot;current date is&quot;, date_now
+  close(&quot;date&quot;)
+}
+</code></pre>
+</li>
+<li><code>next</code>&#xFF1A;&#x7ED3;&#x675F;&#x5F53;&#x524D;&#x8BB0;&#x5F55;&#x7684;&#x64CD;&#x4F5C;&#x3002;<pre><code class="lang-shell">NF != 4 {
+  printf(&quot;%s:%d: skipped: NF != 4\n&quot;, FILENAME, FNR) &gt; &quot;/dev/stderr&quot;
+  next
+}
+</code></pre>
+</li>
+<li><code>nextfile</code>&#xFF1A;&#x7ED3;&#x675F;&#x5BF9;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x7684;&#x64CD;&#x4F5C;&#x3002;<h2 id="&#x4ECE;-shell-&#x4E2D;&#x8BFB;&#x53D6;">&#x4ECE; shell &#x4E2D;&#x8BFB;&#x53D6;</h2>
+<code>awk</code>&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;&#x5728;<code>shell</code>&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#xFF1A;<pre><code class="lang-shell">printf &quot;Enter search pattern: &quot;
+read pattern
+awk &quot;/$pattern/ &quot;&apos;{ nmatches++ }
+   END { print nmatches, &quot;found&quot; }&apos; /path/to/data
+</code></pre>
+</li>
+</ul>
+<h2 id="&#x7279;&#x6B8A;&#x6A21;&#x5F0F;&#x5173;&#x952E;&#x5B57;">&#x7279;&#x6B8A;&#x6A21;&#x5F0F;&#x5173;&#x952E;&#x5B57;</h2>
+<ul>
+<li><code>BEGIN</code>&#xFF1A;&#x9488;&#x5BF9;&#x5355;&#x4E2A;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x6240;&#x6709;&#x8F93;&#x5165;&#x88AB;&#x8BFB;&#x53D6;&#x4E4B;&#x524D;&#x89E6;&#x53D1;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x505A;&#x521D;&#x59CB;&#x5316;&#x3001;&#x8F93;&#x51FA;&#x5934;&#x90E8;&#x4FE1;&#x606F;&#x7B49;&#x5DE5;&#x4F5C;&#x3002;</li>
+<li><code>END</code>&#xFF1A;&#x9488;&#x5BF9;&#x5355;&#x4E2A;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x6240;&#x6709;&#x8F93;&#x5165;&#x88AB;&#x5904;&#x7406;&#x4E4B;&#x540E;&#x89E6;&#x53D1;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x8981;&#x6CE8;&#x610F;<code>$0</code>&#x548C;<code>NF</code>&#x5728;&#x8FD9;&#x91CC;&#x4E0D;&#x53EF;&#x7528;&#x3002;</li>
+<li><code>BEGINFILE</code>&#x548C;<code>ENDFILE</code>&#xFF1A;<code>gawk</code>&#x6269;&#x5C55;&#x7684;&#x6A21;&#x5F0F;&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x533A;&#x522B;&#x4E8E;&#x5BF9;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x90FD;&#x8D77;&#x4F5C;&#x7528;&#x7684;<code>BEGIN</code>&#x548C;<code>END</code>&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x6269;&#x5C55;&#x7684;&#x5173;&#x952E;&#x5B57;&#x662F;&#x5BF9;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x8F93;&#x5165;&#x4E4B;&#x524D;&#x548C;&#x5904;&#x7406;&#x8F93;&#x5165;&#x4E4B;&#x540E;&#x89E6;&#x53D1;&#x7684;&#x6A21;&#x5F0F;&#x3002;</li>
+<li>&#x7A7A;&#x6A21;&#x5F0F;&#xFF1A;&#x80FD;&#x591F;&#x5339;&#x914D;&#x6240;&#x6709;&#x6A21;&#x5F0F;&#x3002;</li>
+</ul>
+<h2 id="&#x53D8;&#x91CF;&#x7684;&#x771F;&#x5047;">&#x53D8;&#x91CF;&#x7684;&#x771F;&#x5047;</h2>
+<ul>
+<li><code>&#x771F;</code>&#xFF1A;<code>true</code>&#x3001;&#x975E;&#x96F6;&#x6570;&#x3001;&#x975E;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+<li><code>&#x5047;</code>&#xFF1A;<code>false</code>&#x3001;0&#x3001;&#x201D;&#x201C;&#x3002;</li>
+</ul>
+<h2 id="&#x53D8;&#x91CF;&#x7684;&#x79CD;&#x7C7B;">&#x53D8;&#x91CF;&#x7684;&#x79CD;&#x7C7B;</h2>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>typeof(x)</code>&#x51FD;&#x6570;&#x83B7;&#x5F97;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x79CD;&#x7C7B;&#xFF1A;</p>
+<ul>
+<li>&#x6570;&#x7EC4;&#xFF1A;&#x663E;&#x793A;&#x4E3A;<code>array</code>&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>isarray(x)</code>&#x51FD;&#x6570;&#x5224;&#x65AD;&#x3002;</li>
+<li>&#x6B63;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;&#x663E;&#x793A;&#x4E3A;<code>regexp</code>&#x3002;</li>
+<li>&#x672A;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#xFF1A;<pre><code class="lang-shell">&gt; awk &apos;BEGIN { print (a==0 &amp;&amp; a==&quot;&quot; ? &quot;a is untyped&quot; : &quot;a has atype!&quot;); print typeof(a)}&apos;
+a is untyped
+unassigned
+</code></pre>
+</li>
+<li>&#x672A;&#x8D4B;&#x503C;&#x7684;&#x53D8;&#x91CF;&#xFF1A;<pre><code class="lang-shell">BEGIN {
+  # &#x521B;&#x5EFA;&#x4E86; a[1] &#x4F46;&#x6CA1;&#x6709;&#x7ED9;&#x5B83;&#x8D4B;&#x503C;
+  a[1]
+  print typeof(a[1])  # unassigned
+}
+</code></pre>
+</li>
+<li>&#x5B57;&#x7B26;&#x4E32;&#x53D8;&#x91CF;&#xFF1A;<pre><code class="lang-shell">&gt; awk &apos;BEGIN { a=&quot;a string&quot;; print typeof(a); b=a; print typeof(b)}&apos;
+string
+string
+</code></pre>
+</li>
+<li>&#x6570;&#x5B57;&#x53D8;&#x91CF;&#xFF1A;<pre><code class="lang-shell">&gt; awk &apos;BEGIN { a=42.23; print typeof(a); b=a; print typeof(b)}&apos;
+number
+number
+</code></pre>
+</li>
+</ul>
+<h2 id="&#x53D8;&#x91CF;&#x7684;&#x8F6C;&#x6362;&#x65B9;&#x5F0F;">&#x53D8;&#x91CF;&#x7684;&#x8F6C;&#x6362;&#x65B9;&#x5F0F;</h2>
+<p><code>awk</code>&#x4F1A;&#x6839;&#x636E;&#x5F53;&#x524D;&#x4EE3;&#x7801;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x5C06;&#x53D8;&#x91CF;&#x7684;&#x683C;&#x5F0F;&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x8868;&#x8FBE;&#x5F0F;<code>foo + bar</code>&#x4E2D;&#x7684;<code>foo</code>&#x6216;<code>bar</code>&#x7684;&#x503C;&#x6070;&#x597D;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5219;&#x5728;&#x6267;&#x884C;&#x52A0;&#x6CD5;&#x8FD0;&#x7B97;&#x4E4B;&#x524D;&#xFF0C;&#x4F1A;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x5B57;&#xFF1B;&#x5982;&#x679C;&#x6570;&#x5B57;&#x503C;&#x51FA;&#x73B0;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x8FDE;&#x63A5;&#x4E2D;&#xFF0C;&#x5219;&#x5B83;&#x4EEC;&#x5C06;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<pre><code class="lang-shell">&gt; awk &apos;BEGIN {two=2;three=3;print (two three) + 4}&apos;
+27
+# &#x5148;&#x8FDB;&#x884C;&#x5B57;&#x7B26;&#x4E32;&#x62FC;&#x63A5; (two three) = &quot;23&quot;
+# &#x7136;&#x540E;&#x8BA1;&#x7B97;&#x52A0;&#x6CD5; 23+4=27
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;<code>CONVFMT</code>&#x53D8;&#x91CF;&#x5BF9;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7684;<strong>&#x6D6E;&#x70B9;&#x6570;</strong>&#x505A;&#x51FA;&#x683C;&#x5F0F;&#x7EA6;&#x675F;&#xFF0C;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x5982;&#x679C;&#x8981;&#x8F6C;&#x6362;&#x7684;&#x6570;&#x5B57;&#x662F;&#x6574;&#x6570;&#x5219;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-shell">&gt; awk &apos;BEGIN {CONVFMT = &quot;%2.2f&quot;; a = 12.1; b=1.0; print (a &quot;&quot;),(b &quot;&quot;)}&apos;
+12.10 1
+</code></pre>
+<p>&#x53D8;&#x91CF;&#x8F6C;&#x6362;&#x7684;&#x7279;&#x6027;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x5BFC;&#x81F4;&#x610F;&#x6599;&#x4E4B;&#x5916;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-shell">&gt; awk &apos;BEGIN {print -12 &quot; &quot; (-24); print -12 &quot; &quot; -24}&apos;
+-12 -24
+-12-24 
+# &#x5728;&#x4E0D;&#x52A0;&#x62EC;&#x53F7;&#x7684;&#x60C5;&#x51B5;&#x4E0B; -12 &quot; &quot; -24 &#x7B49;&#x4EF7;&#x4E8E; -12 (&quot; &#x201C; -24)
+&#x21D2; -12 (0 - 24)
+&#x21D2; -12 (-24)
+&#x21D2; -12-24
+
+# &#x5B57;&#x7B26;&#x4E32;&#x5F3A;&#x8F6C;&#x6570;&#x5B57;&#x4E3A; 0
+&gt; awk &apos;BEGIN {foo=&quot;a string&quot;; foo=foo+5; print foo}&apos;
+5
+
+# &#x6BD4;&#x8F83;&#x5B57;&#x7B26;&#x4E32;&#x4E0E;&#x6570;&#x5B57;
+# &#x628A;&#x6570;&#x5B57;&#x5F3A;&#x8F6C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7136;&#x540E;&#x6839;&#x636E;&#x5B57;&#x5178;&#x987A;&#x5E8F;&#x6BD4;&#x8F83;
+&gt; echo hello | awk &apos;{ printf(&quot;%s %s &lt; 42\n&quot;, $1,
+&gt;                            ($1 &lt; 42 ? &quot;is&quot; : &quot;is not&quot;)) }&apos;
+hello is not &lt; 42
+</code></pre>
+<h1 id="&#x9644;&#x5F55;">&#x9644;&#x5F55;</h1>
+<p><a href="https://www.gnu.org/software/gawk/manual/gawk.html#User_002dmodified" target="_blank">&#x5185;&#x7F6E;&#x53D8;&#x91CF;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="awk_处理输入.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 处理输入">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"快速入门","level":"2.5.1","depth":2,"next":{"title":"处理输入","level":"2.5.2","depth":2,"path":"ch2_bash/awk/awk_处理输入.md","ref":"ch2_bash/awk/awk_处理输入.md","articles":[]},"previous":{"title":"文本分析工具--awk","level":"2.5","depth":1,"ref":"","articles":[{"title":"快速入门","level":"2.5.1","depth":2,"path":"ch2_bash/awk/awk_快速入门.md","ref":"ch2_bash/awk/awk_快速入门.md","articles":[]},{"title":"处理输入","level":"2.5.2","depth":2,"path":"ch2_bash/awk/awk_处理输入.md","ref":"ch2_bash/awk/awk_处理输入.md","articles":[]},{"title":"处理输出","level":"2.5.3","depth":2,"path":"ch2_bash/awk/awk_处理输出.md","ref":"ch2_bash/awk/awk_处理输出.md","articles":[]},{"title":"数组与函数","level":"2.5.4","depth":2,"path":"ch2_bash/awk/awk_数组与函数.md","ref":"ch2_bash/awk/awk_数组与函数.md","articles":[]},{"title":"应用案例","level":"2.5.5","depth":2,"path":"ch2_bash/awk/awk_应用案例.md","ref":"ch2_bash/awk/awk_应用案例.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","flexible-alerts","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/1996scarlet/python-apue"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"1info":{"label":"提示","icon":"fa fa-comments","className":"info"},"1warn":{"label":"注意","icon":"fa fa-warning","className":"warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{}},"theme":"default","author":"1996scarlet <1996scarlet@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"UNIX环境中的全栈Python高级编程","language":"zh-hans","gitbook":"*"},"file":{"path":"ch2_bash/awk/awk_快速入门.md","mtime":"2020-04-02T12:11:45.094Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-04T04:45:30.373Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1943 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>综合脚本练习 · UNIX环境中的全栈Python高级编程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="1996scarlet <1996scarlet@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="基础命令练习.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Part I 绪论</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    梗概
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../ch1_intro/作者简介.html">
+            
+                <a href="../../ch1_intro/作者简介.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    作者简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../ch1_intro/UNIX基础知识.html">
+            
+                <a href="../../ch1_intro/UNIX基础知识.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    UNIX基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part II 深入理解Bash</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../认识Bash.html">
+            
+                <a href="../认识Bash.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Bourne-Again Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                        <b>2.2.</b>
+                    
+                    运行机制
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../mechanism/初始化.html">
+            
+                <a href="../mechanism/初始化.html">
+            
+                    
+                        <b>2.2.1.</b>
+                    
+                    初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../mechanism/实现简单的命令.html">
+            
+                <a href="../mechanism/实现简单的命令.html">
+            
+                    
+                        <b>2.2.2.</b>
+                    
+                    实现简单的命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../mechanism/命令的执行方式.html">
+            
+                <a href="../mechanism/命令的执行方式.html">
+            
+                    
+                        <b>2.2.3.</b>
+                    
+                    命令的执行方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../mechanism/子shell.html">
+            
+                <a href="../mechanism/子shell.html">
+            
+                    
+                        <b>2.2.4.</b>
+                    
+                    子shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="../mechanism/文件描述符与重定向.html">
+            
+                <a href="../mechanism/文件描述符与重定向.html">
+            
+                    
+                        <b>2.2.5.</b>
+                    
+                    文件描述符与重定向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="../mechanism/自动补全.html">
+            
+                <a href="../mechanism/自动补全.html">
+            
+                    
+                        <b>2.2.6.</b>
+                    
+                    自动补全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="../mechanism/历史记录.html">
+            
+                <a href="../mechanism/历史记录.html">
+            
+                    
+                        <b>2.2.7.</b>
+                    
+                    历史记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="../mechanism/作业控制.html">
+            
+                <a href="../mechanism/作业控制.html">
+            
+                    
+                        <b>2.2.8.</b>
+                    
+                    作业控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.9" data-path="../mechanism/信号处理.html">
+            
+                <a href="../mechanism/信号处理.html">
+            
+                    
+                        <b>2.2.9.</b>
+                    
+                    信号处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                        <b>2.3.</b>
+                    
+                    脚本编程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../grammar/变量.html">
+            
+                <a href="../grammar/变量.html">
+            
+                    
+                        <b>2.3.1.</b>
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../grammar/符号与别名.html">
+            
+                <a href="../grammar/符号与别名.html">
+            
+                    
+                        <b>2.3.2.</b>
+                    
+                    符号与别名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../grammar/正则表达式.html">
+            
+                <a href="../grammar/正则表达式.html">
+            
+                    
+                        <b>2.3.3.</b>
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../grammar/流程控制.html">
+            
+                <a href="../grammar/流程控制.html">
+            
+                    
+                        <b>2.3.4.</b>
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="../grammar/调试脚本.html">
+            
+                <a href="../grammar/调试脚本.html">
+            
+                    
+                        <b>2.3.5.</b>
+                    
+                    调试脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                        <b>2.4.</b>
+                    
+                    流编辑器--sed
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../快速上手.md">
+            
+                <span>
+            
+                    
+                        <b>2.4.1.</b>
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../../编写sed脚本.md">
+            
+                <span>
+            
+                    
+                        <b>2.4.2.</b>
+                    
+                    编写脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../../sed中的addr.md">
+            
+                <span>
+            
+                    
+                        <b>2.4.3.</b>
+                    
+                    sed中的addr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="../../配合正则表达式.md">
+            
+                <span>
+            
+                    
+                        <b>2.4.4.</b>
+                    
+                    配合正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="../../高级用法.md">
+            
+                <span>
+            
+                    
+                        <b>2.4.5.</b>
+                    
+                    高级用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.6" data-path="../../应用案例.md">
+            
+                <span>
+            
+                    
+                        <b>2.4.6.</b>
+                    
+                    应用案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" >
+            
+                <span>
+            
+                    
+                        <b>2.5.</b>
+                    
+                    文本分析工具--awk
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../awk/awk_快速入门.html">
+            
+                <a href="../awk/awk_快速入门.html">
+            
+                    
+                        <b>2.5.1.</b>
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="../awk/awk_处理输入.html">
+            
+                <a href="../awk/awk_处理输入.html">
+            
+                    
+                        <b>2.5.2.</b>
+                    
+                    处理输入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="../awk/awk_处理输出.html">
+            
+                <a href="../awk/awk_处理输出.html">
+            
+                    
+                        <b>2.5.3.</b>
+                    
+                    处理输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" data-path="../awk/awk_数组与函数.html">
+            
+                <a href="../awk/awk_数组与函数.html">
+            
+                    
+                        <b>2.5.4.</b>
+                    
+                    数组与函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5" data-path="../awk/awk_应用案例.html">
+            
+                <a href="../awk/awk_应用案例.html">
+            
+                    
+                        <b>2.5.5.</b>
+                    
+                    应用案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" >
+            
+                <span>
+            
+                    
+                        <b>2.6.</b>
+                    
+                    本章练习
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.6.1" data-path="基础命令练习.html">
+            
+                <a href="基础命令练习.html">
+            
+                    
+                        <b>2.6.1.</b>
+                    
+                    基础命令练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.6.2" data-path="综合脚本练习.html">
+            
+                <a href="综合脚本练习.html">
+            
+                    
+                        <b>2.6.2.</b>
+                    
+                    综合脚本练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part III 深入理解Linux内核</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                        <b>3.1.</b>
+                    
+                    引导过程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../ch3_linux/MBR与GPT.html">
+            
+                <a href="../../ch3_linux/MBR与GPT.html">
+            
+                    
+                        <b>3.1.1.</b>
+                    
+                    MBR与GPT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../ch3_linux/运行级别.html">
+            
+                <a href="../../ch3_linux/运行级别.html">
+            
+                    
+                        <b>3.1.2.</b>
+                    
+                    运行级别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../ch3_linux/设备管理.html">
+            
+                <a href="../../ch3_linux/设备管理.html">
+            
+                    
+                        <b>3.1.3.</b>
+                    
+                    设备管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../ch3_linux/内存管理.html">
+            
+                <a href="../../ch3_linux/内存管理.html">
+            
+                    
+                        <b>3.1.4.</b>
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                        <b>3.2.</b>
+                    
+                    系统调度
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../../ch3_linux/信号.html">
+            
+                <a href="../../ch3_linux/信号.html">
+            
+                    
+                        <b>3.2.1.</b>
+                    
+                    信号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../../ch3_linux/进程状态.html">
+            
+                <a href="../../ch3_linux/进程状态.html">
+            
+                    
+                        <b>3.2.2.</b>
+                    
+                    进程状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../../ch3_linux/时间片.html">
+            
+                <a href="../../ch3_linux/时间片.html">
+            
+                    
+                        <b>3.2.3.</b>
+                    
+                    时间片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../../ch3_linux/调度算法.html">
+            
+                <a href="../../ch3_linux/调度算法.html">
+            
+                    
+                        <b>3.2.4.</b>
+                    
+                    调度算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../../ch3_linux/死锁.html">
+            
+                <a href="../../ch3_linux/死锁.html">
+            
+                    
+                        <b>3.2.5.</b>
+                    
+                    死锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                        <b>3.3.</b>
+                    
+                    进程管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../../ch3_linux/进程通信.html">
+            
+                <a href="../../ch3_linux/进程通信.html">
+            
+                    
+                        <b>3.3.1.</b>
+                    
+                    进程通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../../ch3_linux/新建进程.html">
+            
+                <a href="../../ch3_linux/新建进程.html">
+            
+                    
+                        <b>3.3.2.</b>
+                    
+                    新建进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../../ch3_linux/特殊进程.html">
+            
+                <a href="../../ch3_linux/特殊进程.html">
+            
+                    
+                        <b>3.3.3.</b>
+                    
+                    特殊进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="../../ch3_linux/孤儿进程与僵尸进程.html">
+            
+                <a href="../../ch3_linux/孤儿进程与僵尸进程.html">
+            
+                    
+                        <b>3.3.4.</b>
+                    
+                    孤儿进程与僵尸进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="../../ch3_linux/守护进程.html">
+            
+                <a href="../../ch3_linux/守护进程.html">
+            
+                    
+                        <b>3.3.5.</b>
+                    
+                    守护进程（服务）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <span>
+            
+                    
+                        <b>3.4.</b>
+                    
+                    线程管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../../ch3_linux/内核级线程.html">
+            
+                <a href="../../ch3_linux/内核级线程.html">
+            
+                    
+                        <b>3.4.1.</b>
+                    
+                    内核级线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../../ch3_linux/用户级线程.html">
+            
+                <a href="../../ch3_linux/用户级线程.html">
+            
+                    
+                        <b>3.4.2.</b>
+                    
+                    用户级线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../../ch3_linux/线程安全与通信.html">
+            
+                <a href="../../ch3_linux/线程安全与通信.html">
+            
+                    
+                        <b>3.4.3.</b>
+                    
+                    线程安全与通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../ch3_linux/日志模块.html">
+            
+                <a href="../../ch3_linux/日志模块.html">
+            
+                    
+                        <b>3.5.</b>
+                    
+                    日志模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../../ch3_linux/pgrep与pkill.html">
+            
+                <a href="../../ch3_linux/pgrep与pkill.html">
+            
+                    
+                        <b>3.6.</b>
+                    
+                    pgrep与pkill
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../../ch3_linux/find与xargs.html">
+            
+                <a href="../../ch3_linux/find与xargs.html">
+            
+                    
+                        <b>3.7.</b>
+                    
+                    find与xargs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../../ch3_linux/文件系统.html">
+            
+                <a href="../../ch3_linux/文件系统.html">
+            
+                    
+                        <b>3.8.</b>
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >综合脚本练习</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7EFC;&#x5408;&#x811A;&#x672C;&#x7EC3;&#x4E60;">&#x7EFC;&#x5408;&#x811A;&#x672C;&#x7EC3;&#x4E60;</h1>
+<ol>
+<li>&#x5199;&#x4E00;&#x4E2A;&#x811A;&#x672C;, &#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x540D;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;, &#x7528; <code>Here Document</code> &#x8F93;&#x51FA;&#x4FE1;&#x606F;&#x8BA9;&#x7528;&#x6237;&#x9009;&#x62E9;&#x5C06;&#x6587;&#x4EF6;&#x538B;&#x7F29;&#x4E3A; <code>gzip</code> , <code>bzip2</code> , <code>zip</code> .</li>
+</ol>
+<pre><code>#!/usr/bin/bash
+
+menu (){
+clear
+cat &lt;&lt; EOF
+Switch file compress format:
+g) gzip
+b) bzip2
+z) zip
+EOF
+}
+
+if [ ! -f $1 ]; then
+    echo &quot;Usage: $0 &lt;filename&gt;&quot;
+    exit
+fi
+
+menu
+
+while true
+do
+    read -n1 compress
+    case $compress in
+    g)
+        gzip -k $1
+        ;;
+    b)
+        bzip2 -k $1
+        ;;
+    z)
+        zip $1 $1
+        ;;
+    *)
+        menu
+        ;;
+    esac
+done
+</code></pre><ol>
+<li>&#x5B9E;&#x73B0;&#x53EF;&#x4EA4;&#x4E92;&#x7684;&#x76EE;&#x5F55;&#x5907;&#x4EFD;&#x811A;&#x672C;:</li>
+</ol>
+<pre><code>#!/usr/bin/bash
+
+if [ $# -ne 0 ]; then
+    echo &quot;Usage: $0&quot;
+fi
+
+BACKUPDIR=~/Pictures
+if [ ! -e $BACKUPDIR ]; then
+    echo &quot;ERROR: no backup dir $BACKUPDIR&quot;
+    exit
+fi
+
+TARGETDIR=/tmp/backups
+if [ ! -d $TARGETDIR ]; then
+    echo &quot;mkdir...&quot;
+    mkdir $TARGETDIR
+fi
+
+cat &lt;&lt; EOF
+Switch compress type:
+r) incremental backup
+c) full backup
+EOF
+
+read -n1 cptype
+
+case $cptype in
+r)
+    OPTION=&quot;-rf&quot;
+    ;;
+c)
+    OPTION=&quot;-cf&quot;
+    ;;
+*)
+    echo &quot;ERROR&quot;
+    exit
+    ;;
+esac
+
+echo &quot;Taring the $BACKUPDIR&quot;
+echo &quot;This may take several minutes&quot;
+FILENAME=$TARGETDIR/ `date +%y%m%d` .tar
+tar $OPTION $FILENAME $BACKUPDIR &amp;&gt; /dev/null
+ls -sh $FILENAME | awk &apos;{ print $1 &quot; data has been backed up at &quot; $2}&apos;
+</code></pre><ol>
+<li>&#x5199;&#x4E00;&#x4E2A;&#x811A;&#x672C;, &#x5B8C;&#x6210;&#x4E0E; <code>cp -r /etc ~/etcbackup</code> &#x76F8;&#x540C;&#x7684;&#x529F;&#x80FD;.</li>
+<li>&#x5199;&#x4E00;&#x4E2A;&#x811A;&#x672C;, &#x663E;&#x793A;&#x4E00;&#x4E2A;&#x8DEF;&#x5F84;&#x4E0B;&#x7684;&#x6700;&#x5927;&#x7684; <code>N</code> &#x4E2A;&#x6587;&#x4EF6;&#x4EE5;&#x53CA;&#x6700;&#x8FD1;&#x4FEE;&#x6539;&#x7684; <code>N</code> &#x4E2A;&#x6587;&#x4EF6;.</li>
+</ol>
+<pre><code>#!/usr/bin/bash
+
+if [[ $# != 1 || ! -d &quot;$1&quot; ]]; then
+    echo &quot;Usage: $0 &lt;dir-name&gt;&quot;
+    exit
+fi
+
+PS3=&quot;Make your choice (q for exit): &quot;
+select MODE in &quot;top 5 sort by size&quot;, &quot;top 5 sort by recent&quot;;
+do
+    case $REPLY in
+    1)
+        ls -Sl | awk &apos;NR&lt;7 &amp;&amp; NR&gt;1 {print $9, $5}&apos;
+        ;;
+    2)
+        ls -tl | awk &apos;NR&lt;7 &amp;&amp; NR&gt;1 {printf &quot;%s %s-%s-%s\n&quot;, $9, $6, $7, $8}&apos;
+        ;;
+    &apos;q&apos;)
+        exit
+        ;;
+    esac
+done
+</code></pre><ol>
+<li>&#x89E3;&#x91CA;&#x4E3A;&#x4EC0;&#x4E48;&#x6700;&#x597D;&#x5728;&#x53D8;&#x91CF;&#x4E0A;&#x52A0;&#x53CC;&#x5F15;&#x53F7;.</li>
+</ol>
+<pre><code>
+01. &#x9632;&#x6B62;&#x5F3A;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#x62A5;&#x9519;.
+02. &#x9632;&#x6B62;&#x53D8;&#x91CF;&#x4E2D;&#x7684;&#x7A7A;&#x683C;&#x88AB;&#x9519;&#x8BEF;&#x5206;&#x5272;, &#x5982;: 
+
+&gt; FILENAME=&quot;iop poi&quot;
+&gt; ls $FILENAME  # &#x88AB;&#x5F53;&#x505A;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;
+ls: cannot access &apos;iop&apos;: No such file or directory
+ls: cannot access &apos;poi&apos;: No such file or directory
+&gt; ls &quot;$FILENAME&quot;  # &#x88AB;&#x5F53;&#x505A;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;
+ls: cannot access &apos;iop poi&apos;: No such file or directory
+</code></pre><ol>
+<li>&#x5199;&#x4E00;&#x4E2A;&#x6587;&#x672C;&#x6A21;&#x5F0F;&#x6D4F;&#x89C8;&#x5668;, &#x7528;&#x6570;&#x7EC4;&#x4FDD;&#x7559;&#x6700;&#x8FD1;&#x5341;&#x6761;&#x53EF;&#x56DE;&#x9000;&#x7684;&#x5386;&#x53F2;&#x9875;&#x9762;.</li>
+</ol>
+<pre><code>#!/usr/bin/bash
+
+declare -a histarr
+p=1
+
+while true; do
+    read -p &quot;Enter a URL (b for back; q for quit): &quot; ACTION
+    case $ACTION in
+    b)
+        if [ $((p-=2)) -lt 1 ]; then
+            p=1
+            echo &quot;no history&quot;
+        else
+            links -dump &quot;/tmp/$p.html&quot;
+            echo ${histarr[$((p++))]}
+        fi
+        ;;
+    q)
+        exit
+        ;;
+    *)
+        if `wget &quot;$ACTION&quot; -O &quot;/tmp/$p.html&quot; &amp;&gt; /dev/null` ; then
+            histarr[$p]=&quot;$ACTION&quot;
+            links -dump &quot;/tmp/$((p++)).html&quot;
+        else
+            echo &quot;no such website&quot;
+        fi
+        ;;
+    esac
+done
+</code></pre><ol>
+<li>&#x5728;&#x811A;&#x672C;&#x4E2D;&#x5B8C;&#x6210;&#x4E0B;&#x5217;&#x529F;&#x80FD;:</li>
+</ol>
+<pre><code>#!/usr/bin/bash
+
+# &#x663E;&#x793A;&#x5F53;&#x524D;&#x88AB;&#x6267;&#x884C;&#x7684;&#x811A;&#x672C;&#x7684;&#x540D;&#x5B57;
+echo $0
+
+# &#x663E;&#x793A;&#x88AB;&#x4F20;&#x8FDB;&#x6765;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;, &#x7B2C;&#x4E09;&#x4E2A;&#x548C;&#x7B2C;&#x5341;&#x4E2A;&#x53C2;&#x6570;
+# &#x6D4B;&#x8BD5;: bash arguments.sh `seq 11` 
+echo $1 $3 ${10}
+
+# &#x663E;&#x793A;&#x6240;&#x6709;&#x88AB;&#x4F20;&#x8FDB;&#x6765;&#x7684;&#x53C2;&#x6570;
+echo $@
+
+# &#x6253;&#x5370;&#x53C2;&#x6570;&#x603B;&#x6570;
+echo $#
+
+# &#x5982;&#x679C;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x91CF;&#x5927;&#x4E8E; 3, &#x7528; shift &#x6254;&#x6389;&#x524D; 3 &#x4E2A;
+# &#x6CE8;&#x610F; $0 &#x4E0D;&#x4F1A;&#x88AB;&#x504F;&#x79FB;, &#x4F46;&#x4F1A;&#x88AB;&#x8BA1;&#x5165; $#
+if [ $# -ge 4 ]; then
+    shift 3
+fi
+
+# &#x6253;&#x5370;&#x5269;&#x4F59;&#x7684;&#x53C2;&#x6570;
+echo $@
+</code></pre><ol>
+<li>&#x6279;&#x91CF;&#x5E76;&#x53D1; <code>ping</code> &#x4E3B;&#x673A;, &#x7ED3;&#x679C;&#x6253;&#x5370;&#x5230;&#x5C4F;&#x5E55;&#x5E76;&#x5B58;&#x50A8;&#x5230;&#x6587;&#x4EF6;.</li>
+</ol>
+<pre><code>#!/usr/bin/bash
+
+&gt;ip.txt  # &#x6E05;&#x7A7A;&#x6587;&#x4EF6;
+
+for i in {2..254}; do
+    {
+        ip=&quot;127.0.0.$i&quot;
+        ping -c1 -W.5 $ip &amp;&gt; /dev/null
+        if [ $? -eq 0 ]; then
+            echo $ip | tee -a ip.txt
+        fi
+    }&amp;
+done
+
+wait
+echo &quot;finish&quot;
+</code></pre><ol>
+<li>&#x4F7F;&#x7528;&#x547D;&#x540D;&#x7BA1;&#x9053;&#x5B9E;&#x73B0;&#x5BF9;&#x5E76;&#x53D1;&#x8FDB;&#x7A0B;&#x6570;&#x91CF;&#x7684;&#x63A7;&#x5236;:</li>
+</ol>
+<pre><code>#!/usr/bin/bash
+
+DATAPATTERN=&quot;^[1-9][0-9]*$&quot;
+if [[ ! $1 =~ $DATAPATTERN ]]; then
+    echo &quot;Usage: $0 &lt;Positive Integer&gt;&quot;
+    exit
+fi
+
+pipe=/tmp/$.fifo
+if [ ! -p $pipe ]; then
+    mkfifo &quot;$pipe&quot;
+fi
+
+# &#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x64CD;&#x4F5C; fifo &#x4E0D;&#x4F1A;&#x5835;&#x585E;
+exec 8&lt;&gt; &quot;$pipe&quot;
+rm &quot;$pipe&quot;
+
+seq $1 &gt;&amp;8  # &#x521D;&#x59CB;&#x5316;&#x751F;&#x4EA7;&#x56FA;&#x5B9A;&#x6570;&#x91CF;
+
+# &#x5176;&#x5B9E;&#x662F;&#x4E00;&#x4E2A;&#x751F;&#x4EA7;&#x8005;&#x6D88;&#x8D39;&#x8005;&#x6A21;&#x578B;
+# &#x80FD;&#x591F;&#x4FDD;&#x8BC1;&#x540C;&#x65F6;&#x6267;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#x6570;&#x662F;&#x53EF;&#x63A7;&#x7684;
+infoping () {s
+    ip=&quot;127.0.0.$1&quot;
+    ping -c1 -W1 $ip &amp;&gt; /dev/null
+    if [ $? -eq 0 ]; then
+        echo &quot;$ip is up&quot;
+    else
+        echo &quot;$ip is down&quot;
+    fi
+    sleep 1
+    echo &gt;&amp;8  # &#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x5C31;&#x751F;&#x4EA7;&#x4E00;&#x4E2A;
+}
+
+for i in {2..15}
+do
+    read -u 8  # &#x6D88;&#x8D39;, &#x6CA1;&#x6709;&#x5C31;&#x7B49;&#x5F85;
+    infoping $i &amp;  # &#x6D88;&#x8D39;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x4E00;&#x4E2A;
+done
+
+wait
+echo &quot;finish&quot;
+</code></pre><ol>
+<li>&#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x4E2D;&#x5F53;&#x524D;&#x6240;&#x6709;&#x8FDE;&#x63A5;&#x7684;&#x79CD;&#x7C7B;&#x548C;&#x6570;&#x91CF;.</li>
+</ol>
+<pre><code>#!/usr/bin/bash
+
+declare -A status
+
+LINK= `ss -an | awk &apos;{ print $1 }&apos;` 
+for line in $LINK; do
+    let status[$line]++
+#     echo $line
+done
+
+for key in ${!status[@]}; do
+    echo &quot;$key: ${status[$key]}&quot;
+done
+
+# ss -an | awk &apos;{ s[$1]++ } END { for (i in s) { print i, s[i]} }&apos;
+</code></pre><ol>
+<li>&#x5199;&#x4E00;&#x4E2A;&#x6C42;&#x9636;&#x4E58;&#x7684;&#x51FD;&#x6570;, &#x8981;&#x6C42;&#x4F20;&#x53C2;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x6570;&#x7EC4;.</li>
+</ol>
+<pre><code>#!/usr/bin/bash
+
+function ARRAYPOD () {
+    ret=1
+    for i in $@; do
+        let ret*=$i
+    done
+    echo $ret  # &#x7528;&#x7B49;&#x53F7;&#x63A5;&#x6536;
+    return $ret  # &#x4FDD;&#x5B58;&#x5728; $? &#x4E2D;
+}
+
+ARRAY=(1 2 3 4 5)
+result= `ARRAYPOD ${ARRAY[*]}` 
+echo $result $?
+</code></pre><ol>
+<li>&#x901A;&#x8FC7; <code>trap</code> &#x5B9E;&#x73B0;&#x7A0B;&#x5E8F;&#x9000;&#x51FA;&#x786E;&#x8BA4;.</li>
+</ol>
+<pre><code>ex_confirm () {
+  read -n1 -p &quot;Do you want to quit [Y/N]?&quot; JUDGE
+  echo
+  case $JUDGE in
+  y | Y)
+    exit
+    ;;
+  esac
+}
+
+trap ex_confirm INT
+
+while :
+do
+  sleep 1
+done
+</code></pre><ol>
+<li>&#x5B9E;&#x73B0;&#x65E5;&#x5FD7;&#x5B58;&#x50A8;, &#x8981;&#x6C42;&#x6309;&#x4EE5;&#x4E0B;&#x683C;&#x5F0F;&#x5B58;&#x50A8; <code>log/&#x6A21;&#x5757;&#x540D;/&#x5F53;&#x524D;&#x6708;&#x7684;&#x51E0;&#x53F7;/&#x5F53;&#x5929;&#x7684;&#x7B2C;&#x51E0;&#x5C0F;&#x65F6;.log</code> :</li>
+</ol>
+<pre><code>#!/usr/bin/bash
+
+if [ $# -ne 2 ]; then
+    echo &quot;Usage: $0 &lt;module name&gt; &lt;exec file string&gt;&quot;
+    echo &quot;e.g.: $0 LUNATIC \&quot;python3 niconicov4.py --model=[8,16,32]\&quot;&quot;
+    exit
+fi
+
+FIFONAME=&quot;/tmp/$1.fifo&quot; 
+
+if [ ! -p $FIFONAME ]; then
+    mkfifo $FIFONAME
+fi
+
+exec 8&lt;&gt; &quot;$FIFONAME&quot;
+
+gen_filename () {
+    while :
+    do
+        TIMEARR=( `date &quot;+%H %M %S&quot;` )
+        LOGPATHNAME=&quot;log/$1/${TIMEARR[0]}&quot;
+        if [ ! -d &quot;$LOGPATHNAME&quot; ]; then
+            mkdir -p &quot;$LOGPATHNAME&quot;
+        fi
+        LOGFILENAME=&quot;$LOGPATHNAME/${TIMEARR[1]}.log&quot;
+        cat &lt;&amp;8 &gt; &quot;$LOGFILENAME&quot; &amp;
+        sleep $[60-${TIMEARR[2]}]
+    done
+}
+
+$2 2&gt;&amp;8 &amp; MAINPID=$!
+gen_filename $1 &amp; CPID=$!
+
+trap &quot;kill $MAINPID $CPID; rm &quot;$FIFONAME&quot;&quot; EXIT
+wait
+</code></pre><ol>
+<li>&#x6253;&#x5370;&#x5E76;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x6587;&#x4EF6;</li>
+</ol>
+<pre><code>#!/usr/bin/bash
+
+DATETIME= `date` 
+echo $DATETIME |tee myex22.log
+# date |tee myex22.log
+USERS= `who` 
+echo $USERS |tee -a myex22.log
+RUNNING= `uptime` 
+echo $RUNNING |tee -a myex22.log
+</code></pre><ol>
+<li>&#x91CD;&#x5B9A;&#x5411;&#x811A;&#x672C;&#x4E2D;&#x7684;&#x90E8;&#x5206;&#x4FE1;&#x606F;:</li>
+</ol>
+<pre><code>#!/usr/bin/bash
+
+SUCCESS=0
+E_NOARGS=56
+
+if [ -z &quot;$1&quot; ]; then
+    echo &quot;Usage: `basename $0` &lt;package-name&gt;&quot;
+    exit $E_NOARGS
+fi
+apt-cache pkgnames | egrep &apos;^nginx
+$mdFormatter$89$mdFormatter$
+</code></pre><h1 id="usrbinbash">!/usr/bin/bash</h1>
+<p>[ $# -eq 0 ] &amp;&amp; directorys= <code>pwd</code> || directorys=$@</p>
+<p>linkchk () {</p>
+<pre><code>for element in $1/*; do
+    [ -h $element -a ! -e $element ] &amp;&amp; echo &quot;$element&quot;
+    [ -d $element ] &amp;&amp; linkchk $element
+done
+</code></pre><p>}</p>
+<p>for dir in $directorys; do</p>
+<pre><code>if [ -d $dir ]
+then linkchk $dir
+else echo &quot;Usage: `basename $0` dir1 dir2 ...&quot;
+fi
+</code></pre><p>done</p>
+<p>exit 0</p>
+<pre><code>
+37. &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5185;&#x5B58;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;.
+</code></pre><h1 id="usrbinbash">!/usr/bin/bash</h1>
+<p>ROOT_UID=0
+E_WRONG_USER=70</p>
+<p>if [ &quot;$UID&quot; -ne &quot;$ROOT_UID&quot; ]; then</p>
+<pre><code>echo &quot;Must be root to run \&quot; `basename $0` \&quot;.&quot;
+exit $E_WRONG_USER
+</code></pre><p>fi</p>
+<p>MOUNTPT=/mnt/ramdisk
+DEVICE=/dev/ram0
+SIZE=2000
+BLOCKSIZE=1024</p>
+<p>if [ ! -d &quot;$MOUNTPT&quot; ]; then</p>
+<pre><code>mkdir &quot;$MOUNTPT&quot;
+</code></pre><p>fi</p>
+<p>dd if=/dev/zero of=$DEVICE bs=$BLOCKSIZE count=$SIZE
+echo &quot;Creating ramdisk $DEVICE&quot;</p>
+<p>mke2fs $DEVICE
+mount $DEVICE $MOUNTPT
+chmod 777 $MOUNTPT
+echo  &quot;$MOUNTPT is available now.&quot;</p>
+<p>exit 0</p>
+<pre><code>
+# &#x7EFC;&#x5408;&#x7EC3;&#x4E60;
+
+## &#x5B9E;&#x73B0;&#x590D;&#x6742;&#x7684;&#x81EA;&#x52A8;&#x8865;&#x5168;
+
+&#x4E0B;&#x9762;&#x518D;&#x7ED3;&#x5408;&#x524D;&#x9762;&#x4E09;&#x4E2A;&#x8865;&#x5168;&#x547D;&#x4EE4;&#xFF08;complete/compgen/compopt&#xFF09;&#x548C;&#x5185;&#x7F6E;&#x53D8;&#x91CF;&#xFF0C;&#x5199;&#x4E86;&#x4F8B;&#x5B50;&#x8BF4;&#x660E;&#x4E0B;&#x3002;
+
+~~~shell
+# cat /etc/bash_completion.d/foo.bash   
+_foo()  
+{  
+    COMPREPLY=()  
+    local cur=${COMP_WORDS[COMP_CWORD]};  
+    local cmd=${COMP_WORDS[COMP_CWORD-1]};  
+    case $cmd in  
+    &apos;foo&apos;)  
+          COMPREPLY=( $(compgen -W &apos;help test read&apos; -- $cur) ) ;;  
+    &apos;test&apos;)  
+          local pro=( $(awk &apos;{print $1}&apos; /data/a.txt) )  
+          COMPREPLY=( $(compgen -W &apos;${pro[@]}&apos; -- $cur) ) ;;  
+    &apos;*&apos;)  
+          ;;  
+    esac  
+    if [[ &quot;${COMP_WORDS[1]}&quot; == &quot;read&quot; &amp;&amp; ${COMP_CWORD} -eq 2 ]]; then  
+          local pro=($(pwd))  
+          cd /data  
+          compopt -o nospace  
+          COMPREPLY=($(compgen -d -f -- $cur))  
+          cd $pro  
+    fi  
+    return 0  
+}  
+complete -F _foo foo
+~~~
+
+&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C; foo&#x6709;3&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5206;&#x522B;&#x662F; help, read, test
+
+read &#x6D4B;&#x8BD5;&#x904D;&#x5386; /data &#x76EE;&#x5F55;&#x4E0B;&#x6240;&#x6709;&#x6587;&#x4EF6;
+
+test &#x6D4B;&#x8BD5;&#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x63D0;&#x53D6;2&#x7EA7;&#x53C2;&#x6570;  
+help &#x53EA;&#x662F;&#x6F14;&#x793A;&#xFF0C;&#x6CA1;&#x6709;&#x7279;&#x6B8A;&#x4F5C;&#x7528;
+
+&#x73B0;&#x5728;&#x8DD1;&#x4E0B;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;
+
+~~~shell
+# mkdir /data  
+# touch /data/a.txt  
+# touch /data/b.txt  
+# tree /data  
+/data  
+&#x251C;&#x2500;&#x2500; a.txt  
+&#x2514;&#x2500;&#x2500; b.txt  
+
+0 directories, 2 files  
+# source /etc/bash_completion.d/foo.bash   
+# foo [Tab][Tab]  
+help  read  test    
+# echo world1 &gt;&gt; /data/a.txt  
+# echo world2 &gt;&gt; /data/a.txt  
+# foo test world[Tab][Tab]  
+world1  world2    
+# foo read[Tab][Tab]  
+a.txt  b.txt
+~~~
+
+## &#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x6743;&#x9650;&#x63A7;&#x5236;
+
+**&#x5B9E;&#x4F8B;**  
+&#x8BBE;&#x7F6E;uid&#x5927;&#x4E8E;&#x7B49;&#x4E8E;500&#x7684;&#x7528;&#x6237;&#x7684;history&#x5B89;&#x5168;&#x6027;  
+&#x9700;&#x6C42;&#xFF1A;  
+&#x8BB0;&#x5F55;&#x7EDF;&#x4E00;&#x8F6C;&#x79FB;&#x5230;/var/history&#x76EE;&#x5F55;&#x4E0B;&#xFF1B;  
+&#x7528;&#x6237;&#x65E0;&#x6CD5;&#x5220;&#x9664;&#x81EA;&#x5DF1;&#x7684;history&#x6587;&#x4EF6;&#xFF0C;&#x65E0;&#x6CD5;&#x6E05;&#x7A7A;history&#xFF1B;  
+&#x591A;&#x4E2A;&#x7EC8;&#x7AEF;&#x5171;&#x4EAB;history&#xFF0C;&#x5B9E;&#x65F6;&#x8FFD;&#x52A0;&#xFF1B;  
+&#x9650;&#x5236;history&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#x548C;&#x4FDD;&#x5B58;&#x7684;&#x6761;&#x6570;&#xFF1B;  
+&#x4E3E;&#x4F8B;&#x7528;&#x6237;&#xFF0C;lionel&#xFF1B;uid=522
+
+~~~
+1&#xFF09;&#x914D;&#x7F6E;&#x5168;&#x5C40;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6587;&#x4EF6;/etc/profile
+# vi /etc/profile       //&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;
+# add by coolnull
+if [ $UID -ge 500 ]; then
+    readonly HISTFILE=/var/history/$USER-$UID.log
+    readonly HISTFILESIZE=50000
+    readonly HISTSIZE=10000
+    readonly HISTTIMEFORMAT=&apos;%F %T &apos;
+    readonly HISTCONTROL=ignoredups
+    shopt -s histappend
+    readonly PROMPT_COMMAND=&quot;history -a&quot;
+fi
+
+&#x521B;&#x5EFA;&#x76EE;&#x5F55;&#x7ED3;&#x6784;
+# mkdir /var/history
+
+&#x914D;&#x7F6E;&#x76EE;&#x5F55;&#x6743;&#x9650;&#xFF0C;&#x4F7F;&#x5F97;&#x7528;&#x6237;&#x6709;&#x6743;&#x9650;&#x521B;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;history&#x6587;&#x4EF6;
+# chmod 777 /var/history
+# chmod a+t /var/history
+
+2&#xFF09;&#x9650;&#x5236;&#x7528;&#x6237;&#x5220;&#x9664;&#x81EA;&#x5DF1;&#x7684;history&#x6587;&#x4EF6;
+# chattr +a /var/history/lionel-522.log
+
+3&#xFF09;&#x9650;&#x5236;&#x7528;&#x6237;&#x4FEE;&#x6539;&#x81EA;&#x5DF1;&#x4E3B;&#x76EE;&#x5F55;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+# chattr +a /home/lionel/.bash*
+
+# lsattr /home/lionel/.bash*
+-----a------- /home/lionel/.bash_logout
+-----a------- /home/lionel/.bash_profile
+-----a------- /home/lionel/.bashrc
+
+4&#xFF09;&#x7981;&#x6B62;&#x666E;&#x901A;&#x7528;&#x6237;&#x5207;&#x6362;&#x5230;&#x7CFB;&#x7EDF;&#x4E2D;&#x5176;&#x4ED6;shell&#x73AF;&#x5883;&#xFF08;&#x4E00;&#x822C;&#x5305;&#x62EC;csh, tcsh, ksh&#xFF09;
+# chmod 750 tcsh&#xFF08;csh&#x662F;tcsh&#x7684;&#x8F6F;&#x8FDE;&#x63A5;&#xFF0C;&#x8BBE;&#x7F6E;tcsh&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF09;
+# chmod 750 /bin/ksh
+
+&#x666E;&#x901A;&#x5E10;&#x53F7;&#x6D4B;&#x8BD5;
+[zhangfei@node1 ~]$ tcsh
+-bash: /bin/tcsh: Permission denied
+[zhangfei@node1 ~]$ ksh
+-bash: /bin/ksh: Permission denied
+~~~
+
+ &gt; /dev/null
+if [ $? -ne $SUCCESS ]; then
+    echo &quot;Can not find $1 in apt cache list&quot;
+    exit 1
+fi
+
+# &#x53EA;&#x91CD;&#x5B9A;&#x5411;&#x5927;&#x62EC;&#x53F7;&#x91CC;&#x7684;&#x90E8;&#x5206;
+{
+    echo
+    echo &quot;Show packages details:&quot;
+    apt show &quot;$1&quot;
+    echo
+    echo &quot;List packages based on $1:&quot;
+    apt-cache policy &quot;$1&quot;
+} &gt; &quot;$1.details&quot;
+
+echo &quot;Results of apt test in file $1.details&quot;
+exit 0
+</code></pre><ol>
+<li>&#x9012;&#x5F52;&#x67E5;&#x627E;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x6307;&#x5411;&#x6587;&#x4EF6;&#x88AB;&#x5220;&#x9664;&#x7684;&#x7B26;&#x53F7;&#x94FE;&#x63A5;.</li>
+</ol>
+<pre><code>#!/usr/bin/bash
+
+[ $# -eq 0 ] &amp;&amp; directorys= `pwd` || directorys=$@
+
+linkchk () {
+
+    for element in $1/*; do
+        [ -h $element -a ! -e $element ] &amp;&amp; echo &quot;$element&quot;
+        [ -d $element ] &amp;&amp; linkchk $element
+    done
+
+}
+
+for dir in $directorys; do
+
+    if [ -d $dir ]
+    then linkchk $dir
+    else echo &quot;Usage: `basename $0` dir1 dir2 ...&quot;
+    fi
+
+done
+
+exit 0
+</code></pre><ol>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5185;&#x5B58;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;.</li>
+</ol>
+<pre><code>#!/usr/bin/bash
+
+ROOT_UID=0
+E_WRONG_USER=70
+
+if [ &quot;$UID&quot; -ne &quot;$ROOT_UID&quot; ]; then
+
+    echo &quot;Must be root to run \&quot; `basename $0` \&quot;.&quot;
+    exit $E_WRONG_USER
+
+fi
+
+MOUNTPT=/mnt/ramdisk
+DEVICE=/dev/ram0
+SIZE=2000
+BLOCKSIZE=1024
+
+if [ ! -d &quot;$MOUNTPT&quot; ]; then
+
+    mkdir &quot;$MOUNTPT&quot;
+
+fi
+
+dd if=/dev/zero of=$DEVICE bs=$BLOCKSIZE count=$SIZE
+echo &quot;Creating ramdisk $DEVICE&quot;
+
+mke2fs $DEVICE
+mount $DEVICE $MOUNTPT
+chmod 777 $MOUNTPT
+echo  &quot;$MOUNTPT is available now.&quot;
+
+exit 0
+</code></pre><h1 id="&#x7EFC;&#x5408;&#x7EC3;&#x4E60;">&#x7EFC;&#x5408;&#x7EC3;&#x4E60;</h1>
+<h2 id="&#x5B9E;&#x73B0;&#x590D;&#x6742;&#x7684;&#x81EA;&#x52A8;&#x8865;&#x5168;">&#x5B9E;&#x73B0;&#x590D;&#x6742;&#x7684;&#x81EA;&#x52A8;&#x8865;&#x5168;</h2>
+<p>&#x4E0B;&#x9762;&#x518D;&#x7ED3;&#x5408;&#x524D;&#x9762;&#x4E09;&#x4E2A;&#x8865;&#x5168;&#x547D;&#x4EE4;&#xFF08;complete/compgen/compopt&#xFF09;&#x548C;&#x5185;&#x7F6E;&#x53D8;&#x91CF;&#xFF0C;&#x5199;&#x4E86;&#x4F8B;&#x5B50;&#x8BF4;&#x660E;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-shell">
+# cat /etc/bash_completion.d/foo.bash   
+
+_foo()  
+{  
+
+    COMPREPLY=()  
+    local cur=${COMP_WORDS[COMP_CWORD]};  
+    local cmd=${COMP_WORDS[COMP_CWORD-1]};  
+    case $cmd in  
+    &apos;foo&apos;)  
+          COMPREPLY=( $(compgen -W &apos;help test read&apos; -- $cur) ) ;;  
+    &apos;test&apos;)  
+          local pro=( $(awk &apos;{print $1}&apos; /data/a.txt) )  
+          COMPREPLY=( $(compgen -W &apos;${pro[@]}&apos; -- $cur) ) ;;  
+    &apos;*&apos;)  
+          ;;  
+    esac  
+    if [[ &quot;${COMP_WORDS[1]}&quot; == &quot;read&quot; &amp;&amp; ${COMP_CWORD} -eq 2 ]]; then  
+          local pro=($(pwd))  
+          cd /data  
+          compopt -o nospace  
+          COMPREPLY=($(compgen -d -f -- $cur))  
+          cd $pro  
+    fi  
+    return 0  
+
+}  
+complete -F _foo foo
+</code></pre>
+<p>&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C; foo&#x6709;3&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5206;&#x522B;&#x662F; help, read, test</p>
+<p>read &#x6D4B;&#x8BD5;&#x904D;&#x5386; /data &#x76EE;&#x5F55;&#x4E0B;&#x6240;&#x6709;&#x6587;&#x4EF6;</p>
+<p>test &#x6D4B;&#x8BD5;&#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x63D0;&#x53D6;2&#x7EA7;&#x53C2;&#x6570;<br>help &#x53EA;&#x662F;&#x6F14;&#x793A;&#xFF0C;&#x6CA1;&#x6709;&#x7279;&#x6B8A;&#x4F5C;&#x7528;</p>
+<p>&#x73B0;&#x5728;&#x8DD1;&#x4E0B;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-shell">
+# mkdir /data  
+
+# touch /data/a.txt  
+
+# touch /data/b.txt  
+
+# tree /data  
+/data  
+&#x251C;&#x2500;&#x2500; a.txt  
+&#x2514;&#x2500;&#x2500; b.txt  
+
+0 directories, 2 files  
+
+# source /etc/bash_completion.d/foo.bash   
+
+# foo [Tab][Tab]  
+help  read  test    
+
+# echo world1 &gt;&gt; /data/a.txt  
+
+# echo world2 &gt;&gt; /data/a.txt  
+
+# foo test world[Tab][Tab]  
+
+world1  world2    
+
+# foo read[Tab][Tab]  
+
+a.txt  b.txt
+</code></pre>
+<h2 id="&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x6743;&#x9650;&#x63A7;&#x5236;">&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x6743;&#x9650;&#x63A7;&#x5236;</h2>
+<p><strong>&#x5B9E;&#x4F8B;</strong><br>&#x8BBE;&#x7F6E;uid&#x5927;&#x4E8E;&#x7B49;&#x4E8E;500&#x7684;&#x7528;&#x6237;&#x7684;history&#x5B89;&#x5168;&#x6027;<br>&#x9700;&#x6C42;&#xFF1A;<br>&#x8BB0;&#x5F55;&#x7EDF;&#x4E00;&#x8F6C;&#x79FB;&#x5230;/var/history&#x76EE;&#x5F55;&#x4E0B;&#xFF1B;<br>&#x7528;&#x6237;&#x65E0;&#x6CD5;&#x5220;&#x9664;&#x81EA;&#x5DF1;&#x7684;history&#x6587;&#x4EF6;&#xFF0C;&#x65E0;&#x6CD5;&#x6E05;&#x7A7A;history&#xFF1B;<br>&#x591A;&#x4E2A;&#x7EC8;&#x7AEF;&#x5171;&#x4EAB;history&#xFF0C;&#x5B9E;&#x65F6;&#x8FFD;&#x52A0;&#xFF1B;<br>&#x9650;&#x5236;history&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#x548C;&#x4FDD;&#x5B58;&#x7684;&#x6761;&#x6570;&#xFF1B;<br>&#x4E3E;&#x4F8B;&#x7528;&#x6237;&#xFF0C;lionel&#xFF1B;uid=522</p>
+<pre><code>1&#xFF09;&#x914D;&#x7F6E;&#x5168;&#x5C40;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6587;&#x4EF6;/etc/profile
+
+# vi /etc/profile       //&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;
+
+# add by coolnull
+if [ $UID -ge 500 ]; then
+
+    readonly HISTFILE=/var/history/$USER-$UID.log
+    readonly HISTFILESIZE=50000
+    readonly HISTSIZE=10000
+    readonly HISTTIMEFORMAT=&apos;%F %T &apos;
+    readonly HISTCONTROL=ignoredups
+    shopt -s histappend
+    readonly PROMPT_COMMAND=&quot;history -a&quot;
+
+fi
+
+&#x521B;&#x5EFA;&#x76EE;&#x5F55;&#x7ED3;&#x6784;
+
+# mkdir /var/history
+
+&#x914D;&#x7F6E;&#x76EE;&#x5F55;&#x6743;&#x9650;&#xFF0C;&#x4F7F;&#x5F97;&#x7528;&#x6237;&#x6709;&#x6743;&#x9650;&#x521B;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;history&#x6587;&#x4EF6;
+
+# chmod 777 /var/history
+
+# chmod a+t /var/history
+
+2&#xFF09;&#x9650;&#x5236;&#x7528;&#x6237;&#x5220;&#x9664;&#x81EA;&#x5DF1;&#x7684;history&#x6587;&#x4EF6;
+
+# chattr +a /var/history/lionel-522.log
+
+3&#xFF09;&#x9650;&#x5236;&#x7528;&#x6237;&#x4FEE;&#x6539;&#x81EA;&#x5DF1;&#x4E3B;&#x76EE;&#x5F55;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+
+# chattr +a /home/lionel/.bash*
+
+# lsattr /home/lionel/.bash*
+-----a------- /home/lionel/.bash_logout
+-----a------- /home/lionel/.bash_profile
+-----a------- /home/lionel/.bashrc
+
+4&#xFF09;&#x7981;&#x6B62;&#x666E;&#x901A;&#x7528;&#x6237;&#x5207;&#x6362;&#x5230;&#x7CFB;&#x7EDF;&#x4E2D;&#x5176;&#x4ED6;shell&#x73AF;&#x5883;&#xFF08;&#x4E00;&#x822C;&#x5305;&#x62EC;csh, tcsh, ksh&#xFF09;
+
+# chmod 750 tcsh&#xFF08;csh&#x662F;tcsh&#x7684;&#x8F6F;&#x8FDE;&#x63A5;&#xFF0C;&#x8BBE;&#x7F6E;tcsh&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF09;
+
+# chmod 750 /bin/ksh
+
+&#x666E;&#x901A;&#x5E10;&#x53F7;&#x6D4B;&#x8BD5;
+[zhangfei@node1 ~]$ tcsh
+-bash: /bin/tcsh: Permission denied
+[zhangfei@node1 ~]$ ksh
+-bash: /bin/ksh: Permission denied
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="基础命令练习.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 基础命令练习">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"综合脚本练习","level":"2.6.2","depth":2,"next":{"title":"引导过程","level":"3.1","depth":1,"ref":"","articles":[{"title":"MBR与GPT","level":"3.1.1","depth":2,"path":"ch3_linux/MBR与GPT.md","ref":"ch3_linux/MBR与GPT.md","articles":[]},{"title":"运行级别","level":"3.1.2","depth":2,"path":"ch3_linux/运行级别.md","ref":"ch3_linux/运行级别.md","articles":[]},{"title":"设备管理","level":"3.1.3","depth":2,"path":"ch3_linux/设备管理.md","ref":"ch3_linux/设备管理.md","articles":[]},{"title":"内存管理","level":"3.1.4","depth":2,"path":"ch3_linux/内存管理.md","ref":"ch3_linux/内存管理.md","articles":[]}]},"previous":{"title":"基础命令练习","level":"2.6.1","depth":2,"path":"ch2_bash/exercise/基础命令练习.md","ref":"ch2_bash/exercise/基础命令练习.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","flexible-alerts","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/1996scarlet/python-apue"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"1info":{"label":"提示","icon":"fa fa-comments","className":"info"},"1warn":{"label":"注意","icon":"fa fa-warning","className":"warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{}},"theme":"default","author":"1996scarlet <1996scarlet@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"UNIX环境中的全栈Python高级编程","language":"zh-hans","gitbook":"*"},"file":{"path":"ch2_bash/exercise/综合脚本练习.md","mtime":"2020-04-04T03:10:09.146Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-04T04:45:30.373Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
