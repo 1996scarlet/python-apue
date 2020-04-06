@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>子shell · UNIX环境中的全栈Python高级编程</title>
+        <title>退出状态 · UNIX环境中的全栈Python高级编程</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="命令的执行方式.html" />
+    <link rel="next" href="文件描述符与重定向.html" />
     
     
-    <link rel="prev" href="命令的种类.html" />
+    <link rel="prev" href="命令的执行方式.html" />
     
 
     </head>
@@ -212,7 +212,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2.3" data-path="子shell.html">
+        <li class="chapter " data-level="2.2.3" data-path="子shell.html">
             
                 <a href="子shell.html">
             
@@ -242,7 +242,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.5" data-path="退出状态.html">
+        <li class="chapter active" data-level="2.2.5" data-path="退出状态.html">
             
                 <a href="退出状态.html">
             
@@ -1127,7 +1127,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >子shell</a>
+        <a href="../.." >退出状态</a>
     </h1>
 </div>
 
@@ -1142,128 +1142,183 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p> <code>bash</code> &#x4E2D;&#x7684;&#x5B50; <code>shell</code> &#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4EE5;&#x4E0B;&#x4E24;&#x7C7B;&#xFF1A;</p>
-<ul>
-<li><code>subshell</code> &#xFF1A;&#x901A;&#x8FC7;&#x8FDB;&#x7A0B;&#x66FF;&#x6362;&#x3001; <code>(LIST)</code> &#x3001; <code>|</code> &#x6216; <code>&amp;</code> &#x521B;&#x5EFA;&#x7684;&#x5B50; <code>shell</code> &#x3002;&#x56E0;&#x4E3A;&#x8FD9;&#x79CD;&#x5B50; <code>shell</code> &#x5728;&#x521B;&#x5EFA;&#x65F6;&#x53EA;&#x4F7F;&#x7528;&#x4E86; <code>fork</code> &#x51FD;&#x6570;&#xFF0C;&#x5BFC;&#x81F4;&#x5176;&#x53EF;&#x4EE5;&#x7EE7;&#x627F;&#x7236; <code>shell</code> &#x7684;&#x5168;&#x90E8;&#x53D8;&#x91CF;&#xFF08;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x4E5F;&#x4F1A;&#x88AB;&#x7EE7;&#x627F;&#xFF0C;&#x751A;&#x81F3;&#x5305;&#x62EC;<code>`bash</code> &#x4E2D;&#x7684;&#x5B50; <code>shell</code> &#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4EE5;&#x4E0B;&#x4E24;&#x7C7B;&#xFF1A;&#x548C; <code>$PID</code> &#xFF09;&#x3001;&#x522B;&#x540D;&#x548C;&#x51FD;&#x6570;&#x3002;</li>
-<li><code>child shell</code> &#xFF1A;&#x6211;&#x4EEC;&#x8C03;&#x7528; <code>bash</code> &#x547D;&#x4EE4;&#x751F;&#x6210;&#x4EA4;&#x4E92;&#x5F0F; <code>shell</code> &#x6216;&#x6267;&#x884C;&#x811A;&#x672C;&#x90FD;&#x4F1A;&#x5F97;&#x5230;&#x8FD9;&#x79CD;&#x5B50; <code>shell</code> &#x3002;&#x8FD9;&#x79CD;&#x5B50; <code>shell</code> &#x5728;&#x521B;&#x5EFA;&#x65F6;&#x4F1A;&#x901A;&#x8FC7; <code>fork</code> &#x548C; <code>exec</code> &#x51FD;&#x6570;&#x5C06;&#x5176;&#x4EE3;&#x7801;&#x3001;&#x6570;&#x636E;&#x3001;&#x5806;&#x6808;&#x66FF;&#x6362;&#x4E3A;&#x5168;&#x65B0;&#x7684; <code>bash</code> &#x8FDB;&#x7A0B;&#xFF0C;&#x56E0;&#x6B64;&#x53EA;&#x4F1A;&#x7EE7;&#x627F;&#x7236; <code>shell</code> &#x4F20;&#x9012;&#x6765;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x3002;</li>
-</ul>
-<p>shell&#x542F;&#x52A8;&#x7684;shell&#x5B50;&#x8FDB;&#x7A0B;&#x79F0;&#x4E3A;&#x5B50;shell&#x3002;&#x76F4;&#x63A5;&#x4EE5;&#x6587;&#x4EF6;&#x540D;&#x8FD0;&#x884C;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;bash&#x5E76;&#x4E0D;&#x77E5;&#x9053;&#x5B83;&#x8C03;&#x7528;&#x7684;&#x4E00;&#x4E2A;&#x53EF;&#x6267;&#x884C;&#x662F;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x8FD8;&#x662F;&#x811A;&#x672C;&#xFF0C;&#x53EA;&#x662F;&#x5728;exec&#x8FC7;&#x7A0B;&#x4E2D;&#x4EA4;&#x7ED9;&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x5904;&#x7406;&#x3002;&#x5BF9;&#x4E8E;shell&#x811A;&#x672C;&#xFF0C;&#x901A;&#x5E38;&#x4EE5;&#x201C;#![shell&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x540D;]&#x201D;&#x5F00;&#x5934;&#xFF0C;&#x201C;#!&#x201D;&#x662F;&#x4E00;&#x79CD;magic number&#x3002;&#x5F53;&#x5185;&#x6838;&#x901A;&#x8FC7;magic number&#x65AD;&#x5B9A;&#x6267;&#x884C;&#x7684;&#x662F;&#x811A;&#x672C;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6307;&#x5B9A;&#x7684;shell&#x7684;&#x5B9E;&#x4F8B;&#x6765;&#x89E3;&#x91CA;&#x6267;&#x884C;&#x811A;&#x672C;&#xFF0C;&#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;&#x5C31;&#x662F;&#x5B50;shell&#x3002;&#x7236;&#x5B50;shell&#x662F;&#x4E24;&#x4E2A;&#x8FDB;&#x7A0B;&#xFF0C;&#x6240;&#x4EE5;&#x5404;&#x81EA;&#x7684;&#x53D8;&#x91CF;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#x3002;&#x9664;&#x975E;&#x7236;shell&#x5C06;&#x81EA;&#x5DF1;&#x7684;&#x53D8;&#x91CF;&#x5BFC;&#x51FA;&#x5230;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x5426;&#x5219;&#x5B50;shell&#x65E0;&#x6CD5;&#x83B7;&#x5F97;&#x7236;shell&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#x3002;</p>
-<p>bash&#x901A;&#x8FC7;&#x53D8;&#x91CF;SHLVL&#x8BB0;&#x5F55;&#x81EA;&#x5DF1;&#x662F;&#x8FDB;&#x7A0B;&#x8C03;&#x7528;&#x6808;&#x4E2D;&#x54EA;&#x4E00;&#x5C42;&#x7684;shell&#xFF0C;&#x5373;bash&#x88AB;&#x5D4C;&#x5957;&#x7684;&#x6DF1;&#x5EA6;&#x3002;bash&#x542F;&#x52A8;&#x65F6;&#xFF0C;&#x8C03;&#x7528;variables.c&#x4E2D;&#x7684;initialize_shell_level()&#x8BBE;&#x7F6E;SHLVL&#x3002;&#x7CFB;&#x7EDF;login&#x4E4B;&#x540E;&#x542F;&#x52A8;&#x7684;bash&#x7684;SHLVL&#x4E3A;1&#xFF0C;&#x6BCF;&#x5C42;shell&#x542F;&#x52A8;&#x7684;&#x5B50;shell&#x7684;SHLVL&#x5728;&#x5176;&#x73AF;&#x5883;&#x4E2D;&#x8BFB;&#x5230;&#x7684;SHLVL&#x57FA;&#x7840;&#x4E0A;&#x52A0;1&#x3002;</p>
-<p>&#x4F7F;&#x7528;source&#x547D;&#x4EE4;&#xFF08;&#x201C;.&#x201D;&#x547D;&#x4EE4;&#xFF09;&#x6267;&#x884C;&#x811A;&#x672C;&#x65F6;&#xFF0C;&#x4E0D;&#x5F00;&#x542F;&#x5B50;shell&#x3002;bash&#x5185;&#x90E8;&#x7684;&#x5B9E;&#x73B0;&#x662F;&#x5C06;&#x811A;&#x672C;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x8BFB;&#x5165;&#x4E00;&#x4E2A;&#x7F13;&#x51B2;&#x533A;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;&#x8BED;&#x6CD5;&#x5206;&#x6790;&#xFF0C;&#x56E0;&#x6B64;&#x6548;&#x679C;&#x4E0E;&#x76F4;&#x63A5;&#x4ECE;&#x952E;&#x76D8;&#x8F93;&#x5165;&#x811A;&#x672C;&#x5185;&#x5BB9;&#x76F8;&#x540C;&#x3002;</p>
-<h1 id="&#x521B;&#x5EFA;-subshell">&#x521B;&#x5EFA; subshell</h1>
-<pre><code class="lang-bash"><span class="hljs-comment"># &#x521B;&#x5EFA; subshell &#x7684;&#x65B9;&#x6CD5;</span>
-&gt; <span class="hljs-built_in">echo</span> `<span class="hljs-built_in">echo</span> <span class="hljs-variable">$BASH_SUBSHELL</span>` 
-1  <span class="hljs-comment"># &#x547D;&#x4EE4;&#x66FF;&#x6362;&#x4F1A;&#x521B;&#x5EFA; subshell</span>
-&gt; <span class="hljs-built_in">echo</span> <span class="hljs-variable">$BASH_SUBSHELL</span> &amp;
-1  <span class="hljs-comment"># &#x540E;&#x53F0;&#x6267;&#x884C;&#x4F1A;&#x521B;&#x5EFA; subshell</span>
-&gt; (<span class="hljs-built_in">echo</span> <span class="hljs-variable">$BASH_SUBSHELL</span>)
-1  <span class="hljs-comment"># &#x4E00;&#x5BF9;&#x5C0F;&#x62EC;&#x53F7;&#x4F1A;&#x521B;&#x5EFA; subshell</span>
+                                <h1 id="&#x9000;&#x51FA;&#x72B6;&#x6001;">&#x9000;&#x51FA;&#x72B6;&#x6001;</h1>
+<h2 id="&#x7A0B;&#x5E8F;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;">&#x7A0B;&#x5E8F;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;</h2>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x7ED3;&#x675F;&#x65F6;&#x4F1A;&#x5411;&#x7236;&#x8FDB;&#x7A0B;&#x62A5;&#x544A;&#x81EA;&#x5DF1;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;( <code>exit status</code> ). &#x901A;&#x8FC7;&#x4F20;&#x9012; <code>int</code> &#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x7ED9;&#x5E93;&#x51FD;&#x6570; <code>exit</code> &#x6216;&#x7CFB;&#x7EDF;&#x8C03;&#x7528; <code>_exit</code> &#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x7A0B;&#x5E8F;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;, &#x5728; <code>Linux</code> &#x4E2D;, &#x901A;&#x8FC7; <code>WEXITSTATUS</code> &#x8FD4;&#x56DE;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x7684;&#x503C;&#x57DF;&#x4E3A; <code>[0, 255]</code> &#x4E4B;&#x95F4;&#x7684;&#x6574;&#x6570; . &#x5982;&#x679C;&#x4F20;&#x9012;&#x7684;&#x503C;&#x4E0D;&#x5728;&#x8FD9;&#x4E2A;&#x8303;&#x56F4;&#x5185;, &#x5185;&#x6838;&#x4F1A;&#x81EA;&#x52A8;&#x5E2E;&#x4F60;&#x5F3A;&#x8F6C;&#x4E3A; <code>u_int8_t</code> . &#x901A;&#x8FC7; <code>waitpid</code> &#x5E93;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;, &#x5176;&#x503C;&#x5B58;&#x50A8;&#x5728;&#x53C2;&#x6570; <code>wstatus</code> &#x7684;&#x4F4E; <code>8</code> &#x4F4D;&#x4E2D;.</p>
+<pre><code class="lang-C"><span class="hljs-comment">// &#x5B9A;&#x4E49;&#x5728; wait.h &#x4E2D;</span>
+<span class="hljs-meta"># <span class="hljs-meta-keyword">define</span> WEXITSTATUS(status)    __WEXITSTATUS (status)</span>
 
-&gt; <span class="hljs-keyword">function</span> f1()
-&gt; {
-&gt; <span class="hljs-built_in">echo</span> <span class="hljs-variable">$BASH_SUBSHELL</span> &gt;&amp;2
-&gt; }
-&gt; f1
-0
-&gt; f1 | f1 | f1
-1  <span class="hljs-comment"># &#x4E09;&#x4E2A;&#x72EC;&#x7ACB;&#x7684; subshell</span>
-1
-1
+<span class="hljs-comment">// &#x5B9A;&#x4E49;&#x5728; waitstatus.h &#x4E2D;</span>
+<span class="hljs-comment">/* If WIFEXITED(STATUS), the low-order 8 bits of the status.  */</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span>    __WEXITSTATUS(status)    (((status) &amp; 0xff00) &gt;&gt; 8)</span>
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x5C55;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x4F7F;&#x7528; <code>waitpid</code> &#x53CA;&#x76F8;&#x5173;&#x5B8F;&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/types.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/wait.h&gt;</span></span>
 
-<span class="hljs-comment"># &#x7BA1;&#x9053;&#x9677;&#x9631;</span>
-&gt; a=10
-&gt; a=5 | <span class="hljs-built_in">echo</span> <span class="hljs-variable">$a</span>
-10  <span class="hljs-comment"># &#x5DE6;&#x53F3;&#x4E24;&#x4FA7;&#x90FD;&#x5728;&#x5404;&#x81EA;&#x521B;&#x5EFA;&#x7684; subshell &#x4E2D;&#x6267;&#x884C; &#x4E92;&#x4E0D;&#x5F71;&#x54CD;</span>
-&gt; <span class="hljs-built_in">echo</span> <span class="hljs-variable">$a</span>
-10  <span class="hljs-comment"># &#x5728; subshell &#x4E2D;&#x4FEE;&#x6539;&#x53D8;&#x91CF;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x7236; shell</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> PARENT_EXIT 10086</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> CHILD_EXIT -10</span>
 
-<span class="hljs-comment"># &#x8BC1;&#x660E;&#x786E;&#x5B9E;&#x521B;&#x5EFA;&#x4E86;&#x5B50; shell</span>
-&gt; pstree -p $; <span class="hljs-built_in">echo</span> $ <span class="hljs-variable">$SHLVL</span> <span class="hljs-variable">$BASH_SUBSHELL</span>;
-bash(2695)&#x2500;&#x2500;&#x2500;pstree(2702)  
-2695 1 0
-&gt; (pstree -p $; <span class="hljs-built_in">echo</span> $ <span class="hljs-variable">$SHLVL</span> <span class="hljs-variable">$BASH_SUBSHELL</span>;)
-bash(2695)&#x2500;&#x2500;&#x2500;bash(2714)&#x2500;&#x2500;&#x2500;pstree(2715)
-2695 1 1  <span class="hljs-comment"># $&#x4E5F;&#x88AB;&#x7EE7;&#x627F;&#x4E86;&#xFF0C;&#x4F46;&#x6CE8;&#x610F;&#x5176;&#x503C;&#x662F; invorking shell &#x7684; PID</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">pid_t</span> pid = fork();
 
-<span class="hljs-comment"># LIST &#x5FC5;&#x987B;&#x4E3A;&#x591A;&#x6761;&#x547D;&#x4EE4;&#x624D;&#x4F1A;&#x521B;&#x5EFA;&#x5B50; shell</span>
-&gt; pidof bash; (pidof bash;)
-2695
-2695
-&gt; pidof bash; (<span class="hljs-built_in">echo</span>&gt;/dev/null;pidof bash;)
-2695  
-3163 2695
+    <span class="hljs-keyword">if</span> (pid &gt; <span class="hljs-number">0</span>)
+    {
+        <span class="hljs-keyword">int</span> wstatus;
+        <span class="hljs-comment">// &#x7236;&#x8FDB;&#x7A0B;&#x7B49;&#x5F85;&#x5B50;&#x8FDB;&#x7A0B;&#x6267;&#x884C;&#x5B8C;&#x6BD5;, &#x7528; WUNTRACED &#x9009;&#x9879;&#x8FFD;&#x8E2A;&#x5DF2;&#x7ED3;&#x675F;&#x7684;&#x5B50;&#x8FDB;&#x7A0B;</span>
+        <span class="hljs-keyword">pid_t</span> child_pid = waitpid(pid, &amp;wstatus, WUNTRACED);
 
-<span class="hljs-comment"># &#x53EA;&#x6709; subshell &#x53EF;&#x4EE5;&#x7EE7;&#x627F;&#x5C40;&#x90E8;&#x53D8;&#x91CF;</span>
-&gt; <span class="hljs-built_in">unset</span> a; a=1
-&gt; (<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;a is <span class="hljs-variable">$a</span> in the subshell&quot;</span>)
-a is 1 <span class="hljs-keyword">in</span> the subshell  <span class="hljs-comment"># &#x4EC5; fork &#x5B8C;&#x5168;&#x62F7;&#x8D1D;</span>
-&gt; bash -c <span class="hljs-string">&apos;echo &quot;a is $a in the child shell&quot;&apos;</span>
-a is  <span class="hljs-keyword">in</span> the child shell  <span class="hljs-comment"># fork &#x5E76; exec &#x5BFC;&#x81F4;&#x4FE1;&#x606F;&#x88AB;&#x8986;&#x76D6;</span>
+        <span class="hljs-keyword">if</span> (WIFEXITED(wstatus))
+            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Child exit status: %d\n&quot;</span>, WEXITSTATUS(wstatus));
+        <span class="hljs-keyword">else</span>
+            perror(<span class="hljs-string">&quot;Bad wait status\n&quot;</span>);
 
-<span class="hljs-comment"># &#x67E5;&#x770B;&#x5D4C;&#x5957;&#x5C42;&#x7EA7;</span>
-&gt; (<span class="hljs-built_in">echo</span> <span class="hljs-variable">$SHLVL</span> <span class="hljs-variable">$BASH_SUBSHELL</span>;(<span class="hljs-built_in">echo</span> <span class="hljs-variable">$SHLVL</span> <span class="hljs-variable">$BASH_SUBSHELL</span>;(<span class="hljs-built_in">echo</span> <span class="hljs-variable">$SHLVL</span> <span class="hljs-variable">$BASH_SUBSHELL</span>)))
-1 1
-1 2
-1 3
+        <span class="hljs-comment">// &#x7236;&#x8FDB;&#x7A0B;&#x9000;&#x51FA;</span>
+        <span class="hljs-built_in">exit</span>(PARENT_EXIT);
+    }
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (pid == <span class="hljs-number">0</span>)
+    {
+        <span class="hljs-comment">// &#x5B50;&#x8FDB;&#x7A0B;&#x7ACB;&#x5373;&#x9000;&#x51FA;, &#x56E0;&#x6B64;&#x9700;&#x8981;&#x7236;&#x8FDB;&#x7A0B;&#x8BBE;&#x7F6E; WUNTRACED</span>
+        <span class="hljs-built_in">exit</span>(CHILD_EXIT);
+    }
+    <span class="hljs-keyword">else</span>
+    {
+        <span class="hljs-comment">// &#x5904;&#x7406; fork &#x65F6;&#x51FA;&#x73B0;&#x7684;&#x9519;&#x8BEF;</span>
+        perror(<span class="hljs-string">&quot;fork\n&quot;</span>);
+        <span class="hljs-built_in">exit</span>(EXIT_FAILURE);
+    }
+}
+</code></pre>
+<p>&#x7F16;&#x8BD1;&#x5E76;&#x8FD0;&#x884C;&#x4E0A;&#x4F8B;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x88AB;&#x5F3A;&#x8F6C;&#x540E;&#x7684;&#x72B6;&#x6001;&#x7801;, &#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>WIFEXITED</code> &#x5224;&#x65AD;&#x7B49;&#x5F85;&#x7684;&#x5B50;&#x8FDB;&#x7A0B;&#x662F;&#x5426;&#x6267;&#x884C;&#x6210;&#x529F;, &#x7136;&#x540E;&#x5BF9;&#x6267;&#x884C;&#x6210;&#x529F;&#x5B50;&#x8FDB;&#x7A0B;&#x4F7F;&#x7528; <code>WEXITSTATUS</code> &#x83B7;&#x53D6;&#x5176;&#x9000;&#x51FA;&#x72B6;&#x6001;. &#x5BF9;&#x7A0B;&#x5E8F;&#x6765;&#x8BF4;, &#x6700;&#x7EC8;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x5C31;&#x662F;&#x4E3B;&#x8FDB;&#x7A0B;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;.</p>
+<pre><code class="lang-bash">&gt; gcc ecitcode.c;./a.out;<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Parent exit status: $?&quot;</span>
+Child <span class="hljs-built_in">exit</span> status: 246  <span class="hljs-comment"># -10 &#x5F3A;&#x8F6C;&#x4E3A; uint8</span>
+Parent <span class="hljs-built_in">exit</span> status: 102  <span class="hljs-comment"># 10086 &#x5F3A;&#x8F6C;&#x4E3A; uint8</span>
+</code></pre>
+<p>&#x5728; <code>POSIX</code> &#x6807;&#x51C6;&#x4E2D;&#x89C4;&#x5B9A;&#x9000;&#x51FA;&#x72B6;&#x6001; <code>0</code> &#x4EE3;&#x8868;&#x8BE5;&#x7A0B;&#x5E8F;&#x6B63;&#x5E38;&#x9000;&#x51FA;, <code>1</code> &#x4EE3;&#x8868;&#x53D1;&#x751F;&#x9519;&#x8BEF;, &#x5176;&#x4ED6;&#x6570;&#x5B57;&#x7531;&#x7A0B;&#x5E8F;&#x81EA;&#x884C;&#x89C4;&#x5B9A;, &#x56E0;&#x6B64;&#x5728; <code>glibc</code> &#x7684; <code>stdlib.h</code> &#x4E2D;&#x4EC5;&#x5B9A;&#x4E49;&#x4E86;&#x5982;&#x4E0B;&#x5B8F;:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> EXIT_FAILURE    1       <span class="hljs-comment">/* Failing exit status.  */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> EXIT_SUCCESS    0       <span class="hljs-comment">/* Successful exit status.  */</span></span>
+</code></pre>
+<p>&#x7A0B;&#x5E8F;&#x672C;&#x8EAB;&#x4E00;&#x822C;&#x4F1A;&#x5728;&#x6587;&#x6863;&#x4E2D;&#x4E8B;&#x5148;&#x7EA6;&#x5B9A;&#x6BCF;&#x79CD;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x4EE3;&#x8868;&#x7684;&#x9000;&#x51FA;&#x539F;&#x56E0;( <code>termination</code> ), &#x4F8B;&#x5982;&#x5728; <code>ls</code> &#x7684;&#x5E2E;&#x52A9;&#x6587;&#x6863;&#x4E2D;:</p>
+<pre><code class="lang-bash">&gt; ls --help
+...&#x5176;&#x4ED6;&#x5185;&#x5BB9;...
+Exit status:  <span class="hljs-comment"># &#x9000;&#x51FA;&#x72B6;&#x6001;</span>
+ 0  <span class="hljs-keyword">if</span> OK,  <span class="hljs-comment"># &#x6B63;&#x5E38;&#x6267;&#x884C;</span>
+ 1  <span class="hljs-keyword">if</span> minor problems  <span class="hljs-comment"># &#x6B21;&#x8981;&#x95EE;&#x9898;, &#x4F8B;&#x5982;: &#x65E0;&#x6CD5;&#x8BBF;&#x95EE;&#x5B50;&#x76EE;&#x5F55;</span>
+ 2  <span class="hljs-keyword">if</span> serious trouble  <span class="hljs-comment"># &#x4E25;&#x91CD;&#x9519;&#x8BEF;, &#x4F8B;&#x5982;: &#x65E0;&#x6CD5;&#x8BBF;&#x95EE;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;</span>
+...&#x5176;&#x4ED6;&#x5185;&#x5BB9;...
+</code></pre>
+<h2 id="&#x547D;&#x4EE4;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;">&#x547D;&#x4EE4;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;</h2>
+<p>&#x5728; <code>bash</code> &#x4E2D;&#x4F1A;&#x8BB0;&#x5F55;&#x6240;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;, &#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>$?</code> &#x83B7;&#x53D6;&#x6700;&#x8FD1;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;. <code>bash</code> &#x81EA;&#x8EAB;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x4E3A;&#x6267;&#x884C;&#x7684;&#x6700;&#x540E;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;, &#x4E5F;&#x5C31;&#x7B49;&#x4EF7;&#x4E8E;&#x663E;&#x5F0F;&#x6307;&#x5B9A; <code>exit $?</code> . &#x5982;&#x679C;&#x6CA1;&#x6709;&#x6267;&#x884C;&#x4EFB;&#x4F55;&#x547D;&#x4EE4;&#x5C31;&#x9000;&#x51FA;, &#x5219; <code>bash</code> &#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x4E3A; <code>0</code> , &#x8981;&#x6CE8;&#x610F;&#x5728; <code>bash</code> &#x4E2D;&#x7528; <code>0</code> &#x8868;&#x793A; <code>true</code> , &#x7528;&#x975E;&#x96F6;&#x8868;&#x793A; <code>false</code> .</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x7528; exit &#x663E;&#x5F0F;&#x6307;&#x5B9A;&#x9000;&#x51FA;&#x72B6;&#x6001;</span>
 &gt; bash
-&gt; (<span class="hljs-built_in">echo</span> <span class="hljs-variable">$SHLVL</span> <span class="hljs-variable">$BASH_SUBSHELL</span>;(<span class="hljs-built_in">echo</span> <span class="hljs-variable">$SHLVL</span> <span class="hljs-variable">$BASH_SUBSHELL</span>;(<span class="hljs-built_in">echo</span> <span class="hljs-variable">$SHLVL</span> <span class="hljs-variable">$BASH_SUBSHELL</span>)))
-2 1
-2 2
-2 3
-</code></pre>
-<p><code>SHLVL</code> &#x53D8;&#x91CF;&#x7528;&#x4E8E;&#x8BB0;&#x5F55; <code>shell</code> &#x7684;&#x5D4C;&#x5957;&#x5C42;&#x7EA7;&#xFF0C; <code>BASH_SUBSHELL</code> &#x7528;&#x4E8E;&#x8BB0;&#x5F55; <code>subshell</code> &#x7684;&#x5D4C;&#x5957;&#x5C42;&#x7EA7;&#x3002;</p>
-<h1 id="&#x6267;&#x884C;&#x811A;&#x672C;">&#x6267;&#x884C;&#x811A;&#x672C;</h1>
-<p>&#x4F7F;&#x7528; <code>bash</code> &#x547D;&#x4EE4;&#xFF08;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5F53;&#x524D; <code>shell</code> &#x4E2D;&#x6267;&#x884C;&#x4E86;&#x5916;&#x90E8;&#x547D;&#x4EE4;&#xFF09;&#x6267;&#x884C; <code>shell</code> &#x811A;&#x672C;&#x65F6;&#x4F1A;&#x521B;&#x5EFA; <code>child shell</code> &#xFF1B;&#x4F7F;&#x7528; <code>source</code> &#x3001; <code>.</code> &#x6216; <code>exec</code> &#x5219;&#x4F1A;&#x76F4;&#x63A5;&#x5728;&#x5F53;&#x524D; <code>shell</code> &#x4E2D;&#x6267;&#x884C;&#x811A;&#x672C;&#xFF0C;&#x4E0D;&#x4F1A;&#x989D;&#x5916;&#x521B;&#x5EFA; <code>child shell</code> &#xFF08;&#x4E0D;&#x5305;&#x62EC;&#x811A;&#x672C;&#x4E2D;&#x7684;&#x547D;&#x4EE4;&#x53EF;&#x80FD;&#x4F1A;&#x81EA;&#x884C;&#x521B;&#x5EFA;&#x7684;&#x5B50; <code>shell</code> &#xFF09;&#x3002;&#x4F7F;&#x7528; <code>bash</code> &#x547D;&#x4EE4;&#x5F97;&#x5230;&#x7684; <code>child shell</code> &#x6BCF;&#x6B21;&#x4ECE;&#x811A;&#x672C;&#x8BFB;&#x53D6;&#x4E00;&#x884C;&#xFF0C;&#x6BCF;&#x884C;&#x547D;&#x4EE4;&#x90FD;&#x50CF;&#x76F4;&#x63A5;&#x6765;&#x81EA;&#x952E;&#x76D8;&#x4E00;&#x6837;&#x88AB;&#x8BFB;&#x53D6;&#x3001;&#x89E3;&#x91CA;&#x548C;&#x6267;&#x884C;&#xFF0C;&#x7236; <code>shell</code> &#x5728;&#x6B64;&#x8FC7;&#x7A0B;&#x4E2D;&#x5C06;&#x901A;&#x8FC7; <code>wait</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7B49;&#x5F85;&#x5176;&#x5B50;&#x8FDB;&#x7A0B;&#x5B8C;&#x6210;&#x3002;</p>
-<pre><code class="lang-bash">bash my.sh  <span class="hljs-comment"># &#x4F1A;&#x521B;&#x5EFA;&#x5B50; shell</span>
-./my.sh  <span class="hljs-comment"># &#x4F1A;&#x521B;&#x5EFA;&#x5B50; shell</span>
-. my.sh  <span class="hljs-comment"># &#x4E0D;&#x4F1A;&#x521B;&#x5EFA;&#x5B50; shell&#xFF0C;&#x56E0;&#x4E3A;&#x662F;&#x5185;&#x7F6E;&#x547D;&#x4EE4;</span>
-<span class="hljs-built_in">source</span> my.sh  <span class="hljs-comment"># &#x4E0D;&#x4F1A;&#x521B;&#x5EFA;&#x5B50; shell&#xFF0C;&#x56E0;&#x4E3A; `source` &#x662F; `.` &#x7684;&#x522B;&#x79F0;</span>
-</code></pre>
-<p>&#x7B80;&#x5355;&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#x5B50;&#x8FDB;&#x7A0B;&#x548C;&#x5B50; <code>shell</code> &#xFF1A;</p>
-<ul>
-<li>&#x6267;&#x884C;&#x5185;&#x7F6E;&#x547D;&#x4EE4;&#x548C; <code>shell</code> &#x811A;&#x672C;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x8FDE;&#x5B50;&#x8FDB;&#x7A0B;&#x90FD;&#x4E0D;&#x4F1A;&#x521B;&#x5EFA;&#xFF0C;&#x81EA;&#x7136;&#x4E5F;&#x4E0D;&#x4F1A;&#x521B;&#x5EFA;&#x5B50; <code>shell</code> &#x3002;</li>
-</ul>
-<pre><code class="lang-bash">&gt; mkfifo a
-&gt; <span class="hljs-function"><span class="hljs-title">fc1</span></span>(){ a&lt;a; }  <span class="hljs-comment"># &#x5B9A;&#x4E49;&#x4E00;&#x4E2A; shell &#x811A;&#x672C;&#x51FD;&#x6570;</span>
-&gt; <span class="hljs-built_in">echo</span> a&lt;a &amp;
-&gt; pstree -pa $
-bash,6080
-  &#x251C;&#x2500;bash,11092  <span class="hljs-comment"># &#x8FD9;&#x4E2A; subshell &#x662F; &amp; &#x521B;&#x5EFA;&#x7684;</span>
-  &#x2514;&#x2500;pstree,11095 -pa 6080
-<span class="hljs-comment"># &#x5185;&#x7F6E;&#x547D;&#x4EE4; echo &#x76F4;&#x63A5;&#x5728; 11092 &#x4E2D;&#x6267;&#x884C;&#xFF0C;&#x751A;&#x81F3;&#x90FD;&#x6CA1;&#x6709;&#x5EFA;&#x7ACB;&#x5B50;&#x8FDB;&#x7A0B;</span>
-<span class="hljs-comment"># &#x53EF;&#x4EE5;&#x53E6;&#x5F00;&#x4E00;&#x4E2A;&#x7EC8;&#x7AEF;&#x7136;&#x540E; pstree -pa &lt;&#x4E0A;&#x9762;&#x90A3;&#x4E2A;bash&#x7684;pid&gt; &#x8FDB;&#x884C;&#x9A8C;&#x8BC1;</span>
-&gt; <span class="hljs-built_in">fc</span>1 &amp;
-&gt; pstree -pa 6080  <span class="hljs-comment"># &#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x7EC8;&#x7AEF;&#x4E2D;&#x8F93;&#x5165;</span>
-bash,6080  <span class="hljs-comment"># &#x53EA;&#x663E;&#x793A;&#x8FD9;&#x4E2A; &#x6CA1;&#x6709;&#x521B;&#x5EFA;&#x4EFB;&#x4F55;&#x5B50;&#x8FDB;&#x7A0B;</span>
-</code></pre>
-<ul>
-<li>&#x6267;&#x884C;&#x5916;&#x90E8;&#x547D;&#x4EE4;&#x65F6;&#x4F1A;&#x4F7F;&#x7528; <code>fork-exec</code> &#x6A21;&#x5F0F;&#x521B;&#x5EFA;&#x5B50;&#x8FDB;&#x7A0B;&#xFF0C;&#x5982;&#x679C;&#x5916;&#x90E8;&#x547D;&#x4EE4;&#x662F; <code>shell</code> &#x7C7B;&#x578B;&#x5219;&#x4F1A;&#x521B;&#x5EFA; <code>child shell</code> &#x3002;</li>
-<li>&#x4F7F;&#x7528; <code>source</code> &#x3001; <code>.</code> &#x3001; <code>exec</code> &#x6267;&#x884C;&#x811A;&#x672C;&#x4EE5;&#x53CA;&#x7528; <code>{ LIST }</code> &#xFF08;&#x6CE8;&#x610F;&#x662F;&#x5927;&#x62EC;&#x53F7;&#xFF09;&#x5305;&#x88F9;&#x547D;&#x4EE4;&#x5217;&#x8868;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5F53;&#x524D; <code>shell</code> &#x4E2D;&#x9010;&#x884C;&#x8F93;&#x5165;&#x547D;&#x4EE4;&#xFF0C;&#x8981;&#x6CE8;&#x610F;&#x4F7F;&#x7528; <code>exec</code> &#x6267;&#x884C;&#x5B8C;&#x811A;&#x672C;&#x540E;&#x4F1A;&#x9000;&#x51FA; <code>shell</code> &#x3002;</li>
-<li>&#x4F7F;&#x7528; <code>bash xxx.sh</code> &#x6216; <code>./xxx.sh</code> &#x8FD0;&#x884C;&#x811A;&#x672C;&#x4F1A;&#x521B;&#x5EFA; <code>child shell</code> &#x3002;</li>
-</ul>
-<pre><code class="lang-bash">&gt; cat test.sh
-<span class="hljs-meta">#!/bin/bash</span>
-sleep 30;
+&gt; <span class="hljs-built_in">exit</span> 98
+<span class="hljs-built_in">exit</span>
+&gt; <span class="hljs-built_in">echo</span> $?
+98
 
-&gt; bash test.sh  <span class="hljs-comment"># &#x56DE;&#x8F66;&#x4E4B;&#x540E; ctrl+z</span>
-&gt; pstree -pa $
-bash,6080
-  &#x251C;&#x2500;bash,12602 test.sh  <span class="hljs-comment"># &#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x7684; child shell</span>
-  &#x2502;   &#x2514;&#x2500;sleep,12603 30  <span class="hljs-comment"># &#x9010;&#x884C;&#x89E3;&#x91CA;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;</span>
-  &#x2514;&#x2500;pstree,12606 -pa 6080
-</code></pre>
-<ul>
-<li>&#x4F7F;&#x7528; <code>( LIST )</code> &#x6267;&#x884C;&#x547D;&#x4EE4;&#x5217;&#x8868;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA; <code>subshell</code> &#x3002;</li>
-</ul>
-<pre><code class="lang-shell">&gt; (echo;sleep 30;)  # &#x56DE;&#x8F66;&#x4E4B;&#x540E;&#x6309;&#x4E0B; ctrl + z
+<span class="hljs-comment"># &#x4EC0;&#x4E48;&#x4E5F;&#x4E0D;&#x6267;&#x884C;&#x5219;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x4E3A; 0</span>
+&gt; bash
+<span class="hljs-built_in">exit</span>  <span class="hljs-comment"># Ctrl + D &#x9000;&#x51FA;</span>
+&gt; <span class="hljs-built_in">echo</span> $?
+0
 
-&gt; pstree -pa $
-bash,6080  # &#x6572;&#x547D;&#x4EE4;&#x7684; invoking shell
-  &#x251C;&#x2500;bash,9780  # &#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x7684; subshell&#xFF0C;&#x53EF;&#x4E0E;&#x7236; shell &#x5171;&#x4EAB;&#x5C40;&#x90E8;&#x53D8;&#x91CF;
-  &#x2502;   &#x2514;&#x2500;sleep,9781 30  # &#x6267;&#x884C;&#x5916;&#x90E8;&#x547D;&#x4EE4;&#x521B;&#x5EFA;&#x7684; child process
-  &#x2514;&#x2500;pstree,9782 -pa 6080
-&gt; fg 1  # &#x53EF;&#x4EE5;&#x7B49;&#x5F85;&#x5B8C;&#x6210; &#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5; ctrl+c
+<span class="hljs-comment"># &#x9ED8;&#x8BA4;&#x4E3A;&#x6700;&#x540E;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;</span>
+&gt; bash
+&gt; ecasd
+ecasd: <span class="hljs-built_in">command</span> not found
+<span class="hljs-built_in">exit</span>  <span class="hljs-comment"># Ctrl + D &#x9000;&#x51FA;</span>
+&gt; <span class="hljs-built_in">echo</span> $?
+127
 </code></pre>
+<p>&#x5728; <code>bash</code> &#x4E2D;&#x5BF9;&#x4E0D;&#x540C;&#x79CD;&#x7C7B;&#x547D;&#x4EE4;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x4F5C;&#x51FA;&#x5982;&#x4E0B;&#x89C4;&#x5B9A;:</p>
+<p><strong>&#x5185;&#x7F6E;&#x547D;&#x4EE4;:</strong> &#x7531;&#x4E8E;&#x5185;&#x7F6E;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x65F6;&#x4E0D;&#x9700;&#x8981;&#x542F;&#x52A8;&#x989D;&#x5916;&#x7684;&#x5B50;&#x8FDB;&#x7A0B;, &#x56E0;&#x6B64;&#x9700;&#x8981;&#x7528;&#x8FD4;&#x56DE;&#x503C;&#x6A21;&#x62DF;&#x9000;&#x51FA;&#x72B6;&#x6001;. &#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x90FD;&#x5B9A;&#x4E49;&#x4E86;&#x81EA;&#x5DF1;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;, &#x4F8B;&#x5982;: &#x5185;&#x7F6E;&#x547D;&#x4EE4; <code>source</code> &#x5C06;&#x811A;&#x672C;&#x6587;&#x4EF6;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x8FD4;&#x56DE;&#x72B6;&#x6001;&#x4F5C;&#x4E3A;&#x547D;&#x4EE4;&#x7684;&#x8FD4;&#x56DE;&#x72B6;&#x6001;. <code>bash</code> &#x4E2D;&#x6240;&#x6709;&#x7684;&#x5185;&#x7F6E;&#x547D;&#x4EE4;&#x90FD;&#x7528;&#x9000;&#x51FA;&#x72B6;&#x6001; <code>2</code> &#x8868;&#x793A;&#x7528;&#x6CD5;&#x9519;&#x8BEF;, &#x4F8B;&#x5982;: &#x9009;&#x9879;&#x9519;&#x8BEF;, &#x7F3A;&#x5C11;&#x53C2;&#x6570;.</p>
+<pre><code class="lang-bash">&gt; <span class="hljs-built_in">cd</span> -+-  <span class="hljs-comment"># &#x9519;&#x8BEF;&#x7684;&#x53C2;&#x6570;</span>
+bash: <span class="hljs-built_in">cd</span>: -+: invalid option
+<span class="hljs-built_in">cd</span>: usage: <span class="hljs-built_in">cd</span> [-L|[-P [<span class="hljs-_">-e</span>]] [-@]] [dir]
+&gt; <span class="hljs-built_in">echo</span> $?
+2
+</code></pre>
+<p><strong>&#x5916;&#x90E8;&#x547D;&#x4EE4;:</strong> &#x5916;&#x90E8;&#x547D;&#x4EE4;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x5C31;&#x662F;&#x4F7F;&#x7528; <code>waitpid</code> &#x5F97;&#x5230;&#x7684;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;, &#x5982;&#x679C;&#x5B50;&#x8FDB;&#x7A0B;&#x5728;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x88AB;&#x7F16;&#x53F7;&#x4E3A; <code>N</code> &#x7684;&#x4FE1;&#x53F7;&#x6240;&#x7EC8;&#x6B62;, &#x5219;&#x5F97;&#x5230;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x5C31;&#x4E3A; <code>128+N</code> .</p>
+<p><strong>Shell &#x51FD;&#x6570;:</strong> &#x5B9A;&#x4E49; <code>shell</code> &#x51FD;&#x6570;&#x65F6;, &#x51FD;&#x6570;&#x540D;&#x4E0E;&#x4E4B;&#x524D;&#x5DF2;&#x5B9A;&#x4E49;&#x7684;&#x53EA;&#x8BFB;&#x51FD;&#x6570;&#x540D;&#x76F8;&#x540C;&#x5219;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x4E3A; <code>1</code> , &#x5F53;&#x53D1;&#x751F;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;&#x5219;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x4E3A; <code>2</code> . &#x6267;&#x884C; <code>shell</code> &#x51FD;&#x6570;&#x65F6;, &#x51FD;&#x6570;&#x4E2D;&#x6700;&#x540E;&#x6267;&#x884C;&#x7684;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x5C31;&#x662F;&#x6574;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;.</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x4E8C;&#x6B21;&#x5B9A;&#x4E49;&#x53EA;&#x8BFB;&#x51FD;&#x6570;&#x62A5;&#x9519;</span>
+&gt; <span class="hljs-function"><span class="hljs-title">func</span></span> () { <span class="hljs-built_in">echo</span>; }
+&gt; <span class="hljs-built_in">readonly</span> <span class="hljs-_">-f</span> func
+&gt; func; <span class="hljs-built_in">echo</span> $?
+0
+&gt; <span class="hljs-function"><span class="hljs-title">func</span></span> () { <span class="hljs-built_in">echo</span> poi; }
+bash: func: <span class="hljs-built_in">readonly</span> <span class="hljs-keyword">function</span>
+&gt; <span class="hljs-built_in">echo</span> $?
+1
+
+<span class="hljs-comment"># &#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x53D1;&#x751F;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;</span>
+&gt; <span class="hljs-function"><span class="hljs-title">fune</span></span> () {aa}
+bash: syntax error near unexpected token <span class="hljs-string">&apos;{aa}&apos;</span>
+&gt; <span class="hljs-built_in">echo</span> $?
+2
+
+<span class="hljs-comment"># &#x51FD;&#x6570;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x662F;&#x6700;&#x540E;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;</span>
+&gt; <span class="hljs-function"><span class="hljs-title">funr</span></span> () { <span class="hljs-built_in">echo</span>; <span class="hljs-built_in">return</span> 6; }
+&gt; funr; <span class="hljs-built_in">echo</span> $?
+   <span class="hljs-comment"># echo &#x6253;&#x5370;&#x7684;&#x7A7A;&#x884C;</span>
+6  <span class="hljs-comment"># return 6 &#x662F;&#x51FD;&#x6570;&#x4E2D;&#x6700;&#x540E;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;</span>
+</code></pre>
+<p><strong>&#x8868;&#x8FBE;&#x5F0F;:</strong> &#x4F7F;&#x7528; <code>((...))</code> &#x6216; <code>let</code> &#x4FEE;&#x9970;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x53D6;&#x51B3;&#x4E8E;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;, &#x5982;&#x679C;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x4E3A; <code>0</code> &#x5219;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x4E3A; <code>1</code> ; &#x5982;&#x679C;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x4E3A;&#x975E;&#x96F6;, &#x5219;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x4E3A; <code>0</code> .</p>
+<pre><code class="lang-bash">&gt; <span class="hljs-built_in">let</span> 0+0; <span class="hljs-built_in">echo</span> $?
+1  <span class="hljs-comment"># &#x8868;&#x8FBE;&#x5F0F;&#x503C;&#x4E3A;&#x96F6;</span>
+&gt; ((7-5)); <span class="hljs-built_in">echo</span> $?
+0  <span class="hljs-comment"># &#x8868;&#x8FBE;&#x5F0F;&#x503C;&#x975E;&#x96F6;</span>
+</code></pre>
+<p><strong>&#x547D;&#x4EE4;&#x5217;&#x8868;:</strong> &#x7528; <code>;</code> , <code>&amp;</code> , <code>&amp;&amp;</code> , <code>||</code> &#x8FDE;&#x63A5;&#x547D;&#x4EE4;&#x88AB;&#x79F0;&#x4E3A;&#x547D;&#x4EE4;&#x5217;&#x8868;, &#x5176;&#x4E2D;&#x7528; <code>&amp;&amp;</code> &#x548C; <code>||</code> &#x8FDE;&#x63A5;&#x7684;&#x547D;&#x4EE4;&#x4F7F;&#x7528;&#x5DE6;&#x5173;&#x8054;( <code>left associativity</code> )&#x6A21;&#x5F0F;&#x6267;&#x884C;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x547D;&#x4EE4;. &#x6574;&#x4E2A;&#x547D;&#x4EE4;&#x5217;&#x8868;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x4E3A;&#x6700;&#x540E;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;. &#x6B64;&#x5916;, <code>$( LISTS )</code> &#x4EE5;&#x53CA;&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x7ED3;&#x6784;&#x5982;: <code>for</code> , <code>while</code> &#x7B49;&#x7684;&#x8FD4;&#x56DE;&#x72B6;&#x6001;&#x4E5F;&#x662F;&#x7ED3;&#x6784;&#x4E2D;&#x7684;&#x547D;&#x4EE4;&#x5217;&#x8868;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;.</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x529F;&#x80FD;: &#x80FD;ping&#x901A;baidu.com&#x5219;&#x8F93;&#x51FA; `baidu.com is up` &#xFF0C; &#x5426;&#x5219;&#x8F93;&#x51FA; `baidu.com is down` &#x3002;</span>
+&gt; ping -c1 baidu.com &amp;&gt; /dev/null &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;baidu.com is up&apos;</span> || <span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;baidu.com is down&apos;</span>
+baidu.com is down
+&gt; <span class="hljs-built_in">echo</span> $?
+0  <span class="hljs-comment"># &#x65E0;&#x8BBA;&#x662F;&#x5426;&#x80FD; ping &#x901A;, &#x547D;&#x4EE4;&#x5217;&#x8868;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x90FD;&#x7B49;&#x4E8E;&#x6700;&#x540E;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;</span>
+</code></pre>
+<blockquote>
+<p>[!1INFo]
+&#x5DE6;&#x5173;&#x8054;&#x6A21;&#x5F0F;&#x88AB;&#x5E7F;&#x6CDB;&#x5E94;&#x7528;&#x4E8E;&#x5404;&#x79CD;&#x8BED;&#x8A00;&#x7684;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;&#x4F18;&#x5316;&#x4E2D;. &#x5BF9;&#x4E8E;&#x903B;&#x8F91;&#x4E0E;&#x8FD0;&#x7B97;&#x7B26; <code>&amp;&amp;</code> , &#x4EE5; <code>eq1 &amp;&amp; eq2</code> &#x4E3A;&#x4F8B;, &#x53EA;&#x6709;&#x5F53;&#x4E24;&#x8FB9;&#x90FD;&#x4E3A; <code>True</code> &#x624D;&#x4F1A;&#x8FD4;&#x56DE; <code>True</code> , &#x56E0;&#x6B64;&#x5F53; <code>eq1</code> &#x4E3A; <code>False</code> &#x65F6;, <code>eq2</code> &#x4E0D;&#x4F1A;&#x6267;&#x884C;; &#x5BF9;&#x4E8E;&#x903B;&#x8F91;&#x6216;&#x8FD0;&#x7B97;&#x7B26; <code>||</code> , &#x4EE5; <code>eq1 || eq2</code> &#x4E3A;&#x4F8B;, &#x53EA;&#x8981;&#x4E24;&#x8FB9;&#x6709;&#x4E00;&#x4E2A; <code>True</code> &#x5C31;&#x4F1A;&#x8FD4;&#x56DE; <code>True</code> , &#x56E0;&#x6B64;&#x5F53; <code>eq1</code> &#x4E3A; <code>True</code> &#x65F6;, <code>eq2</code> &#x4E0D;&#x4F1A;&#x6267;&#x884C;&#x3002;</p>
+</blockquote>
+<p><strong>&#x811A;&#x672C;:</strong> &#x4F7F;&#x7528; <code>.</code> &#x6216; <code>source</code> &#x8FD0;&#x884C;&#x811A;&#x672C;&#x6587;&#x4EF6;&#x7B49;&#x540C;&#x4E8E;&#x5728;&#x5F53;&#x524D; <code>bash</code> &#x4E2D;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x5757;, &#x811A;&#x672C;&#x4E2D;&#x6700;&#x540E;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x5C31;&#x662F;&#x811A;&#x672C;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;. &#x4F7F;&#x7528; <code>./&#x811A;&#x672C;&#x540D;</code> &#x6216; <code>bash &#x811A;&#x672C;&#x540D;</code> &#x7684;&#x65B9;&#x5F0F;&#x6267;&#x884C;&#x811A;&#x672C;&#x6587;&#x4EF6;&#x7B49;&#x540C;&#x4E8E;&#x6267;&#x884C;&#x5916;&#x90E8;&#x547D;&#x4EE4;, &#x811A;&#x672C;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x5C31;&#x662F;&#x5916;&#x90E8;&#x547D;&#x4EE4; <code>bash</code> &#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;.</p>
+<blockquote>
+<p>[!1WARN]
+&#x5982;&#x679C;&#x811A;&#x672C;&#x4E2D;&#x6700;&#x540E;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;&#x662F; <code>exit</code> , &#x90A3;&#x4E48;&#x4F7F;&#x7528; <code>.</code> &#x6216; <code>source</code> &#x6267;&#x884C;&#x8BE5;&#x811A;&#x672C;&#x6587;&#x4EF6;&#x5728;&#x6267;&#x884C;&#x7ED3;&#x675F;&#x540E;&#x4F1A;&#x9000;&#x51FA;&#x5F53;&#x524D; <code>bash</code> .</p>
+</blockquote>
+<p><strong>&#x540E;&#x53F0;&#x4F5C;&#x4E1A;&#x4E0E;&#x534F;&#x4F5C;&#x8FDB;&#x7A0B;:</strong> &#x4F7F;&#x7528;&#x4E0D;&#x5E26;&#x9009;&#x9879;&#x7684; <code>wait</code> &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x7684;&#x540E;&#x53F0;&#x4F5C;&#x4E1A;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;, &#x5982;&#x679C;&#x4F7F;&#x7528; <code>wait -n &lt;jobsec&gt;</code> &#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x6307;&#x5B9A;&#x540E;&#x53F0;&#x4F5C;&#x4E1A;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;, &#x5982;&#x679C;&#x4F5C;&#x4E1A;&#x4E0D;&#x5B58;&#x5728;&#x5219;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x4E3A; <code>127</code> . &#x4F7F;&#x7528; <code>coproc</code> &#x5728; <code>sub shell</code> &#x4E2D;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x548C;&#x540E;&#x53F0;&#x4F5C;&#x4E1A;&#x4E00;&#x6837;&#x53EF;&#x4EE5;&#x88AB; <code>wait</code> &#x83B7;&#x53D6;, <code>coproc</code> &#x81EA;&#x8EAB;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x59CB;&#x7EC8;&#x4E3A; <code>0</code> .</p>
+<pre><code class="lang-bash">&gt; { sleep 10; aad; } &amp;
+[1] 558
+&gt; <span class="hljs-built_in">wait</span> -n 1
+[1]+  Exit 127                { sleep 10; aad; }
+
+&gt; coproc { sleep 10; aad; }
+[1] 558
+&gt; <span class="hljs-built_in">echo</span> $?
+0  <span class="hljs-comment"># &#x8FD9;&#x662F; coproc &#x7684;&#x6267;&#x884C;&#x7ED3;&#x679C;</span>
+&gt; <span class="hljs-built_in">jobs</span>
+[1]+  Exit 127                coproc COPROC { sleep 10; aad; }
+</code></pre>
+<p><strong>&#x7BA1;&#x9053;&#x547D;&#x4EE4;:</strong> &#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;, &#x7BA1;&#x9053;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x53D6;&#x51B3;&#x4E8E;&#x7BA1;&#x9053;&#x4E2D;&#x6700;&#x540E;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;. &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86; <code>set -o pipefail</code> , &#x90A3;&#x4E48;&#x53EA;&#x6709;&#x5728;&#x7BA1;&#x9053;&#x4E2D;&#x7684;&#x5168;&#x90E8;&#x547D;&#x4EE4;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x4E3A; <code>0</code> &#x65F6;, &#x6574;&#x4E2A;&#x7BA1;&#x9053;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x624D;&#x4E3A; <code>0</code> , &#x5426;&#x5219;&#x5C31;&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x975E;&#x96F6;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;. &#x5728;&#x7BA1;&#x9053;&#x524D;&#x6DFB;&#x52A0; <code>!</code> &#x7B26;&#x53F7;&#x53EF;&#x4EE5;&#x5BF9;&#x6574;&#x4E2A;&#x7BA1;&#x9053;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x53D6;&#x53CD;. <code>bash</code> &#x4E2D;&#x7684;&#x7279;&#x6B8A;&#x53D8;&#x91CF; <code>$PIPESTATUS</code> &#x4EE5;&#x6570;&#x7EC4;&#x7684;&#x5F62;&#x5F0F;&#x5B58;&#x50A8;&#x6700;&#x8FD1;&#x6267;&#x884C;&#x7684;&#x524D;&#x53F0;&#x7BA1;&#x9053;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;, &#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x5355;&#x4E2A;&#x547D;&#x4EE4;&#x4E5F;&#x4F1A;&#x88AB;&#x8BB0;&#x5F55;, &#x4E5F;&#x5C31;&#x662F;&#x8BF4; <code>${PIPESTATUS[0]}</code> &#x548C; <code>$?</code> &#x662F;&#x7B49;&#x4EF7;&#x7684;.</p>
+<pre><code class="lang-bash">
+<span class="hljs-comment"># &#x7BA1;&#x9053;&#x4E2D;&#x6BCF;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x88AB;&#x6309;&#x987A;&#x5E8F;&#x8BB0;&#x5F55;&#x5728;&#x6570;&#x7EC4;&#x4E2D;</span>
+&gt; easd 2&gt;/dev/null | ls /nou 2&gt;/dev/null | more 2&gt;/dev/null
+&gt; <span class="hljs-built_in">echo</span> <span class="hljs-variable">${PIPESTATUS[@]}</span>
+127 2 0
+
+<span class="hljs-comment"># &#x4E0D;&#x5E26;&#x7BA1;&#x9053;&#x7B26;&#x53F7;&#x7684;&#x5355;&#x4E2A;&#x547D;&#x4EE4;&#x4E5F;&#x4F1A;&#x88AB;&#x8BB0;&#x5F55;</span>
+&gt; ping asbasdasd 2&gt;/dev/null; <span class="hljs-built_in">echo</span> <span class="hljs-variable">${PIPESTATUS[0]}</span>
+2
+&gt; ping asbasdasd 2&gt;/dev/null; <span class="hljs-built_in">echo</span> $?
+2
+</code></pre>
+<h1 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h1>
+<ul>
+<li><a href="https://unix.stackexchange.com/questions/418784/what-is-the-min-and-max-values-of-exit-codes-in-linux" target="_blank">Exit status range</a></li>
+<li><a href="https://linux.die.net/man/1/bash" target="_blank">Bash man page</a></li>
+</ul>
 
                                 
                                 </section>
@@ -1291,12 +1346,12 @@ bash,6080  # &#x6572;&#x547D;&#x4EE4;&#x7684; invoking shell
 
             
                 
-                <a href="命令的种类.html" class="navigation navigation-prev " aria-label="Previous page: 命令的种类">
+                <a href="命令的执行方式.html" class="navigation navigation-prev " aria-label="Previous page: 命令的执行方式">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="命令的执行方式.html" class="navigation navigation-next " aria-label="Next page: 命令的执行方式">
+                <a href="文件描述符与重定向.html" class="navigation navigation-next " aria-label="Next page: 文件描述符与重定向">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1307,7 +1362,7 @@ bash,6080  # &#x6572;&#x547D;&#x4EE4;&#x7684; invoking shell
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"子shell","level":"2.2.3","depth":2,"next":{"title":"命令的执行方式","level":"2.2.4","depth":2,"path":"ch2_bash/mechanism/命令的执行方式.md","ref":"ch2_bash/mechanism/命令的执行方式.md","articles":[]},"previous":{"title":"命令的种类","level":"2.2.2","depth":2,"path":"ch2_bash/mechanism/命令的种类.md","ref":"ch2_bash/mechanism/命令的种类.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","flexible-alerts","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/1996scarlet/python-apue"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"1info":{"label":"提示","icon":"fa fa-comments","className":"info"},"1warn":{"label":"注意","icon":"fa fa-warning","className":"warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{}},"theme":"default","author":"1996scarlet <1996scarlet@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"UNIX环境中的全栈Python高级编程","language":"zh-hans","gitbook":"*"},"file":{"path":"ch2_bash/mechanism/子shell.md","mtime":"2020-04-04T09:32:54.429Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-06T02:48:53.723Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"退出状态","level":"2.2.5","depth":2,"next":{"title":"文件描述符与重定向","level":"2.2.6","depth":2,"path":"ch2_bash/mechanism/文件描述符与重定向.md","ref":"ch2_bash/mechanism/文件描述符与重定向.md","articles":[]},"previous":{"title":"命令的执行方式","level":"2.2.4","depth":2,"path":"ch2_bash/mechanism/命令的执行方式.md","ref":"ch2_bash/mechanism/命令的执行方式.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","flexible-alerts","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/1996scarlet/python-apue"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"1info":{"label":"提示","icon":"fa fa-comments","className":"info"},"1warn":{"label":"注意","icon":"fa fa-warning","className":"warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{}},"theme":"default","author":"1996scarlet <1996scarlet@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"UNIX环境中的全栈Python高级编程","language":"zh-hans","gitbook":"*"},"file":{"path":"ch2_bash/mechanism/退出状态.md","mtime":"2020-04-06T06:06:54.538Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-06T02:48:53.723Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
